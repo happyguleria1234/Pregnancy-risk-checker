@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="BhF-Jn-xv3">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="reR-fY-8qI" customClass="HomeVC" customModule="Pregnancy_risk_checker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FUZ-VP-MNa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="NC0-97-9we"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="a8x-zc-3JQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0e-cR-iEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="132.68365817091455"/>
+        </scene>
+        <!--Feedback-->
+        <scene sceneID="UdA-Mo-Zqv">
+            <objects>
+                <viewController storyboardIdentifier="FeedBackVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j17-dY-KbP" customClass="FeedBackVC" customModule="Pregnancy_risk_checker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GuM-S5-NHS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="GlF-RM-LsQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Feedback" id="fOu-CW-gXc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wdK-xZ-mUZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906" y="129"/>
+        </scene>
+        <!--Tab BarVC-->
+        <scene sceneID="fTR-4g-dSt">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="t27-gj-OS4" customClass="TabBarVC" customModule="Pregnancy_risk_checker" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c3M-Tr-520">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="reR-fY-8qI" kind="relationship" relationship="viewControllers" id="yMq-ae-ZmE"/>
+                        <segue destination="j17-dY-KbP" kind="relationship" relationship="viewControllers" id="9hW-jn-VsA"/>
+                        <segue destination="URg-WT-FXS" kind="relationship" relationship="viewControllers" id="HBe-UM-lyv"/>
+                        <segue destination="18t-BF-vrK" kind="relationship" relationship="viewControllers" id="81z-cM-Hb3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6Y-Aj-H6j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="W0e-Jx-KIA">
+            <objects>
+                <viewController storyboardIdentifier="SettingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="18t-BF-vrK" customClass="SettingVC" customModule="Pregnancy_risk_checker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kYG-BW-hD1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="00U-cN-xRy"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Setting" id="O1B-QG-IP9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ww-jl-GbS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3410" y="128"/>
+        </scene>
+        <!--Funds-->
+        <scene sceneID="Rqj-kr-DjQ">
+            <objects>
+                <viewController storyboardIdentifier="FundsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="URg-WT-FXS" customClass="FundsVC" customModule="Pregnancy_risk_checker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r62-aa-oS5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uTK-ml-SeY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Funds" id="gwc-em-zfJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qhn-4g-j3v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2631" y="128"/>
+        </scene>
+    </scenes>
+</document>

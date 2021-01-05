@@ -1,0 +1,6 @@
+framework module Pods_Pregnancy_risk_checkerTests {
+  umbrella header "Pods-Pregnancy risk checkerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

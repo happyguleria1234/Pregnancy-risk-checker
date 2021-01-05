@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03C8072B1EB3719FE5E6BA6B /* Pods_Pregnancy_risk_checkerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7362076A4D941422D60151E /* Pods_Pregnancy_risk_checkerTests.framework */; };
 		1827BA5D25A4870700D2EE9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA5C25A4870700D2EE9C /* AppDelegate.swift */; };
 		1827BA5F25A4870700D2EE9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA5E25A4870700D2EE9C /* SceneDelegate.swift */; };
 		1827BA6125A4870700D2EE9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA6025A4870700D2EE9C /* ViewController.swift */; };
@@ -15,6 +16,20 @@
 		1827BA6925A4870A00D2EE9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1827BA6725A4870A00D2EE9C /* LaunchScreen.storyboard */; };
 		1827BA7425A4870A00D2EE9C /* Pregnancy_risk_checkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA7325A4870A00D2EE9C /* Pregnancy_risk_checkerTests.swift */; };
 		1827BA7F25A4870A00D2EE9C /* Pregnancy_risk_checkerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA7E25A4870A00D2EE9C /* Pregnancy_risk_checkerUITests.swift */; };
+		1827BA9825A4899400D2EE9C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1827BA9725A4899400D2EE9C /* Auth.storyboard */; };
+		1827BA9B25A48C8300D2EE9C /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA9A25A48C8300D2EE9C /* SignInVC.swift */; };
+		1827BA9D25A48C9100D2EE9C /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA9C25A48C9100D2EE9C /* SignUpVC.swift */; };
+		1827BA9F25A48EE600D2EE9C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1827BA9E25A48EE600D2EE9C /* Home.storyboard */; };
+		1827BAA125A4905900D2EE9C /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAA025A4905900D2EE9C /* ForgotPasswordVC.swift */; };
+		1827BAA425A4908E00D2EE9C /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAA325A4908E00D2EE9C /* TabBarVC.swift */; };
+		1827BAA625A490AE00D2EE9C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAA525A490AE00D2EE9C /* HomeVC.swift */; };
+		1827BAA825A490BE00D2EE9C /* FeedBackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAA725A490BE00D2EE9C /* FeedBackVC.swift */; };
+		1827BAAA25A490CD00D2EE9C /* FundsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAA925A490CD00D2EE9C /* FundsVC.swift */; };
+		1827BAAC25A490E900D2EE9C /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAAB25A490E900D2EE9C /* SettingVC.swift */; };
+		1827BAAF25A4910E00D2EE9C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAAE25A4910E00D2EE9C /* ProfileVC.swift */; };
+		1827BAB125A4911F00D2EE9C /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAB025A4911F00D2EE9C /* EditProfileVC.swift */; };
+		873B5076B6124DD14A3BA971 /* Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671EE0B9F364F87B15DC5052 /* Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework */; };
+		B7B0B3C3306851B24E3FC96B /* Pods_Pregnancy_risk_checker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AFC80F5C665D2DFCDBEBBD /* Pods_Pregnancy_risk_checker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +64,27 @@
 		1827BA7A25A4870A00D2EE9C /* Pregnancy risk checkerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pregnancy risk checkerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1827BA7E25A4870A00D2EE9C /* Pregnancy_risk_checkerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pregnancy_risk_checkerUITests.swift; sourceTree = "<group>"; };
 		1827BA8025A4870B00D2EE9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1827BA9725A4899400D2EE9C /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		1827BA9A25A48C8300D2EE9C /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		1827BA9C25A48C9100D2EE9C /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		1827BA9E25A48EE600D2EE9C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		1827BAA025A4905900D2EE9C /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		1827BAA325A4908E00D2EE9C /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		1827BAA525A490AE00D2EE9C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		1827BAA725A490BE00D2EE9C /* FeedBackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackVC.swift; sourceTree = "<group>"; };
+		1827BAA925A490CD00D2EE9C /* FundsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsVC.swift; sourceTree = "<group>"; };
+		1827BAAB25A490E900D2EE9C /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		1827BAAE25A4910E00D2EE9C /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		1827BAB025A4911F00D2EE9C /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		1B4FCD98864F22E088068B5C /* Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.release.xcconfig"; path = "Target Support Files/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3C44850C55A4B0B6A5986B28 /* Pods-Pregnancy risk checkerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pregnancy risk checkerTests.debug.xcconfig"; path = "Target Support Files/Pods-Pregnancy risk checkerTests/Pods-Pregnancy risk checkerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		671EE0B9F364F87B15DC5052 /* Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DE452B3230D29B2DC3073F8 /* Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A7362076A4D941422D60151E /* Pods_Pregnancy_risk_checkerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pregnancy_risk_checkerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9360D842FFE7062D15A2B8D /* Pods-Pregnancy risk checker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pregnancy risk checker.debug.xcconfig"; path = "Target Support Files/Pods-Pregnancy risk checker/Pods-Pregnancy risk checker.debug.xcconfig"; sourceTree = "<group>"; };
+		ACC835DA3C9763435F29B89A /* Pods-Pregnancy risk checkerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pregnancy risk checkerTests.release.xcconfig"; path = "Target Support Files/Pods-Pregnancy risk checkerTests/Pods-Pregnancy risk checkerTests.release.xcconfig"; sourceTree = "<group>"; };
+		C4AFC80F5C665D2DFCDBEBBD /* Pods_Pregnancy_risk_checker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pregnancy_risk_checker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE6761C180E842A0B74EFE9F /* Pods-Pregnancy risk checker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pregnancy risk checker.release.xcconfig"; path = "Target Support Files/Pods-Pregnancy risk checker/Pods-Pregnancy risk checker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7B0B3C3306851B24E3FC96B /* Pods_Pregnancy_risk_checker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C8072B1EB3719FE5E6BA6B /* Pods_Pregnancy_risk_checkerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +108,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				873B5076B6124DD14A3BA971 /* Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06F7E5FFC310925377F5A784 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4AFC80F5C665D2DFCDBEBBD /* Pods_Pregnancy_risk_checker.framework */,
+				671EE0B9F364F87B15DC5052 /* Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework */,
+				A7362076A4D941422D60151E /* Pods_Pregnancy_risk_checkerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1827BA5025A4870700D2EE9C = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +132,8 @@
 				1827BA7225A4870A00D2EE9C /* Pregnancy risk checkerTests */,
 				1827BA7D25A4870A00D2EE9C /* Pregnancy risk checkerUITests */,
 				1827BA5A25A4870700D2EE9C /* Products */,
+				921135D046EE5D062B550980 /* Pods */,
+				06F7E5FFC310925377F5A784 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +150,11 @@
 		1827BA5B25A4870700D2EE9C /* Pregnancy risk checker */ = {
 			isa = PBXGroup;
 			children = (
-				1827BA5C25A4870700D2EE9C /* AppDelegate.swift */,
-				1827BA5E25A4870700D2EE9C /* SceneDelegate.swift */,
-				1827BA6025A4870700D2EE9C /* ViewController.swift */,
-				1827BA6225A4870700D2EE9C /* Main.storyboard */,
-				1827BA6525A4870A00D2EE9C /* Assets.xcassets */,
-				1827BA6725A4870A00D2EE9C /* LaunchScreen.storyboard */,
+				1827BA8D25A4873200D2EE9C /* App */,
+				1827BA8C25A4872A00D2EE9C /* Model */,
+				1827BA8F25A4874600D2EE9C /* Views */,
+				1827BA9025A4874C00D2EE9C /* Controllers */,
+				1827BA9125A4875500D2EE9C /* Resources */,
 				1827BA6A25A4870A00D2EE9C /* Info.plist */,
 			);
 			path = "Pregnancy risk checker";
@@ -128,6 +178,144 @@
 			path = "Pregnancy risk checkerUITests";
 			sourceTree = "<group>";
 		};
+		1827BA8C25A4872A00D2EE9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1827BA9625A487EF00D2EE9C /* JSON Parsing */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1827BA8D25A4873200D2EE9C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1827BA8E25A4873800D2EE9C /* Constant */,
+				1827BA9525A487D100D2EE9C /* Formatting */,
+				1827BA9425A487C300D2EE9C /* Classes */,
+				1827BA9325A487BC00D2EE9C /* Managers */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1827BA8E25A4873800D2EE9C /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		1827BA8F25A4874600D2EE9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1827BA6225A4870700D2EE9C /* Main.storyboard */,
+				1827BA6725A4870A00D2EE9C /* LaunchScreen.storyboard */,
+				1827BA9725A4899400D2EE9C /* Auth.storyboard */,
+				1827BA9E25A48EE600D2EE9C /* Home.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1827BA9025A4874C00D2EE9C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1827BAA225A4906300D2EE9C /* TabBar */,
+				1827BA9925A48C7300D2EE9C /* Auth */,
+				1827BA6025A4870700D2EE9C /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1827BA9125A4875500D2EE9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1827BA9225A4876A00D2EE9C /* Fonts */,
+				1827BA6525A4870A00D2EE9C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1827BA9225A4876A00D2EE9C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1827BA9325A487BC00D2EE9C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		1827BA9425A487C300D2EE9C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1827BA5C25A4870700D2EE9C /* AppDelegate.swift */,
+				1827BA5E25A4870700D2EE9C /* SceneDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1827BA9525A487D100D2EE9C /* Formatting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Formatting;
+			sourceTree = "<group>";
+		};
+		1827BA9625A487EF00D2EE9C /* JSON Parsing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "JSON Parsing";
+			sourceTree = "<group>";
+		};
+		1827BA9925A48C7300D2EE9C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				1827BA9A25A48C8300D2EE9C /* SignInVC.swift */,
+				1827BA9C25A48C9100D2EE9C /* SignUpVC.swift */,
+				1827BAA025A4905900D2EE9C /* ForgotPasswordVC.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		1827BAA225A4906300D2EE9C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1827BAA325A4908E00D2EE9C /* TabBarVC.swift */,
+				1827BAA525A490AE00D2EE9C /* HomeVC.swift */,
+				1827BAA725A490BE00D2EE9C /* FeedBackVC.swift */,
+				1827BAA925A490CD00D2EE9C /* FundsVC.swift */,
+				1827BAAB25A490E900D2EE9C /* SettingVC.swift */,
+				1827BAAD25A490ED00D2EE9C /* Setting */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		1827BAAD25A490ED00D2EE9C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				1827BAAE25A4910E00D2EE9C /* ProfileVC.swift */,
+				1827BAB025A4911F00D2EE9C /* EditProfileVC.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		921135D046EE5D062B550980 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9360D842FFE7062D15A2B8D /* Pods-Pregnancy risk checker.debug.xcconfig */,
+				CE6761C180E842A0B74EFE9F /* Pods-Pregnancy risk checker.release.xcconfig */,
+				9DE452B3230D29B2DC3073F8 /* Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.debug.xcconfig */,
+				1B4FCD98864F22E088068B5C /* Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.release.xcconfig */,
+				3C44850C55A4B0B6A5986B28 /* Pods-Pregnancy risk checkerTests.debug.xcconfig */,
+				ACC835DA3C9763435F29B89A /* Pods-Pregnancy risk checkerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +323,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1827BA8325A4870B00D2EE9C /* Build configuration list for PBXNativeTarget "Pregnancy risk checker" */;
 			buildPhases = (
+				B17138151C3D64EE2B9999AC /* [CP] Check Pods Manifest.lock */,
 				1827BA5525A4870700D2EE9C /* Sources */,
 				1827BA5625A4870700D2EE9C /* Frameworks */,
 				1827BA5725A4870700D2EE9C /* Resources */,
+				40B9911C99633DEB52AA5E4E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +342,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1827BA8625A4870B00D2EE9C /* Build configuration list for PBXNativeTarget "Pregnancy risk checkerTests" */;
 			buildPhases = (
+				A2E85B1DA6AC5001C4700404 /* [CP] Check Pods Manifest.lock */,
 				1827BA6B25A4870A00D2EE9C /* Sources */,
 				1827BA6C25A4870A00D2EE9C /* Frameworks */,
 				1827BA6D25A4870A00D2EE9C /* Resources */,
@@ -170,9 +361,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1827BA8925A4870B00D2EE9C /* Build configuration list for PBXNativeTarget "Pregnancy risk checkerUITests" */;
 			buildPhases = (
+				063E13F7C06C300AB7ED854F /* [CP] Check Pods Manifest.lock */,
 				1827BA7625A4870A00D2EE9C /* Sources */,
 				1827BA7725A4870A00D2EE9C /* Frameworks */,
 				1827BA7825A4870A00D2EE9C /* Resources */,
+				82C3E6F214F5860CD09824BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +425,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1827BA9825A4899400D2EE9C /* Auth.storyboard in Resources */,
+				1827BA9F25A48EE600D2EE9C /* Home.storyboard in Resources */,
 				1827BA6925A4870A00D2EE9C /* LaunchScreen.storyboard in Resources */,
 				1827BA6625A4870A00D2EE9C /* Assets.xcassets in Resources */,
 				1827BA6425A4870700D2EE9C /* Main.storyboard in Resources */,
@@ -254,14 +449,127 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		063E13F7C06C300AB7ED854F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40B9911C99633DEB52AA5E4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pregnancy risk checker/Pods-Pregnancy risk checker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pregnancy risk checker/Pods-Pregnancy risk checker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pregnancy risk checker/Pods-Pregnancy risk checker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82C3E6F214F5860CD09824BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2E85B1DA6AC5001C4700404 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pregnancy risk checkerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B17138151C3D64EE2B9999AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pregnancy risk checker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1827BA5525A4870700D2EE9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1827BAAF25A4910E00D2EE9C /* ProfileVC.swift in Sources */,
+				1827BAA425A4908E00D2EE9C /* TabBarVC.swift in Sources */,
+				1827BAA625A490AE00D2EE9C /* HomeVC.swift in Sources */,
 				1827BA6125A4870700D2EE9C /* ViewController.swift in Sources */,
+				1827BAA825A490BE00D2EE9C /* FeedBackVC.swift in Sources */,
 				1827BA5D25A4870700D2EE9C /* AppDelegate.swift in Sources */,
+				1827BAA125A4905900D2EE9C /* ForgotPasswordVC.swift in Sources */,
+				1827BA9B25A48C8300D2EE9C /* SignInVC.swift in Sources */,
+				1827BAAC25A490E900D2EE9C /* SettingVC.swift in Sources */,
+				1827BAAA25A490CD00D2EE9C /* FundsVC.swift in Sources */,
+				1827BA9D25A48C9100D2EE9C /* SignUpVC.swift in Sources */,
 				1827BA5F25A4870700D2EE9C /* SceneDelegate.swift in Sources */,
+				1827BAB125A4911F00D2EE9C /* EditProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,10 +740,12 @@
 		};
 		1827BA8425A4870B00D2EE9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9360D842FFE7062D15A2B8D /* Pods-Pregnancy risk checker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Pregnancy risk checker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -443,16 +753,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dharmaniApps.Pregnancy-risk-checker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		1827BA8525A4870B00D2EE9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE6761C180E842A0B74EFE9F /* Pods-Pregnancy risk checker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Pregnancy risk checker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,12 +772,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dharmaniApps.Pregnancy-risk-checker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		1827BA8725A4870B00D2EE9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C44850C55A4B0B6A5986B28 /* Pods-Pregnancy risk checkerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +800,7 @@
 		};
 		1827BA8825A4870B00D2EE9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACC835DA3C9763435F29B89A /* Pods-Pregnancy risk checkerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +822,7 @@
 		};
 		1827BA8A25A4870B00D2EE9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DE452B3230D29B2DC3073F8 /* Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +842,7 @@
 		};
 		1827BA8B25A4870B00D2EE9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B4FCD98864F22E088068B5C /* Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

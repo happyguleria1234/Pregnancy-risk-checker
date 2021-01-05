@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests : NSObject
+@end
+@implementation PodsDummy_Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests
+@end
