@@ -578,6 +578,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ye9-SU-PCx" secondAttribute="height" multiplier="1:1" id="7Hc-pz-g9T"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="backButton:" destination="JJG-he-2aW" eventType="touchUpInside" id="DI5-qR-TSz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZP-59-1nS">
                                 <rect key="frame" x="0.0" y="100" width="375" height="24.5"/>
@@ -655,6 +658,9 @@
                                 <state key="normal" image="submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="JJG-he-2aW" eventType="touchUpInside" id="8zb-8Y-iWQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -686,10 +692,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pZF-7p-ssY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTxtFld" destination="gyb-Vg-H8j" id="hFA-oM-64x"/>
+                        <outlet property="emailView" destination="kBC-c2-hfO" id="gbp-j5-N2M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEU-ec-cL7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3445" y="-213"/>
+            <point key="canvasLocation" x="2646" y="-205"/>
         </scene>
     </scenes>
     <resources>

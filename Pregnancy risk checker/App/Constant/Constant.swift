@@ -17,6 +17,10 @@ class Constant: NSObject {
     
     let SignUP = "signUp.php"
     let SignIN = "Login.php"
+    let forgotPassword = "forgetPassword.php"
+    let termsAndCondtion = "https://www.dharmani.com/pregnancyApp/TermsAndConditions.html"
+    let aboutUS = "https://www.dharmani.com/pregnancyApp/AboutUs.html"
+    let privecyPolicy = "https://www.dharmani.com/pregnancyApp/PrivacyPolicy.html"
    
 }
 

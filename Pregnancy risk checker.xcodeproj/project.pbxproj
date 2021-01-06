@@ -11,6 +11,9 @@
 		180686E425A5906E00297E06 /* AppFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180686E125A5906D00297E06 /* AppFunctions.swift */; };
 		180686E525A5906E00297E06 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180686E225A5906D00297E06 /* AppExtensions.swift */; };
 		180686E625A5906E00297E06 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180686E325A5906E00297E06 /* ImagePicker.swift */; };
+		180686F825A5E1B300297E06 /* PrivecyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180686F725A5E1B300297E06 /* PrivecyPolicyVC.swift */; };
+		180686FA25A5E20D00297E06 /* TermsAndConitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180686F925A5E20D00297E06 /* TermsAndConitions.swift */; };
+		180686FC25A5E68D00297E06 /* AboutUS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180686FB25A5E68D00297E06 /* AboutUS.swift */; };
 		1827BA5D25A4870700D2EE9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA5C25A4870700D2EE9C /* AppDelegate.swift */; };
 		1827BA6125A4870700D2EE9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA6025A4870700D2EE9C /* ViewController.swift */; };
 		1827BA6425A4870700D2EE9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1827BA6225A4870700D2EE9C /* Main.storyboard */; };
@@ -80,6 +83,9 @@
 		180686F425A59FCC00297E06 /* LATO-MEDIUM.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-MEDIUM.TTF"; sourceTree = "<group>"; };
 		180686F525A59FCC00297E06 /* LATO-LIGHT.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-LIGHT.TTF"; sourceTree = "<group>"; };
 		180686F625A59FCC00297E06 /* LATO-ITALIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-ITALIC.TTF"; sourceTree = "<group>"; };
+		180686F725A5E1B300297E06 /* PrivecyPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivecyPolicyVC.swift; sourceTree = "<group>"; };
+		180686F925A5E20D00297E06 /* TermsAndConitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConitions.swift; sourceTree = "<group>"; };
+		180686FB25A5E68D00297E06 /* AboutUS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUS.swift; sourceTree = "<group>"; };
 		1827BA5925A4870700D2EE9C /* Pregnancy risk checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pregnancy risk checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1827BA5C25A4870700D2EE9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1827BA6025A4870700D2EE9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -190,8 +196,8 @@
 			children = (
 				1827BA8D25A4873200D2EE9C /* App */,
 				1827BA8C25A4872A00D2EE9C /* Model */,
-				1827BA8F25A4874600D2EE9C /* Views */,
 				1827BA9025A4874C00D2EE9C /* Controllers */,
+				1827BA8F25A4874600D2EE9C /* Views */,
 				1827BA9125A4875500D2EE9C /* Resources */,
 				1827BA6A25A4870A00D2EE9C /* Info.plist */,
 			);
@@ -364,6 +370,9 @@
 			children = (
 				1827BAAE25A4910E00D2EE9C /* ProfileVC.swift */,
 				1827BAB025A4911F00D2EE9C /* EditProfileVC.swift */,
+				180686F725A5E1B300297E06 /* PrivecyPolicyVC.swift */,
+				180686F925A5E20D00297E06 /* TermsAndConitions.swift */,
+				180686FB25A5E68D00297E06 /* AboutUS.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -627,12 +636,14 @@
 				180686E625A5906E00297E06 /* ImagePicker.swift in Sources */,
 				1827BAA425A4908E00D2EE9C /* TabBarVC.swift in Sources */,
 				18833EE225A57ADA00390BFE /* AppConstants.swift in Sources */,
+				180686F825A5E1B300297E06 /* PrivecyPolicyVC.swift in Sources */,
 				18833ED625A57A9300390BFE /* Constant.swift in Sources */,
 				1827BAA625A490AE00D2EE9C /* HomeVC.swift in Sources */,
 				18833EE125A57ADA00390BFE /* ValidationManager.swift in Sources */,
 				18833ED725A57A9300390BFE /* Reachability.swift in Sources */,
 				180686E425A5906E00297E06 /* AppFunctions.swift in Sources */,
 				1827BA6125A4870700D2EE9C /* ViewController.swift in Sources */,
+				180686FC25A5E68D00297E06 /* AboutUS.swift in Sources */,
 				1827BAA825A490BE00D2EE9C /* FeedBackVC.swift in Sources */,
 				1827BA5D25A4870700D2EE9C /* AppDelegate.swift in Sources */,
 				1827BAA125A4905900D2EE9C /* ForgotPasswordVC.swift in Sources */,
@@ -643,6 +654,7 @@
 				1827BAAA25A490CD00D2EE9C /* FundsVC.swift in Sources */,
 				1827BA9D25A48C9100D2EE9C /* SignUpVC.swift in Sources */,
 				18833EDC25A57AC600390BFE /* HelperMethods.swift in Sources */,
+				180686FA25A5E20D00297E06 /* TermsAndConitions.swift in Sources */,
 				18833EDB25A57AC600390BFE /* ChangeBottamColor.swift in Sources */,
 				18833EE325A57ADA00390BFE /* DisplayAlertManager.swift in Sources */,
 				1827BAB125A4911F00D2EE9C /* EditProfileVC.swift in Sources */,

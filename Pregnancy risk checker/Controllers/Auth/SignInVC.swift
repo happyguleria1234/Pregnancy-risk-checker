@@ -41,7 +41,7 @@ class SignInVC: UIViewController {
     
     @IBAction func signUpButtonAction(_ sender: Any) {
         
-        let vc = SignUpVC.instantiate(fromAppStoryboard: .Auth)
+        let vc = TabBarVC.instantiate(fromAppStoryboard: .Home)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
