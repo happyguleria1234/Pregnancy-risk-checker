@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		03C8072B1EB3719FE5E6BA6B /* Pods_Pregnancy_risk_checkerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7362076A4D941422D60151E /* Pods_Pregnancy_risk_checkerTests.framework */; };
+		180686E425A5906E00297E06 /* AppFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180686E125A5906D00297E06 /* AppFunctions.swift */; };
+		180686E525A5906E00297E06 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180686E225A5906D00297E06 /* AppExtensions.swift */; };
+		180686E625A5906E00297E06 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180686E325A5906E00297E06 /* ImagePicker.swift */; };
 		1827BA5D25A4870700D2EE9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA5C25A4870700D2EE9C /* AppDelegate.swift */; };
-		1827BA5F25A4870700D2EE9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA5E25A4870700D2EE9C /* SceneDelegate.swift */; };
 		1827BA6125A4870700D2EE9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA6025A4870700D2EE9C /* ViewController.swift */; };
 		1827BA6425A4870700D2EE9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1827BA6225A4870700D2EE9C /* Main.storyboard */; };
 		1827BA6625A4870A00D2EE9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1827BA6525A4870A00D2EE9C /* Assets.xcassets */; };
@@ -28,6 +30,15 @@
 		1827BAAC25A490E900D2EE9C /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAAB25A490E900D2EE9C /* SettingVC.swift */; };
 		1827BAAF25A4910E00D2EE9C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAAE25A4910E00D2EE9C /* ProfileVC.swift */; };
 		1827BAB125A4911F00D2EE9C /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAB025A4911F00D2EE9C /* EditProfileVC.swift */; };
+		18833ED525A57A9300390BFE /* AFWrapperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833ED125A57A9300390BFE /* AFWrapperClass.swift */; };
+		18833ED625A57A9300390BFE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833ED225A57A9300390BFE /* Constant.swift */; };
+		18833ED725A57A9300390BFE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833ED325A57A9300390BFE /* Reachability.swift */; };
+		18833EDB25A57AC600390BFE /* ChangeBottamColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833ED825A57AC600390BFE /* ChangeBottamColor.swift */; };
+		18833EDC25A57AC600390BFE /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833ED925A57AC600390BFE /* HelperMethods.swift */; };
+		18833EDD25A57AC600390BFE /* Activityloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833EDA25A57AC600390BFE /* Activityloader.swift */; };
+		18833EE125A57ADA00390BFE /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833EDE25A57ADA00390BFE /* ValidationManager.swift */; };
+		18833EE225A57ADA00390BFE /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833EDF25A57ADA00390BFE /* AppConstants.swift */; };
+		18833EE325A57ADA00390BFE /* DisplayAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833EE025A57ADA00390BFE /* DisplayAlertManager.swift */; };
 		873B5076B6124DD14A3BA971 /* Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671EE0B9F364F87B15DC5052 /* Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework */; };
 		B7B0B3C3306851B24E3FC96B /* Pods_Pregnancy_risk_checker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AFC80F5C665D2DFCDBEBBD /* Pods_Pregnancy_risk_checker.framework */; };
 /* End PBXBuildFile section */
@@ -50,9 +61,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180686E125A5906D00297E06 /* AppFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFunctions.swift; sourceTree = "<group>"; };
+		180686E225A5906D00297E06 /* AppExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
+		180686E325A5906E00297E06 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		180686E725A59FCA00297E06 /* LATO-MEDIUMITALIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-MEDIUMITALIC.TTF"; sourceTree = "<group>"; };
+		180686E825A59FCA00297E06 /* LATO-THINITALIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-THINITALIC.TTF"; sourceTree = "<group>"; };
+		180686E925A59FCA00297E06 /* LATO-BOLDITALIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-BOLDITALIC.TTF"; sourceTree = "<group>"; };
+		180686EA25A59FCA00297E06 /* LATO-HEAVYITALIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-HEAVYITALIC.TTF"; sourceTree = "<group>"; };
+		180686EB25A59FCB00297E06 /* LATO-REGULAR.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-REGULAR.TTF"; sourceTree = "<group>"; };
+		180686EC25A59FCB00297E06 /* LATO-BLACKITALIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-BLACKITALIC.TTF"; sourceTree = "<group>"; };
+		180686ED25A59FCB00297E06 /* LATO-BLACK.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-BLACK.TTF"; sourceTree = "<group>"; };
+		180686EE25A59FCB00297E06 /* LATO-HEAVY.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-HEAVY.TTF"; sourceTree = "<group>"; };
+		180686EF25A59FCB00297E06 /* LATO-LIGHTITALIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-LIGHTITALIC.TTF"; sourceTree = "<group>"; };
+		180686F025A59FCB00297E06 /* LATO-BOLD.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-BOLD.TTF"; sourceTree = "<group>"; };
+		180686F125A59FCB00297E06 /* LATO-SEMIBOLDITALIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-SEMIBOLDITALIC.TTF"; sourceTree = "<group>"; };
+		180686F225A59FCB00297E06 /* LATO-THIN.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-THIN.TTF"; sourceTree = "<group>"; };
+		180686F325A59FCC00297E06 /* LATO-SEMIBOLD.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-SEMIBOLD.TTF"; sourceTree = "<group>"; };
+		180686F425A59FCC00297E06 /* LATO-MEDIUM.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-MEDIUM.TTF"; sourceTree = "<group>"; };
+		180686F525A59FCC00297E06 /* LATO-LIGHT.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-LIGHT.TTF"; sourceTree = "<group>"; };
+		180686F625A59FCC00297E06 /* LATO-ITALIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-ITALIC.TTF"; sourceTree = "<group>"; };
 		1827BA5925A4870700D2EE9C /* Pregnancy risk checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pregnancy risk checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1827BA5C25A4870700D2EE9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1827BA5E25A4870700D2EE9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1827BA6025A4870700D2EE9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1827BA6325A4870700D2EE9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1827BA6525A4870A00D2EE9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +105,15 @@
 		1827BAAB25A490E900D2EE9C /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		1827BAAE25A4910E00D2EE9C /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		1827BAB025A4911F00D2EE9C /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		18833ED125A57A9300390BFE /* AFWrapperClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFWrapperClass.swift; sourceTree = "<group>"; };
+		18833ED225A57A9300390BFE /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		18833ED325A57A9300390BFE /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		18833ED825A57AC600390BFE /* ChangeBottamColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeBottamColor.swift; sourceTree = "<group>"; };
+		18833ED925A57AC600390BFE /* HelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
+		18833EDA25A57AC600390BFE /* Activityloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activityloader.swift; sourceTree = "<group>"; };
+		18833EDE25A57ADA00390BFE /* ValidationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
+		18833EDF25A57ADA00390BFE /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		18833EE025A57ADA00390BFE /* DisplayAlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayAlertManager.swift; sourceTree = "<group>"; };
 		1B4FCD98864F22E088068B5C /* Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.release.xcconfig"; path = "Target Support Files/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3C44850C55A4B0B6A5986B28 /* Pods-Pregnancy risk checkerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pregnancy risk checkerTests.debug.xcconfig"; path = "Target Support Files/Pods-Pregnancy risk checkerTests/Pods-Pregnancy risk checkerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		671EE0B9F364F87B15DC5052 /* Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +238,9 @@
 		1827BA8E25A4873800D2EE9C /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				18833ED125A57A9300390BFE /* AFWrapperClass.swift */,
+				18833ED225A57A9300390BFE /* Constant.swift */,
+				18833ED325A57A9300390BFE /* Reachability.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -237,6 +278,22 @@
 		1827BA9225A4876A00D2EE9C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				180686ED25A59FCB00297E06 /* LATO-BLACK.TTF */,
+				180686EC25A59FCB00297E06 /* LATO-BLACKITALIC.TTF */,
+				180686F025A59FCB00297E06 /* LATO-BOLD.TTF */,
+				180686E925A59FCA00297E06 /* LATO-BOLDITALIC.TTF */,
+				180686EE25A59FCB00297E06 /* LATO-HEAVY.TTF */,
+				180686EA25A59FCA00297E06 /* LATO-HEAVYITALIC.TTF */,
+				180686F625A59FCC00297E06 /* LATO-ITALIC.TTF */,
+				180686F525A59FCC00297E06 /* LATO-LIGHT.TTF */,
+				180686EF25A59FCB00297E06 /* LATO-LIGHTITALIC.TTF */,
+				180686F425A59FCC00297E06 /* LATO-MEDIUM.TTF */,
+				180686E725A59FCA00297E06 /* LATO-MEDIUMITALIC.TTF */,
+				180686EB25A59FCB00297E06 /* LATO-REGULAR.TTF */,
+				180686F325A59FCC00297E06 /* LATO-SEMIBOLD.TTF */,
+				180686F125A59FCB00297E06 /* LATO-SEMIBOLDITALIC.TTF */,
+				180686F225A59FCB00297E06 /* LATO-THIN.TTF */,
+				180686E825A59FCA00297E06 /* LATO-THINITALIC.TTF */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -244,6 +301,9 @@
 		1827BA9325A487BC00D2EE9C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				18833EDF25A57ADA00390BFE /* AppConstants.swift */,
+				18833EE025A57ADA00390BFE /* DisplayAlertManager.swift */,
+				18833EDE25A57ADA00390BFE /* ValidationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -251,8 +311,10 @@
 		1827BA9425A487C300D2EE9C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				180686E225A5906D00297E06 /* AppExtensions.swift */,
+				180686E125A5906D00297E06 /* AppFunctions.swift */,
+				180686E325A5906E00297E06 /* ImagePicker.swift */,
 				1827BA5C25A4870700D2EE9C /* AppDelegate.swift */,
-				1827BA5E25A4870700D2EE9C /* SceneDelegate.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -260,6 +322,9 @@
 		1827BA9525A487D100D2EE9C /* Formatting */ = {
 			isa = PBXGroup;
 			children = (
+				18833EDA25A57AC600390BFE /* Activityloader.swift */,
+				18833ED825A57AC600390BFE /* ChangeBottamColor.swift */,
+				18833ED925A57AC600390BFE /* HelperMethods.swift */,
 			);
 			path = Formatting;
 			sourceTree = "<group>";
@@ -557,18 +622,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18833ED525A57A9300390BFE /* AFWrapperClass.swift in Sources */,
 				1827BAAF25A4910E00D2EE9C /* ProfileVC.swift in Sources */,
+				180686E625A5906E00297E06 /* ImagePicker.swift in Sources */,
 				1827BAA425A4908E00D2EE9C /* TabBarVC.swift in Sources */,
+				18833EE225A57ADA00390BFE /* AppConstants.swift in Sources */,
+				18833ED625A57A9300390BFE /* Constant.swift in Sources */,
 				1827BAA625A490AE00D2EE9C /* HomeVC.swift in Sources */,
+				18833EE125A57ADA00390BFE /* ValidationManager.swift in Sources */,
+				18833ED725A57A9300390BFE /* Reachability.swift in Sources */,
+				180686E425A5906E00297E06 /* AppFunctions.swift in Sources */,
 				1827BA6125A4870700D2EE9C /* ViewController.swift in Sources */,
 				1827BAA825A490BE00D2EE9C /* FeedBackVC.swift in Sources */,
 				1827BA5D25A4870700D2EE9C /* AppDelegate.swift in Sources */,
 				1827BAA125A4905900D2EE9C /* ForgotPasswordVC.swift in Sources */,
+				18833EDD25A57AC600390BFE /* Activityloader.swift in Sources */,
 				1827BA9B25A48C8300D2EE9C /* SignInVC.swift in Sources */,
+				180686E525A5906E00297E06 /* AppExtensions.swift in Sources */,
 				1827BAAC25A490E900D2EE9C /* SettingVC.swift in Sources */,
 				1827BAAA25A490CD00D2EE9C /* FundsVC.swift in Sources */,
 				1827BA9D25A48C9100D2EE9C /* SignUpVC.swift in Sources */,
-				1827BA5F25A4870700D2EE9C /* SceneDelegate.swift in Sources */,
+				18833EDC25A57AC600390BFE /* HelperMethods.swift in Sources */,
+				18833EDB25A57AC600390BFE /* ChangeBottamColor.swift in Sources */,
+				18833EE325A57ADA00390BFE /* DisplayAlertManager.swift in Sources */,
 				1827BAB125A4911F00D2EE9C /* EditProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
