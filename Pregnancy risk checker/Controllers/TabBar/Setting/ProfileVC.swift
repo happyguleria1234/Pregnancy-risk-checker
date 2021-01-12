@@ -23,6 +23,8 @@ class ProfileVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func editProfileButton(_ sender: Any) {
+        let vc = EditProfileVC.instantiate(fromAppStoryboard: .Home)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

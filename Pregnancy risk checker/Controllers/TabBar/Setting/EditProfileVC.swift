@@ -25,6 +25,8 @@ class EditProfileVC: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: Any) {
+        let vc = TabBarVC.instantiate(fromAppStoryboard: .Home)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func backButton(_ sender: Any) {
     }

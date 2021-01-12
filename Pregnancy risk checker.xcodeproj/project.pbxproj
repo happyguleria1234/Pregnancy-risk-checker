@@ -275,8 +275,8 @@
 		1827BA9125A4875500D2EE9C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				187EB0EB25AD746A0080D75A /* Images */,
 				1827BA9225A4876A00D2EE9C /* Fonts */,
-				1827BA6525A4870A00D2EE9C /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -375,6 +375,14 @@
 				180686FB25A5E68D00297E06 /* AboutUS.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		187EB0EB25AD746A0080D75A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1827BA6525A4870A00D2EE9C /* Assets.xcassets */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		921135D046EE5D062B550980 /* Pods */ = {

@@ -23,6 +23,11 @@ class SettingVC: UIViewController {
         settingTBView.separatorStyle = .none
         settingTBView.reloadData()
     }
+    
+    @IBAction func gotoProfileVC(_ sender: Any) {
+        let vc = ProfileVC.instantiate(fromAppStoryboard: .Home)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 class settingTBViewCell: UITableViewCell {
