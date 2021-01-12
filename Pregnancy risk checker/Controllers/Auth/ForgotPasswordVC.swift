@@ -19,6 +19,7 @@ class ForgotPasswordVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func submitButton(_ sender: Any) {

@@ -22,7 +22,7 @@ class SignInVC: UIViewController {
     }
     
     @IBAction func forgotPasswordButton(_ sender: Any) {
-        let vc = SignUpVC.instantiate(fromAppStoryboard: .Auth)
+        let vc = ForgotPasswordVC.instantiate(fromAppStoryboard: .Auth)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -41,7 +41,7 @@ class SignInVC: UIViewController {
     
     @IBAction func signUpButtonAction(_ sender: Any) {
         
-        let vc = TabBarVC.instantiate(fromAppStoryboard: .Home)
+        let vc = SignUpVC.instantiate(fromAppStoryboard: .Auth)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -55,14 +55,14 @@ class SignInVC: UIViewController {
             AFWrapperClass.requestPOSTURL(url, params: params, success: { (response) in
                 IJProgressView.shared.hideProgressView()
                 self.messgae = response["message"] as? String ?? ""
-                let status = response["status"] as? Int
-                if status == 1{
+                let status = response["status"] as? String
+                if status == "1"{
                     let allData = response as? [String:Any] ?? [:]
                     print(allData)
                     if let data = allData["user_detail"] as? [String:Any]  {
                         //                        UserDefaults.standard.set(true, forKey: "tokenFString")
                         UserDefaults.standard.set(1, forKey: "tokenFString")
-                        UserDefaults.standard.set(data["id"], forKey: "id")
+                        UserDefaults.standard.set(data["userID"], forKey: "id")
                         UserDefaults.standard.set(data["device_token"], forKey: "authToken")
                         print(data)
                     }

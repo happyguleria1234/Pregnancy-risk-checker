@@ -42,6 +42,7 @@
 		18833EE125A57ADA00390BFE /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833EDE25A57ADA00390BFE /* ValidationManager.swift */; };
 		18833EE225A57ADA00390BFE /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833EDF25A57ADA00390BFE /* AppConstants.swift */; };
 		18833EE325A57ADA00390BFE /* DisplayAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833EE025A57ADA00390BFE /* DisplayAlertManager.swift */; };
+		18C2A76625ADB8340060C9B0 /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2A76525ADB8340060C9B0 /* ChangePasswordVC.swift */; };
 		873B5076B6124DD14A3BA971 /* Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671EE0B9F364F87B15DC5052 /* Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework */; };
 		B7B0B3C3306851B24E3FC96B /* Pods_Pregnancy_risk_checker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AFC80F5C665D2DFCDBEBBD /* Pods_Pregnancy_risk_checker.framework */; };
 /* End PBXBuildFile section */
@@ -120,6 +121,7 @@
 		18833EDE25A57ADA00390BFE /* ValidationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		18833EDF25A57ADA00390BFE /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		18833EE025A57ADA00390BFE /* DisplayAlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayAlertManager.swift; sourceTree = "<group>"; };
+		18C2A76525ADB8340060C9B0 /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
 		1B4FCD98864F22E088068B5C /* Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.release.xcconfig"; path = "Target Support Files/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3C44850C55A4B0B6A5986B28 /* Pods-Pregnancy risk checkerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pregnancy risk checkerTests.debug.xcconfig"; path = "Target Support Files/Pods-Pregnancy risk checkerTests/Pods-Pregnancy risk checkerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		671EE0B9F364F87B15DC5052 /* Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -373,6 +375,7 @@
 				180686F725A5E1B300297E06 /* PrivecyPolicyVC.swift */,
 				180686F925A5E20D00297E06 /* TermsAndConitions.swift */,
 				180686FB25A5E68D00297E06 /* AboutUS.swift */,
+				18C2A76525ADB8340060C9B0 /* ChangePasswordVC.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				18833EE225A57ADA00390BFE /* AppConstants.swift in Sources */,
 				180686F825A5E1B300297E06 /* PrivecyPolicyVC.swift in Sources */,
 				18833ED625A57A9300390BFE /* Constant.swift in Sources */,
+				18C2A76625ADB8340060C9B0 /* ChangePasswordVC.swift in Sources */,
 				1827BAA625A490AE00D2EE9C /* HomeVC.swift in Sources */,
 				18833EE125A57ADA00390BFE /* ValidationManager.swift in Sources */,
 				18833ED725A57A9300390BFE /* Reachability.swift in Sources */,

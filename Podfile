@@ -12,6 +12,8 @@ target 'Pregnancy risk checker' do
     pod 'Alamofire', '~> 5.2'
     pod 'SVProgressHUD-0.8.1'
     pod 'SDWebImage', '~> 4.0'
+    pod 'SKCountryPicker'
+
 
   target 'Pregnancy risk checkerTests' do
     inherit! :search_paths

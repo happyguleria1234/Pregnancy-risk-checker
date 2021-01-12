@@ -5,6 +5,7 @@ PODS:
   - SDWebImage (4.4.8):
     - SDWebImage/Core (= 4.4.8)
   - SDWebImage/Core (4.4.8)
+  - SKCountryPicker (1.2.9)
   - SVProgressHUD-0.8.1 (0.8)
 
 DEPENDENCIES:
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - SCLAlertView
   - SDWebImage (~> 4.0)
+  - SKCountryPicker
   - SVProgressHUD-0.8.1
 
 SPEC REPOS:
@@ -20,6 +22,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - SCLAlertView
     - SDWebImage
+    - SKCountryPicker
     - SVProgressHUD-0.8.1
 
 SPEC CHECKSUMS:
@@ -27,8 +30,9 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
+  SKCountryPicker: 7ad1e7dfb482cfb26855e33c2d70dbf1eaf218fe
   SVProgressHUD-0.8.1: ee9e6e58b5b5ffaf3f1a62c2dc409763470df143
 
-PODFILE CHECKSUM: 7ffb40bb66d732c2cd8078fdb7e6abb115feaccb
+PODFILE CHECKSUM: 56689007491b324b8d535a9fd95222deee5a04bf
 
 COCOAPODS: 1.9.3

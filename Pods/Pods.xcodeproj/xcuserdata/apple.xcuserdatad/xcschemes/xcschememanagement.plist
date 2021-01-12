@@ -53,12 +53,26 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>SVProgressHUD-0.8.1.xcscheme</key>
+		<key>SKCountryPicker-CountryPickerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>SKCountryPicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>7</integer>
+		</dict>
+		<key>SVProgressHUD-0.8.1.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>9</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

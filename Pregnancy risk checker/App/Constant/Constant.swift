@@ -21,7 +21,10 @@ class Constant: NSObject {
     let termsAndCondtion = "https://www.dharmani.com/pregnancyApp/TermsAndConditions.html"
     let aboutUS = "https://www.dharmani.com/pregnancyApp/AboutUs.html"
     let privecyPolicy = "https://www.dharmani.com/pregnancyApp/PrivacyPolicy.html"
-   
+    let ChangePassword = "changePassword.php"
+    let profile = "getProfileDetails.php"
+    let editProfile = "editProfile.php"
+    let feedBack = "feedBack.php"
 }
 
 class Singleton  {

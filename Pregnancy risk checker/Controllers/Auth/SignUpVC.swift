@@ -72,15 +72,14 @@ class SignUpVC: UIViewController {
                 AFWrapperClass.requestPOSTURL(url, params: params, success: { (response) in
                     IJProgressView.shared.hideProgressView()
                     self.messgae = response["message"] as? String ?? ""
-                    let status = response["status"] as? Int
-                    if status == 1{
-    //                    UserDefaults.standard.set(true, forKey: "tokenFString")
+                    let status = response["status"] as? String
+                    if status == "1"{
+//                        UserDefaults.standard.set(true, forKey: "tokenFString")
                         UserDefaults.standard.set(1, forKey: "tokenFString")
-
                         let allData = response as? [String:Any] ?? [:]
                         print(allData)
                         if let data = allData["data"] as? [String:Any]  {
-                            UserDefaults.standard.set(data["id"], forKey: "id")
+                            UserDefaults.standard.set(data["userID"], forKey: "id")
                             print(data)
                         }
                          let vc = TabBarVC.instantiate(fromAppStoryboard: .Home)

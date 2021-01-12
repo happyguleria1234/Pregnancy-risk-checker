@@ -54,6 +54,9 @@ extension SettingVC : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0{
             
+            let vc = ChangePasswordVC.instantiate(fromAppStoryboard: .Home)
+            self.navigationController?.pushViewController(vc, animated: true)
+            
         }else if indexPath.row == 1{
             
         }else if indexPath.row == 2{
