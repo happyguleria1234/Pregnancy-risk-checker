@@ -15,6 +15,9 @@ class AboutUS: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let link = URL(string:"https://www.dharmani.com/pregnancyApp/AboutUs.html")!
+        let request = URLRequest(url: link)
+        webKitView.load(request)
         // Do any additional setup after loading the view.
     }
     

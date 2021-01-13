@@ -54,16 +54,23 @@ extension SettingVC : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0{
             
-            let vc = ChangePasswordVC.instantiate(fromAppStoryboard: .Home)
+            let vc = AboutUS.instantiate(fromAppStoryboard: .Home)
             self.navigationController?.pushViewController(vc, animated: true)
             
         }else if indexPath.row == 1{
             
-        }else if indexPath.row == 2{
             let vc = PrivecyPolicyVC.instantiate(fromAppStoryboard: .Home)
             self.navigationController?.pushViewController(vc, animated: true)
+            
+        }else if indexPath.row == 2{
+            
+            let vc = TermsAndConitions.instantiate(fromAppStoryboard: .Home)
+            self.navigationController?.pushViewController(vc, animated: true)
+            
         }else if indexPath.row == 3{
-         
+            
+            let vc = ChangePasswordVC.instantiate(fromAppStoryboard: .Home)
+            self.navigationController?.pushViewController(vc, animated: true)
             
         }else if indexPath.row == 4{
             let dialogMessage = UIAlertController(title: Constant.shared.appTitle, message: "Are you sure you want to Logout?", preferredStyle: .alert)

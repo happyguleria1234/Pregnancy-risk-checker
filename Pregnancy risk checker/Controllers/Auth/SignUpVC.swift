@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpVC: UIViewController {
+class SignUpVC: UIViewController ,UITextFieldDelegate{
 
     @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var passwordTxtFld: UITextField!
@@ -26,6 +26,26 @@ class SignUpVC: UIViewController {
     @IBAction func signInbuttonAction(_ sender: Any) {
         let vc = SignInVC.instantiate(fromAppStoryboard: .Auth)
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == nameTxtFld {
+            nameView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            emailView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            passwordView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            
+        } else if textField == emailTxtView{
+            
+            nameView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            emailView.borderColor =  #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            passwordView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        }
+        else if textField == passwordTxtFld{
+            
+            nameView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            emailView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            passwordView.borderColor =  #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+        }
     }
     
     @IBAction func signupButtonAction(_ sender: Any) {

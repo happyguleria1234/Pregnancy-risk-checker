@@ -207,10 +207,10 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
     }
     
     func editProfile() {
-        let id = UserDefaults.standard.value(forKey: "id") ?? ""
         if Reachability.isConnectedToNetwork() == true {
             print("Internet connection OK")
             IJProgressView.shared.showProgressView()
+            let id = UserDefaults.standard.value(forKey: "id") ?? ""
             let url = Constant.shared.baseUrl + Constant.shared.editProfile
             print(url)
             let parms : [String:Any] = ["userID" : id,"name" : nameTxtFld.text ?? "","bio" : bioTxtView.text ?? "","profileImage" : base64String,"countryName" : countryName ?? ""]
@@ -244,6 +244,29 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
     }
     
     
+    func updateData() {
+        if Reachability.isConnectedToNetwork() == true {
+            IJProgressView.shared.showProgressView()
+            let id = UserDefaults.standard.value(forKey: "id") ?? ""
+            let url = Constant.shared.baseUrl + Constant.shared.editProfile
+            print(url)
+            let parms : [String:Any] = ["userID" : id,"name" : nameTxtFld.text ?? "","bio" : bioTxtView.text ?? "","profileImage" : base64String,"countryName" : countryName ]
+            print(parms)
+            AFWrapperClass.requestPOSTURL(url, params: parms) { (response) in
+                IJProgressView.shared.hideProgressView()
+                print(response)
+            } failure: { (error) in
+                IJProgressView.shared.hideProgressView()
+                alert(Constant.shared.appTitle, message: error.localizedDescription, view: self)
+                print(error)
+            }
+
+        }else{
+            
+        }
+    }
+    
+    
     @IBAction func backButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -253,7 +276,7 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
     }
     
     @IBAction func submitButton(_ sender: Any) {
-        editProfile()
+        updateData()
     }
     
 }

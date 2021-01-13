@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignInVC: UIViewController {
+class SignInVC: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var passwordTxtFld: UITextField!
@@ -26,6 +26,20 @@ class SignInVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == emailTxtFld {
+            
+            emailView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            passwordView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            
+        } else if textField == passwordTxtFld{
+            
+            emailView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            passwordView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+        }
+    }
+    
     @IBAction func signInButtonAction(_ sender: Any) {
         if (emailTxtFld.text?.isEmpty)!{
             
@@ -38,6 +52,8 @@ class SignInVC: UIViewController {
         }
         
     }
+    
+    
     
     @IBAction func signUpButtonAction(_ sender: Any) {
         

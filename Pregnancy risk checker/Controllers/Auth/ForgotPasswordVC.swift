@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ForgotPasswordVC: UIViewController {
+class ForgotPasswordVC: UIViewController , UITextFieldDelegate{
     
     @IBOutlet weak var emailView: UIView!
     @IBOutlet weak var emailTxtFld: UITextField!
