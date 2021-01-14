@@ -14,6 +14,7 @@
 		180686F825A5E1B300297E06 /* PrivecyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180686F725A5E1B300297E06 /* PrivecyPolicyVC.swift */; };
 		180686FA25A5E20D00297E06 /* TermsAndConitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180686F925A5E20D00297E06 /* TermsAndConitions.swift */; };
 		180686FC25A5E68D00297E06 /* AboutUS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180686FB25A5E68D00297E06 /* AboutUS.swift */; };
+		180C226025B05D9300CF955E /* ArrayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C225F25B05D9300CF955E /* ArrayData.swift */; };
 		1827BA5D25A4870700D2EE9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA5C25A4870700D2EE9C /* AppDelegate.swift */; };
 		1827BA6125A4870700D2EE9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA6025A4870700D2EE9C /* ViewController.swift */; };
 		1827BA6425A4870700D2EE9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1827BA6225A4870700D2EE9C /* Main.storyboard */; };
@@ -87,6 +88,7 @@
 		180686F725A5E1B300297E06 /* PrivecyPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivecyPolicyVC.swift; sourceTree = "<group>"; };
 		180686F925A5E20D00297E06 /* TermsAndConitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConitions.swift; sourceTree = "<group>"; };
 		180686FB25A5E68D00297E06 /* AboutUS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUS.swift; sourceTree = "<group>"; };
+		180C225F25B05D9300CF955E /* ArrayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayData.swift; sourceTree = "<group>"; };
 		1827BA5925A4870700D2EE9C /* Pregnancy risk checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pregnancy risk checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1827BA5C25A4870700D2EE9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1827BA6025A4870700D2EE9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				18833ED125A57A9300390BFE /* AFWrapperClass.swift */,
 				18833ED225A57A9300390BFE /* Constant.swift */,
 				18833ED325A57A9300390BFE /* Reachability.swift */,
+				180C225F25B05D9300CF955E /* ArrayData.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				180686E525A5906E00297E06 /* AppExtensions.swift in Sources */,
 				1827BAAC25A490E900D2EE9C /* SettingVC.swift in Sources */,
 				1827BAAA25A490CD00D2EE9C /* FundsVC.swift in Sources */,
+				180C226025B05D9300CF955E /* ArrayData.swift in Sources */,
 				1827BA9D25A48C9100D2EE9C /* SignUpVC.swift in Sources */,
 				18833EDC25A57AC600390BFE /* HelperMethods.swift in Sources */,
 				180686FA25A5E20D00297E06 /* TermsAndConitions.swift in Sources */,

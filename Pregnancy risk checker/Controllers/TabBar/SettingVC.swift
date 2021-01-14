@@ -116,12 +116,12 @@ extension SettingVC : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0{
             
-            let vc = AboutUS.instantiate(fromAppStoryboard: .Home)
+            let vc = ChangePasswordVC.instantiate(fromAppStoryboard: .Home)
             self.navigationController?.pushViewController(vc, animated: true)
             
         }else if indexPath.row == 1{
             
-            let vc = PrivecyPolicyVC.instantiate(fromAppStoryboard: .Home)
+            let vc = AboutUS.instantiate(fromAppStoryboard: .Home)
             self.navigationController?.pushViewController(vc, animated: true)
             
         }else if indexPath.row == 2{
@@ -131,7 +131,7 @@ extension SettingVC : UITableViewDelegate , UITableViewDataSource {
             
         }else if indexPath.row == 3{
             
-            let vc = ChangePasswordVC.instantiate(fromAppStoryboard: .Home)
+            let vc = PrivecyPolicyVC.instantiate(fromAppStoryboard: .Home)
             self.navigationController?.pushViewController(vc, animated: true)
             
         }else if indexPath.row == 4{
