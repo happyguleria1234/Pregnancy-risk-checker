@@ -22,7 +22,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        getData()
+        
         nameTxtFld.isUserInteractionEnabled = false
         emailTxtFld.isUserInteractionEnabled = false
         bioTxtView.isUserInteractionEnabled = false
@@ -41,6 +41,13 @@ class ProfileVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        getData()
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     
     func getData() {

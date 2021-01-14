@@ -10,6 +10,8 @@ import UIKit
 
 class HomeVC: UIViewController {
 
+    @IBOutlet weak var detailsTBView: UITableView!
+    @IBOutlet weak var detailsView: UIView!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var dataTBView: UITableView!
     var alldataArray = [AllData]()
@@ -57,14 +59,42 @@ class HomeVC: UIViewController {
                              "Risks associated with skin problems such as eczema, psoriasis and polymorphic eruption of pregnancy",
                              "Risks associated with problems such as fibroid and ovarian cyst",
                              "Risks associated with current and previous cancer diagnosis and treatment",""]
+    var titleArry2 = ["Previous caesarean section",
+                      "Previous normal vaginal birth",
+                      "Previous induced birth",
+                      "Previous miscarriage",
+                      "Previous stillbirth",
+                      "Previous preterm birth",
+                      "Previous forceps or vacuum birth",
+                      "Previous major vaginal or perineum tear",
+                      "Previous Group B Strep infection",
+                      "Previous Shoulder dystocia",
+                      "Previous major blood loss in labour",
+                      "Previous blood clot"]
+    var descriptionArray2 = ["Risks associated with current pregnancy if you have had previous caesarean delivery",
+                             "Risks associated with current pregnancy if you have had normal birth",
+                             "Risks associated with current pregnancy if your last birth was induced",
+                             "Risks associated with a previous miscarriage",
+                             "Risks associated with a previous stillborn",
+                             "Risks associated with a previous preterm birth",
+                             "Risks associated with a forceps and vacuum cup birth",
+                             "Risks associated with a previous significant tear",
+                             "Risks associated with a previous Group B streptococcus infection",
+                             "Risks associated with a previous Group B streptococcus infection",
+                             "Risks associated with a previous major bleeding after delivery",
+                             "Rates of delivery routes, complications and more"]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataTBView.separatorStyle = .none
         // Do any additional setup after loading the view.
-        
+        detailsView.isHidden = true
+        dataTBView.reloadData()
     }
     
-
+    @IBAction func backButtonAction(_ sender: Any) {
+        self.detailsView.isHidden = true
+    }
+    
     @IBAction func searchButtonAction(_ sender: Any) {
     }
 }
@@ -83,20 +113,44 @@ class DataTBViewCell: UITableViewCell {
 
 extension HomeVC : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titleArray.count
+        
+        if tableView == dataTBView{
+            return titleArray.count
+
+        }else{
+            return titleArray.count
+
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DataTBViewCell", for: indexPath) as! DataTBViewCell
-        cell.titleLbl.text = titleArray[indexPath.row]
-        cell.descriptionLbl.text = descriptionArray[indexPath.row]
-        cell.showImage.image = UIImage(named: imagesArray[indexPath.row])
-        return cell
+        
+        if tableView == dataTBView{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DataTBViewCell", for: indexPath) as! DataTBViewCell
+            cell.titleLbl.text = titleArray[indexPath.row]
+            cell.descriptionLbl.text = descriptionArray[indexPath.row]
+            cell.showImage.image = UIImage(named: imagesArray[indexPath.row])
+            return cell
+
+        }else{
+            let cellB = tableView.dequeueReusableCell(withIdentifier: "DetailsTBViewCell", for: indexPath) as! DetailsTBViewCell
+//            cellB.titleLbl.text = titleArry2[indexPath.row]
+//            cellB.showImage.image = UIImage(named: imagesArray[indexPath.row])
+            return cellB
+        }
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == dataTBView {
+            self.detailsView.isHidden = false
+            self.detailsTBView.reloadData()
+        }else{
+            
+        }
+    }
 }
 
 struct AllData {
@@ -108,3 +162,15 @@ struct AllData {
         self.description = description
     }
 }
+
+class DetailsTBViewCell: UITableViewCell {
+    
+    @IBOutlet weak var showImage: UIImageView!
+    @IBOutlet weak var descriptionLbl: UILabel!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var dataView: UIView!
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+    }
+}
+

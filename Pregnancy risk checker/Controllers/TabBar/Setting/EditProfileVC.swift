@@ -8,7 +8,7 @@
 
 import UIKit
 import SKCountryPicker
-
+import Alamofire
 
 class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -30,6 +30,7 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
     var imagePicker: ImagePicker!
     var flagBase64 = String()
     var countryName = String()
+    var userDetails = [String:Any]()
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
@@ -244,26 +245,56 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
     }
     
     
-    func updateData() {
-        if Reachability.isConnectedToNetwork() == true {
-            IJProgressView.shared.showProgressView()
-            let id = UserDefaults.standard.value(forKey: "id") ?? ""
-            let url = Constant.shared.baseUrl + Constant.shared.editProfile
-            print(url)
-            let parms : [String:Any] = ["userID" : id,"name" : nameTxtFld.text ?? "","bio" : bioTxtView.text ?? "","profileImage" : base64String,"countryName" : countryName ]
-            print(parms)
-            AFWrapperClass.requestPOSTURL(url, params: parms) { (response) in
-                IJProgressView.shared.hideProgressView()
-                print(response)
-            } failure: { (error) in
-                IJProgressView.shared.hideProgressView()
-                alert(Constant.shared.appTitle, message: error.localizedDescription, view: self)
-                print(error)
-            }
-
-        }else{
+    func updateData()  {
             
-        }
+            let id = UserDefaults.standard.value(forKey: "id") ?? ""
+            
+            userDetails = ["userID" : id,"name" : nameTxtFld.text ?? "","bio" : bioTxtView.text ?? "","countryName" : countryName]
+            
+            let url = Constant.shared.baseUrl + Constant.shared.editProfile
+            IJProgressView.shared.showProgressView()
+            print(self.userDetails)
+            AF.upload(multipartFormData: { (multipartFormData) in
+                for (key, value) in self.userDetails {
+                    multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+                }
+                print(multipartFormData)
+                let imageData1 = self.profileImage.image!.jpegData(compressionQuality: 0.3)
+                    multipartFormData.append(imageData1!, withName: "profileImage" , fileName: "\(String.random(length: 8))", mimeType: "image/jpeg")
+                
+            }, to: url, usingThreshold: UInt64.init(), method: .post, headers: nil, interceptor: nil, fileManager: .default)
+                
+                .uploadProgress(closure: { (progress) in
+                    print("Upload Progress: \(progress.fractionCompleted)")
+                })
+                .responseJSON { (response) in
+                    IJProgressView.shared.hideProgressView()
+                    switch response.result {
+                    case .success(let value):
+                        if let JSON = value as? [String: Any] {
+                            if let dataDict = JSON as? NSDictionary{
+                                let message = dataDict["message"] as? String ?? ""
+                                let status = JSON["status"] as? String ?? ""
+                                if status == "1"{
+                                    showAlertMessage(title: Constant.shared.appTitle, message: message, okButton: "Ok", controller: self) {
+                                        self.navigationController?.popViewController(animated: true)
+                                    }
+                                }else{
+                                    alert(Constant.shared.appTitle, message: message, view: self)
+                                }
+                            }
+                        }
+                        
+                    case .failure(let error):
+                        if let JSON2 = error as? AFError {
+                            print(JSON2)
+                            alert(Constant.shared.appTitle, message: "\(JSON2)", view: self)
+                        }
+                        break
+                        
+                    }
+                    self.userDetails.removeAll()
+            }
     }
     
     
@@ -285,5 +316,18 @@ extension EditProfileVC: ImagePickerDelegate {
     
     func didSelect(image: UIImage?) {
         self.profileImage.image = image
+    }
+}
+extension String {
+    
+    static func random(length: Int = 8) -> String {
+        let base = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        var randomString: String = ""
+        
+        for _ in 0..<length {
+            let randomValue = arc4random_uniform(UInt32(base.count))
+            randomString += "\(base[base.index(base.startIndex, offsetBy: Int(randomValue))])"
+        }
+        return randomString
     }
 }
