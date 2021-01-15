@@ -21,6 +21,7 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     @IBOutlet weak var dataTBView: UITableView!
     var issearchSelected = false
     var isdetailSelected = false
+    var issubCatSelected = false
     var currentArray = [String]()
     var currentArrayDes = [String]()
     var selectedIndex = Int()
@@ -243,14 +244,18 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "DataTBViewCell") as! DataTBViewCell
                 var selectedArrayForTitle = [String]()
                 var selectedArrayForDes = [String]()
+//                var selectedArrayForImg = [String]()
     //            var imgArray = [String]()
                 switch selectedIndex {
                 case 0:
                     selectedArrayForTitle = subArray1
                     selectedArrayForDes = subArrayDes1
+//                    selectedArrayForImg = subArrayImg1
                 case 1:
                     selectedArrayForTitle = subArray2
                     selectedArrayForDes = subArrayDes2
+//                    selectedArrayForImg = subArrayImg2
+
                 case 2:
                     selectedArrayForTitle = subArray3
                     selectedArrayForDes = subArrayDes3
@@ -320,6 +325,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 if selectedArrayForTitle.count > 0 {
                     cell.titleLbl.text = selectedArrayForTitle[indexPath.row]
                     cell.descriptionLbl.text = selectedArrayForDes[indexPath.row]
+//                    cell.showImage.image = UIImage(named: selectedArrayForImg[indexPath.row])
                 }
                 return cell
             }else{
@@ -351,6 +357,14 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
             self.titleLbl.text = titleArray[indexPath.row]
             DispatchQueue.main.async {
                 self.dataTBView.reloadData()
+                
+                if self.issubCatSelected == true {
+                    
+                }else{
+                    let vc = SubCatDetailsVC.instantiate(fromAppStoryboard: .Home)
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    self.issubCatSelected = false
+                }
             }
         }
         

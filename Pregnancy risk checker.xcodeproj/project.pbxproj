@@ -50,6 +50,7 @@
 		185F37F425AF11F4009ABA72 /* LATO-MEDIUMITALIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 185F37E425AF11F4009ABA72 /* LATO-MEDIUMITALIC.TTF */; };
 		185F37F525AF11F4009ABA72 /* LATO-SEMIBOLD.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 185F37E525AF11F4009ABA72 /* LATO-SEMIBOLD.TTF */; };
 		185F37F625AF11F4009ABA72 /* LATO-THIN.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 185F37E625AF11F4009ABA72 /* LATO-THIN.TTF */; };
+		1879A94225B182970042AEA6 /* SubCatDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A94125B182970042AEA6 /* SubCatDetailsVC.swift */; };
 		18833ED525A57A9300390BFE /* AFWrapperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833ED125A57A9300390BFE /* AFWrapperClass.swift */; };
 		18833ED625A57A9300390BFE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833ED225A57A9300390BFE /* Constant.swift */; };
 		18833ED725A57A9300390BFE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833ED325A57A9300390BFE /* Reachability.swift */; };
@@ -130,6 +131,7 @@
 		185F37E525AF11F4009ABA72 /* LATO-SEMIBOLD.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-SEMIBOLD.TTF"; sourceTree = "<group>"; };
 		185F37E625AF11F4009ABA72 /* LATO-THIN.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-THIN.TTF"; sourceTree = "<group>"; };
 		185F384225AF16C1009ABA72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Pregnancy risk checker/Info.plist"; sourceTree = "<group>"; };
+		1879A94125B182970042AEA6 /* SubCatDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCatDetailsVC.swift; sourceTree = "<group>"; };
 		18833ED125A57A9300390BFE /* AFWrapperClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFWrapperClass.swift; sourceTree = "<group>"; };
 		18833ED225A57A9300390BFE /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		18833ED325A57A9300390BFE /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 			children = (
 				1827BAA325A4908E00D2EE9C /* TabBarVC.swift */,
 				1827BAA525A490AE00D2EE9C /* HomeVC.swift */,
+				1879A94125B182970042AEA6 /* SubCatDetailsVC.swift */,
 				1827BAA725A490BE00D2EE9C /* FeedBackVC.swift */,
 				1827BAA925A490CD00D2EE9C /* FundsVC.swift */,
 				1827BAAB25A490E900D2EE9C /* SettingVC.swift */,
@@ -686,6 +689,7 @@
 				18833ED625A57A9300390BFE /* Constant.swift in Sources */,
 				18C2A76625ADB8340060C9B0 /* ChangePasswordVC.swift in Sources */,
 				1827BAA625A490AE00D2EE9C /* HomeVC.swift in Sources */,
+				1879A94225B182970042AEA6 /* SubCatDetailsVC.swift in Sources */,
 				18833EE125A57ADA00390BFE /* ValidationManager.swift in Sources */,
 				18833ED725A57A9300390BFE /* Reachability.swift in Sources */,
 				180686E425A5906E00297E06 /* AppFunctions.swift in Sources */,
