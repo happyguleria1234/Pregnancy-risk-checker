@@ -26,7 +26,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home-->
+        <!--HomeVC-->
         <scene sceneID="BhF-Jn-xv3">
             <objects>
                 <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="reR-fY-8qI" customClass="HomeVC" customModule="Pregnancy_risk_checker" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,7 +44,7 @@
                                 <rect key="frame" x="0.0" y="26.5" width="375" height="47"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgg-md-EEM">
-                                        <rect key="frame" x="164.5" y="13.5" width="46" height="20"/>
+                                        <rect key="frame" x="165" y="13.5" width="45.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -124,16 +124,16 @@
                                                     <rect key="frame" x="0.0" y="16" width="337.5" height="171"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tNG-ti-thW">
-                                                            <rect key="frame" x="15" y="52" width="219.5" height="67"/>
+                                                            <rect key="frame" x="15" y="51" width="219.5" height="69"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous  pregnancy and birth" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vb-rW-NDe">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="219.5" height="42"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="219.5" height="43.5"/>
                                                                     <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYI-UK-hhc">
-                                                                    <rect key="frame" x="0.0" y="47" width="219.5" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="48.5" width="219.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -258,7 +258,7 @@
                             <constraint firstItem="PQd-iI-2Lg" firstAttribute="leading" secondItem="FUZ-VP-MNa" secondAttribute="leading" id="y8W-uw-02r"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home-act" id="a8x-zc-3JQ"/>
+                    <navigationItem key="navigationItem" id="Shy-kI-agc"/>
                     <connections>
                         <outlet property="backButton" destination="m6v-gw-46g" id="9I5-Ph-uaW"/>
                         <outlet property="backButtonImage" destination="gmg-sV-czC" id="x85-Df-Xgc"/>
@@ -273,7 +273,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V0e-cR-iEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="132.68365817091455"/>
+            <point key="canvasLocation" x="2039.2" y="-263.11844077961024"/>
         </scene>
         <!--Sub Cat DetailsVC-->
         <scene sceneID="TwM-fh-PHp">
@@ -351,16 +351,20 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G04-k8-AZW">
                                                             <rect key="frame" x="0.0" y="4" width="10" height="154"/>
                                                         </imageView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1YL-aj-XgW">
+                                                            <rect key="frame" x="0.0" y="4" width="10" height="154"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nZS-uU-zi6">
                                                             <rect key="frame" x="20" y="57.5" width="304" height="47.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous  pregnancy and birth" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIa-Y6-ioP">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Previous  pregnancy and birth" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIa-Y6-ioP">
                                                                     <rect key="frame" x="0.0" y="0.0" width="304" height="22"/>
                                                                     <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMP-ZM-jPJ">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMP-ZM-jPJ">
                                                                     <rect key="frame" x="0.0" y="27" width="304" height="20.5"/>
                                                                     <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -377,11 +381,15 @@
                                                     <constraints>
                                                         <constraint firstItem="nZS-uU-zi6" firstAttribute="centerY" secondItem="G04-k8-AZW" secondAttribute="centerY" id="2FE-hQ-fsK"/>
                                                         <constraint firstItem="G04-k8-AZW" firstAttribute="leading" secondItem="FJ4-PV-22o" secondAttribute="leading" id="5hr-5V-1W8"/>
+                                                        <constraint firstItem="1YL-aj-XgW" firstAttribute="centerY" secondItem="G04-k8-AZW" secondAttribute="centerY" id="6nR-u0-WMa"/>
                                                         <constraint firstItem="nZS-uU-zi6" firstAttribute="leading" secondItem="G04-k8-AZW" secondAttribute="trailing" constant="10" id="C9g-b1-M4S"/>
                                                         <constraint firstItem="G04-k8-AZW" firstAttribute="width" secondItem="FJ4-PV-22o" secondAttribute="width" multiplier="0.03" id="MV7-Dv-55l"/>
                                                         <constraint firstItem="nZS-uU-zi6" firstAttribute="width" secondItem="FJ4-PV-22o" secondAttribute="width" multiplier="0.9" id="ZQ9-2l-yDX"/>
+                                                        <constraint firstItem="1YL-aj-XgW" firstAttribute="centerX" secondItem="G04-k8-AZW" secondAttribute="centerX" id="dqF-wZ-nsr"/>
+                                                        <constraint firstItem="1YL-aj-XgW" firstAttribute="height" secondItem="G04-k8-AZW" secondAttribute="height" id="h28-VT-4BN"/>
                                                         <constraint firstItem="G04-k8-AZW" firstAttribute="height" secondItem="FJ4-PV-22o" secondAttribute="height" multiplier="0.953216" id="j2X-8g-0u6"/>
                                                         <constraint firstItem="G04-k8-AZW" firstAttribute="centerY" secondItem="FJ4-PV-22o" secondAttribute="centerY" id="ji8-IG-PZC"/>
+                                                        <constraint firstItem="1YL-aj-XgW" firstAttribute="width" secondItem="G04-k8-AZW" secondAttribute="width" id="tG7-8y-3hV"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -395,6 +403,7 @@
                                         <connections>
                                             <outlet property="desLbl" destination="QMP-ZM-jPJ" id="8lU-UX-swe"/>
                                             <outlet property="iconImgs" destination="G04-k8-AZW" id="s0H-8e-HCM"/>
+                                            <outlet property="setColorView" destination="1YL-aj-XgW" id="wAJ-1G-vk8"/>
                                             <outlet property="titleLbl" destination="CIa-Y6-ioP" id="x9d-1l-q1u"/>
                                         </connections>
                                     </tableViewCell>
@@ -431,11 +440,12 @@
                     </view>
                     <connections>
                         <outlet property="detailsTBView" destination="Hmw-B7-0mC" id="hQ7-Gk-50A"/>
+                        <outlet property="titleLbl" destination="clb-c4-Kq5" id="FNz-ed-Gnm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqp-qP-7oX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="801.94902548725645"/>
+            <point key="canvasLocation" x="1100" y="461"/>
         </scene>
         <!--Feedback-->
         <scene sceneID="UdA-Mo-Zqv">
@@ -675,7 +685,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdK-xZ-mUZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1904.8" y="128.18590704647679"/>
+            <point key="canvasLocation" x="2828" y="-263.11844077961024"/>
         </scene>
         <!--Tab BarVC-->
         <scene sceneID="fTR-4g-dSt">
@@ -688,7 +698,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="reR-fY-8qI" kind="relationship" relationship="viewControllers" id="yMq-ae-ZmE"/>
+                        <segue destination="lUq-73-aSI" kind="relationship" relationship="viewControllers" id="yMq-ae-ZmE"/>
                         <segue destination="j17-dY-KbP" kind="relationship" relationship="viewControllers" id="9hW-jn-VsA"/>
                         <segue destination="URg-WT-FXS" kind="relationship" relationship="viewControllers" id="HBe-UM-lyv"/>
                         <segue destination="18t-BF-vrK" kind="relationship" relationship="viewControllers" id="81z-cM-Hb3"/>
@@ -885,7 +895,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ww-jl-GbS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3408.8000000000002" y="127.28635682158921"/>
+            <point key="canvasLocation" x="4348" y="-263.11844077961024"/>
         </scene>
         <!--AboutUS-->
         <scene sceneID="QNP-WB-gS4">
@@ -983,7 +993,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90u-g2-c2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4161" y="128"/>
+            <point key="canvasLocation" x="5100" y="127.28635682158921"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="qio-P1-EvX">
@@ -1438,7 +1448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhn-4g-j3v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2631" y="128"/>
+            <point key="canvasLocation" x="3592.8000000000002" y="-263.11844077961024"/>
         </scene>
         <!--Edit ProfileVC-->
         <scene sceneID="pfx-E1-pHn">
@@ -2258,7 +2268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryt-Bg-Uze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5559" y="127"/>
+            <point key="canvasLocation" x="6496.8000000000002" y="126.38680659670166"/>
         </scene>
         <!--Terms And Conitions-->
         <scene sceneID="Bxg-Sl-cWa">
@@ -2358,7 +2368,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VP9-gb-nO0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="hIV-Wo-7ol" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4838" y="128"/>
+            <point key="canvasLocation" x="5776.8000000000002" y="127.28635682158921"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Alm-q8-DFh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="lUq-73-aSI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home-act" id="a8x-zc-3JQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tFz-n6-zCl">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="reR-fY-8qI" kind="relationship" relationship="rootViewController" id="5St-xd-Ad3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tuk-9L-Kqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="-263.11844077961024"/>
         </scene>
     </scenes>
     <resources>

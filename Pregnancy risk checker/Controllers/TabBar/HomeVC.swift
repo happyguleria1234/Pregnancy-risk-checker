@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeVC: UIViewController , UITextFieldDelegate{
-
+    
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var backButtonImage: UIImageView!
     @IBOutlet weak var backButton: UIButton!
@@ -26,6 +26,8 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     var currentArrayDes = [String]()
     var selectedIndex = Int()
     var alldataArray = [AllData]()
+    var selectedArrayForTitle = [String]()
+    
     var filteredData: [String]!
     var searchResults = [String]()
     var titleArray = ["Previous pregnancy and birth",
@@ -121,7 +123,7 @@ class HomeVC: UIViewController , UITextFieldDelegate{
             sender.isSelected = true
             closeButton.isHidden = false
             
-
+            
         }
     }
     
@@ -223,109 +225,130 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 }
             }else{
                 return filteredData.count
-
+                
             }
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
+        
         
         if issearchSelected == true {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "DataTBViewCell") as! DataTBViewCell
             cell.titleLbl.text = searchResults[indexPath.row]
-//            cell.descriptionLbl.text = currentArrayDes[indexPath.row]
+            //            cell.descriptionLbl.text = currentArrayDes[indexPath.row]
             return cell
             
         }else{
             
             if isdetailSelected == true{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "DataTBViewCell") as! DataTBViewCell
-                var selectedArrayForTitle = [String]()
+//                var selectedArrayForTitle = [String]()
                 var selectedArrayForDes = [String]()
-//                var selectedArrayForImg = [String]()
-    //            var imgArray = [String]()
+                var selectedArrayForImg = [String]()
+                //            var imgArray = [String]()
                 switch selectedIndex {
                 case 0:
                     selectedArrayForTitle = subArray1
                     selectedArrayForDes = subArrayDes1
-//                    selectedArrayForImg = subArrayImg1
+                    selectedArrayForImg = subArrayImg1
                 case 1:
                     selectedArrayForTitle = subArray2
                     selectedArrayForDes = subArrayDes2
-//                    selectedArrayForImg = subArrayImg2
-
+                    selectedArrayForImg = subArrayImg2
+                    
                 case 2:
                     selectedArrayForTitle = subArray3
                     selectedArrayForDes = subArrayDes3
+                    selectedArrayForImg = subArrayImg3
                 case 3:
                     selectedArrayForTitle = subArray4
                     selectedArrayForDes = subArrayDes4
+                    selectedArrayForImg = subArrayImg4
                 case 4:
                     selectedArrayForTitle = subArray5
                     selectedArrayForDes = subArrayDes5
+                    selectedArrayForImg = subArrayImg5
                 case 5:
                     selectedArrayForTitle = subArray6
                     selectedArrayForDes = subArrayDes6
+                    selectedArrayForImg = subArrayImg6
                 case 6:
                     selectedArrayForTitle = subArray7
                     selectedArrayForDes = subArrayDes7
+                    selectedArrayForImg = subArrayImg7
                 case 7:
                     selectedArrayForTitle = subArray8
                     selectedArrayForDes = subArrayDes8
+                    selectedArrayForImg = subArrayImg8
                 case 8:
                     selectedArrayForTitle = subArray9
                     selectedArrayForDes = subArrayDes9
+                    selectedArrayForImg = subArrayImg9
                 case 9:
                     selectedArrayForTitle = subArray10
                     selectedArrayForDes = subArrayDes10
+                    selectedArrayForImg = subArrayImg10
                 case 10:
                     selectedArrayForTitle = subArray11
                     selectedArrayForDes = subArrayDes11
+                    selectedArrayForImg = subArrayImg11
                 case 11:
                     selectedArrayForTitle = subArray12
                     selectedArrayForDes = subArrayDes12
+                    selectedArrayForImg = subArrayImg12
                 case 12:
                     selectedArrayForTitle = subArray13
                     selectedArrayForDes = subArrayDes13
+                    selectedArrayForImg = subArrayImg13
                 case 13:
                     selectedArrayForTitle = subArray14
                     selectedArrayForDes = subArrayDes14
+                    selectedArrayForImg = subArrayImg14
                 case 14:
                     selectedArrayForTitle = subArray15
                     selectedArrayForDes = subArrayDes15
+                    selectedArrayForImg = subArrayImg15
                 case 15:
                     selectedArrayForTitle = subArray16
                     selectedArrayForDes = subArrayDes16
+                    selectedArrayForImg = subArrayImg16
                 case 16:
                     selectedArrayForTitle = subArray17
                     selectedArrayForDes = subArrayDes17
+                    selectedArrayForImg = subArrayImg17
                 case 17:
                     selectedArrayForTitle = subArray18
                     selectedArrayForDes = subArrayDes18
+                    selectedArrayForImg = subArrayImg18
                 case 18:
                     selectedArrayForTitle = subArray19
                     selectedArrayForDes = subArrayDes19
+                    selectedArrayForImg = subArrayImg19
                 case 19:
                     selectedArrayForTitle = subArray20
                     selectedArrayForDes = subArrayDes20
+                    selectedArrayForImg = subArrayImg20
                 case 20:
                     selectedArrayForTitle = subArray21
                     selectedArrayForDes = subArrayDes21
+                    selectedArrayForImg = subArrayImg21
                 case 21:
                     selectedArrayForTitle = subArray22
                     selectedArrayForDes = subArrayDes22
+                    selectedArrayForImg = subArrayImg22
                 case 22:
                     selectedArrayForTitle = subArray23
                     selectedArrayForDes = subArrayDes23
+                    selectedArrayForImg = subArrayImg23
                 default:
                     print(subArray1)
                 }
                 if selectedArrayForTitle.count > 0 {
                     cell.titleLbl.text = selectedArrayForTitle[indexPath.row]
                     cell.descriptionLbl.text = selectedArrayForDes[indexPath.row]
-//                    cell.showImage.image = UIImage(named: selectedArrayForImg[indexPath.row])
+                    cell.showImage.image = UIImage(named: selectedArrayForImg[indexPath.row])
                 }
                 return cell
             }else{
@@ -334,7 +357,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 cell.descriptionLbl.text = descriptionArray[indexPath.row]
                 cell.showImage.image = UIImage(named: imagesArray[indexPath.row])
                 return cell
-
+                
             }
         }
     }
@@ -348,6 +371,12 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
         
         if isdetailSelected == true{
             
+            
+            let vc = SubCatDetailsVC.instantiate(fromAppStoryboard: .Home)
+            self.navigationController?.pushViewController(vc, animated: true)
+            vc.subcatTitle = selectedArrayForTitle[indexPath.row]
+            self.issubCatSelected = false
+            
         }else{
             isdetailSelected = true
             selectedIndex = indexPath.row
@@ -358,16 +387,8 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
             DispatchQueue.main.async {
                 self.dataTBView.reloadData()
                 
-                if self.issubCatSelected == true {
-                    
-                }else{
-                    let vc = SubCatDetailsVC.instantiate(fromAppStoryboard: .Home)
-                    self.navigationController?.pushViewController(vc, animated: true)
-                    self.issubCatSelected = false
-                }
             }
         }
-        
     }
 }
 

@@ -72,7 +72,7 @@ let subArrayDes3 = [   "Risks when you go into labour naturally",
                        "Risks when you go into labour naturally",
                        "Risks when you go into labour naturally"]
 
-let subArrayImg3 = [String]()
+let subArrayImg3 = ["spotaneous_vaginal","induced_vaginal","forceps_delivery","vaccum_cup_deli","planned_caesaerean","emergency_cas","breech","twin_vaginal"]
 
 
 
@@ -91,7 +91,7 @@ let subArrayDes4 = [ "Risks of bleeding during and after labour",
 
 
                 
-let subArrayImg4 = [String]()
+let subArrayImg4 = ["bleeding","cord_coming","baby_stuck","breech","twin_vaginal-1"]
 
 let subArray5 = ["Anaemia",
                  "Platelets problems",
@@ -131,7 +131,7 @@ let subArrayDes5 = [ "Low blood count",
                      "",
                      ""]
 
-let subArrayImg5 = [String]()
+let subArrayImg5 = ["anemia","placenta_prob","blood_clot_risk","sickle_cell","thalasemia","rbc_prob","factov_leiden","anti_thrombin_defi","proteinc_defi","proteins_defi","proteins_defi","little_fluid","hepatits","hepatits","facto_xiii_defi","facto_xiii_defi","facto_xiii_defi","facto_xiii_defi"]
 
 
 let subArray6 = [String]()
@@ -156,7 +156,7 @@ let subArrayDes7 = [  "",
                       "",
                       ""]
 
-let subArrayImg7 = [String]()
+let subArrayImg7 = ["anti_thrombin_defi","cord_coming","","","heart_prob","kideney_prob",""]
 
 
 let subArray8 = [  "Appendicitis",
@@ -170,7 +170,7 @@ let subArrayDes8 = [ "",
                      "This usually occurs in pregnant women with previous bowel surgery"]
 
 
-let subArrayImg8 = [String]()
+let subArrayImg8 = ["","","",""]
 
 let subArray9 = [ "Depression",
                   "Anxiety",
@@ -185,7 +185,7 @@ let subArrayDes9 = [  "",
                       "",
                       ""]
 
-let subArrayImg9 = [String]()
+let subArrayImg9 = ["","","","",""]
 
 
 let subArray10 = [ "Previous loop excision of cervix",
@@ -197,7 +197,7 @@ let subArrayDes10 = [ "Common treatment for abnormal smears",
                       "Removal of cervix to treat early stage cervical cancer"]
 
 
-let subArrayImg10 = [String]()
+let subArrayImg10 = ["previous_loop","cervical_biopsy","trachelectomy"]
 
 
 let subArray11 = ["High blood pressure",
@@ -209,7 +209,7 @@ let subArrayDes11 = ["High blood pressure conditions before or during pregnancy"
                      "High blood pressure and increased protein in the urine",
                      "High blood pressure, increased protein and seizure"]
 
-let subArrayImg11 = [String]()
+let subArrayImg11 = ["high_bp","pre_eclampsia","eclampsia"]
 
 
 let subArray12 = [   "Gestational Diabetes",
@@ -220,7 +220,7 @@ let subArrayDes12 = [ "Diabetes that develops during pregnancy",
                       "",
                       "Including maturity onset Diabetes (MODY)"]
 
-let subArrayImg12 = [String]()
+let subArrayImg12 = ["gestational","type_1","type_2"]
 
 
 let subArray13 = ["Big baby",
@@ -243,7 +243,7 @@ let subArrayDes13 = [     "",
                           "",
                           ""]
 
-let subArrayImg13 = [String]()
+let subArrayImg13 = ["big_baby","small_baby","too_much_fluid","","heart_prob","brain_problem","spine_prob","kideney_prob","placenta_prob"]
 
 let subArray14 = [ "Coronavirus(Covid19)",
                    "Common cold",
@@ -268,15 +268,7 @@ let subArray14 = [ "Coronavirus(Covid19)",
                    "Genital thrush",
                    "Bacterial vaginosis"]
 
-let subArrayDes14 = [   "",
-                        "",
-                        "",
-                        "",
-                        "",
-                        "Group A throat infection",
-                        "Parvovirus",
-                        "",
-                        "",
+let subArrayDes14 = [   "","","","","","Group A throat infection","Parvovirus","","",
                         "",
                         "",
                         "",
@@ -291,7 +283,7 @@ let subArrayDes14 = [   "",
                         "Candidiasis",
                         ""]
 
-let subArrayImg14 = [String]()
+let subArrayImg14 = ["corona","common_cold","flu","groupb_strep","groupb_strep-1","scarlet_fiver","slapped_cheek","measles","hand_foot_mouth","chicken_pox","toxoplamosis","hepatits","chlamydia","herpes","gonorhoea","hiv","tuberculosis","genital_thrush","cytomegalovirus","syphilis","genital","bacterial_vaginosis"]
 
 let subArray15 = [ "Paracetamol",
                    "Ibuprofen",
@@ -308,7 +300,7 @@ let subArrayDes15 = [   "",
                         "",
                         "",
                         ""]
-let subArrayImg15 = [String]()
+let subArrayImg15 = ["","","","","","",""]
 
 let subArray16 = ["Caucasian or White",
                   "African or Black",
@@ -320,13 +312,13 @@ let subArrayDes16 = [ "",
                       "",
                       ""]
 
-let subArrayImg16 = [String]()
+let subArrayImg16 = ["causaian","african","east_asian","middle_eastern"]
 
 let subArray17 = ["Cystic Fibrosis"]
 
 let subArrayDes17 = [""]
 
-let subArrayImg17 = [String]()
+let subArrayImg17 = ["cystosic"]
 
 let subArray18 = ["Pain from gallstones",
                   "Biliary cirrhosis",
@@ -338,7 +330,7 @@ let subArrayDes18 = [     "Biliary colic",
                           "Cholecystitis",
                           "Viral infaction of the liver"]
 
-let subArrayImg18 = [String]()
+let subArrayImg18 = ["","","",""]
 
 let subArray19 = [ "Eczema",
                    "Psoriasis",
@@ -356,7 +348,7 @@ let subArrayDes19 = [ "",
                       "",
                       ""]
 
-let subArrayImg19 = [String]()
+let subArrayImg19 = ["","","","","","",""]
 
 let subArray20 = [ "Fibroid",
                    "Other uterus abnormalities",
@@ -367,7 +359,7 @@ let subArrayDes20 = [   "",
                         "Didelphic uterus, Bicornuate uterus, Subseptate uterus, and more",
                         ""]
 
-let subArrayImg20 = [String]()
+let subArrayImg20 = ["","",""]
 
 let subArray21 = [ "Brain Cancer",
                    "Breast Cancer",
@@ -381,7 +373,7 @@ let subArrayDes21 = [   "",
                         "",
                         ""]
 
-let subArrayImg21 = [String]()
+let subArrayImg21 = ["brain_cancer","breast_cancer","uterine_cancer","ovary_cancer","cervical_cancer"]
 
 let subArray22 = ["Smoking",
                   "Cannabis",
@@ -396,7 +388,7 @@ let subArrayDes22 = [    "",
                          "",
                          ""]
 
-let subArrayImg22 = [String]()
+let subArrayImg22 = ["","","","",""]
 
 let subArray23 = ["Less than 12 weeks pregnant",
                   "12 to 23 weeks pregnant",
@@ -407,7 +399,7 @@ let subArrayDes23 = [  "",
                        "",
                        ""]
 
-let subArrayImg23 = [String]()
+let subArrayImg23 = ["","",""]
 
 
 let detailsArray = ["Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency",

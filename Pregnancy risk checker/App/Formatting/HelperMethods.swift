@@ -87,3 +87,12 @@ extension String{
         return tagFree.replacingOccurrences(of: "&[^;]+;", with: "", options: String.CompareOptions.regularExpression, range: nil)
     }
 }
+
+extension UIColor {
+    static var random: UIColor {
+        return UIColor(red: .random(in: 0...1),
+                       green: .random(in: 0...1),
+                       blue: .random(in: 0...1),
+                       alpha: 1.0)
+    }
+}
