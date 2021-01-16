@@ -156,7 +156,7 @@ let subArrayDes7 = [  "",
                       "",
                       ""]
 
-let subArrayImg7 = ["anti_thrombin_defi","cord_coming","","","heart_prob","kideney_prob",""]
+let subArrayImg7 = ["asthma","crohns","ulcerative_colitis","epilepsy","heart","kidney","autoimmuine"]
 
 
 let subArray8 = [  "Appendicitis",
@@ -170,7 +170,7 @@ let subArrayDes8 = [ "",
                      "This usually occurs in pregnant women with previous bowel surgery"]
 
 
-let subArrayImg8 = ["","","",""]
+let subArrayImg8 = ["appendictics","gallstone","pancreatitis","bowel_obs"]
 
 let subArray9 = [ "Depression",
                   "Anxiety",
@@ -185,7 +185,7 @@ let subArrayDes9 = [  "",
                       "",
                       ""]
 
-let subArrayImg9 = ["","","","",""]
+let subArrayImg9 = ["depress","anxiety","schizo","bipolar","pcychosis"]
 
 
 let subArray10 = [ "Previous loop excision of cervix",
@@ -300,7 +300,7 @@ let subArrayDes15 = [   "",
                         "",
                         "",
                         ""]
-let subArrayImg15 = ["","","","","","",""]
+let subArrayImg15 = ["para","ibuprofen","codeine","marphine","cyclizene","ondan","stemetil"]
 
 let subArray16 = ["Caucasian or White",
                   "African or Black",
@@ -330,7 +330,7 @@ let subArrayDes18 = [     "Biliary colic",
                           "Cholecystitis",
                           "Viral infaction of the liver"]
 
-let subArrayImg18 = ["","","",""]
+let subArrayImg18 = ["pain_gallstone","biliary_cirhosis","galbladder_infection","hepatitis"]
 
 let subArray19 = [ "Eczema",
                    "Psoriasis",
@@ -348,7 +348,7 @@ let subArrayDes19 = [ "",
                       "",
                       ""]
 
-let subArrayImg19 = ["","","","","","",""]
+let subArrayImg19 = ["ecezma","psoriasis","polymorphic","pemphigoid","skin_aller","viral","bacterial"]
 
 let subArray20 = [ "Fibroid",
                    "Other uterus abnormalities",
@@ -359,7 +359,7 @@ let subArrayDes20 = [   "",
                         "Didelphic uterus, Bicornuate uterus, Subseptate uterus, and more",
                         ""]
 
-let subArrayImg20 = ["","",""]
+let subArrayImg20 = ["fibroid","uterus_abnormal","ovarian"]
 
 let subArray21 = [ "Brain Cancer",
                    "Breast Cancer",
@@ -388,7 +388,7 @@ let subArrayDes22 = [    "",
                          "",
                          ""]
 
-let subArrayImg22 = ["","","","",""]
+let subArrayImg22 = ["smoking","cannabis","cocaine","heroine","amphetamines"]
 
 let subArray23 = ["Less than 12 weeks pregnant",
                   "12 to 23 weeks pregnant",
