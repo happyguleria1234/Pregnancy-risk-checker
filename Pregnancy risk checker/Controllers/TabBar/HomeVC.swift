@@ -52,7 +52,7 @@ class HomeVC: UIViewController , UITextFieldDelegate{
                       "Uterus and ovary problems",
                       "Cancer",
                       "Substance misuse"]
-    var imagesArray = ["previous_pregnancy_birth","where_deliver","deliver","delivery_complication","blood_clotting_problem","bleeding_in_pregnancy","medical_conditions","surgical_conditions","mental_health","cervix_treatment","high_bp","diabities","baby_problem","infection","medication","ethnicity","genetic","liver","skin","uterus","cancer","cancer"]
+    var imagesArray = ["previous_pregnancy_birth","where_deliver","deliver","delivery_complication","blood_clotting_problem","bleeding_in_pregnancy","medical_conditions","surgical_conditions","mental_health","cervix_treatment","high_bp","diabities","baby_problem","infection","medication","ethnicity","genetic","liver","skin","uterus","cancer","substance"]
     var descriptionArray = [ "Your risk based on previous pregnancy and birth",
                              "Your risk based on where you choose to deliver such as Hospital, midwife unit or homebirth",
                              "Risks associated with various types of deliveries such as forceps, caesarean, vacuum cup and breech",
@@ -364,7 +364,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 240
+        return 220
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

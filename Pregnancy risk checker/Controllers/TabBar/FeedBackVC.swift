@@ -8,8 +8,11 @@
 
 import UIKit
 
-class FeedBackVC: UIViewController {
+class FeedBackVC: UIViewController , UITextFieldDelegate{
 
+    @IBOutlet weak var feedbacView: UIView!
+    @IBOutlet weak var emailView: UIView!
+    @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var feedbackTxtView: UITextView!
     @IBOutlet weak var emailTxtFld: UITextField!
     @IBOutlet weak var nameTxtFld: UITextField!
@@ -30,7 +33,7 @@ class FeedBackVC: UIViewController {
             
             ValidateData(strMessage: " Please enter email")
             
-        }else if (feedbackTxtView.text.isEmpty)!{
+        }else if (feedbackTxtView.text.isEmpty){
             
             ValidateData(strMessage: "Please enter somrthing here")
             
@@ -40,6 +43,30 @@ class FeedBackVC: UIViewController {
 
         }
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == nameTxtFld {
+            
+            nameView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            emailView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            feedbacView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            
+        } else if textField == emailTxtFld{
+            
+            nameView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            emailView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            feedbacView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            
+        } else if textField == feedbackTxtView {
+            
+            nameView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            emailView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            feedbacView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            
+            
+        }
+    }
+    
     
     func feedback() {
         if Reachability.isConnectedToNetwork() == true {

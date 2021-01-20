@@ -36,6 +36,15 @@ class ForgotPasswordVC: UIViewController , UITextFieldDelegate{
         }
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        if textField == emailTxtFld {
+            
+            emailView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            
+        }
+    }
+    
     func forgotPassword() {
         if Reachability.isConnectedToNetwork() == true {
             print("Internet connection OK")

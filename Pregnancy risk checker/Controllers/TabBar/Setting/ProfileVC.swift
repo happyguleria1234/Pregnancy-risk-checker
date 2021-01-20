@@ -9,8 +9,9 @@
 import UIKit
 import SDWebImage
 
-class ProfileVC: UIViewController {
+class ProfileVC: UIViewController , UITextFieldDelegate{
 
+    @IBOutlet weak var flagImage: UIImageView!
     @IBOutlet weak var nameTxtFld: UITextField!
     var message = String()
     @IBOutlet weak var bioTxtView: UITextView!
@@ -22,11 +23,12 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getData()
         nameTxtFld.isUserInteractionEnabled = false
         emailTxtFld.isUserInteractionEnabled = false
         bioTxtView.isUserInteractionEnabled = false
-
+        passwordTxtFld.isUserInteractionEnabled = false
+        
         // Do any additional setup after loading the view.
     }
     
@@ -42,7 +44,7 @@ class ProfileVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        getData()
+       
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -88,6 +90,21 @@ class ProfileVC: UIViewController {
                         }
                         else{
                             self.profileImage.image = UIImage(named: "img")
+                        }
+                        
+                        let urls = URL(string:allData["countryImage"] as? String ?? "")
+                        if urls != nil{
+                            if let data = try? Data(contentsOf: urls!)
+                            {
+                                if let image: UIImage = (UIImage(data: data)){
+                                    self.flagImage.image = image
+                                    self.flagImage.contentMode = .scaleToFill
+                                    IJProgressView.shared.hideProgressView()
+                                }
+                            }
+                        }
+                        else{
+                            self.flagImage.image = UIImage(named: "")
                         }
 
                     }

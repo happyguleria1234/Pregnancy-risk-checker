@@ -606,13 +606,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your registered email address to recover your password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRd-gk-5T5">
-                                <rect key="frame" x="19" y="131.5" width="337.5" height="34"/>
+                                <rect key="frame" x="19" y="146.5" width="337.5" height="34"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYl-OI-Ghc">
-                                <rect key="frame" x="19" y="180.5" width="337.5" height="80"/>
+                                <rect key="frame" x="19" y="195.5" width="337.5" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BK2-qf-GgG">
                                         <rect key="frame" x="0.0" y="0.0" width="303.5" height="19.5"/>
@@ -653,7 +653,7 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="systemPinkColor"/>
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="5"/>
@@ -673,12 +673,12 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiK-Kk-SL0">
-                                <rect key="frame" x="19" y="280.5" width="337.5" height="42.5"/>
+                                <rect key="frame" x="19" y="295.5" width="337.5" height="42.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SiK-Kk-SL0" secondAttribute="height" multiplier="48:6" id="WOL-Dd-ZzU"/>
                                 </constraints>
-                                <state key="normal" image="btnn">
+                                <state key="normal" image="submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -707,7 +707,7 @@
                             <constraint firstItem="LNI-FG-kZ3" firstAttribute="height" secondItem="ye9-SU-PCx" secondAttribute="height" multiplier="0.5" id="cq2-Vq-BFl"/>
                             <constraint firstItem="SiK-Kk-SL0" firstAttribute="width" secondItem="Nfm-vK-Mee" secondAttribute="width" multiplier="0.9" id="fCd-NJ-Rd2"/>
                             <constraint firstItem="ye9-SU-PCx" firstAttribute="top" secondItem="pZF-7p-ssY" secondAttribute="top" constant="30" id="iXN-2s-xnH"/>
-                            <constraint firstItem="oRd-gk-5T5" firstAttribute="top" secondItem="1ZP-59-1nS" secondAttribute="bottom" constant="5" id="qW3-18-7ir"/>
+                            <constraint firstItem="oRd-gk-5T5" firstAttribute="top" secondItem="1ZP-59-1nS" secondAttribute="bottom" constant="20" id="qW3-18-7ir"/>
                             <constraint firstItem="pZF-7p-ssY" firstAttribute="trailing" secondItem="AFI-hU-i1S" secondAttribute="trailing" id="s4X-Uk-KY7"/>
                             <constraint firstItem="AFI-hU-i1S" firstAttribute="leading" secondItem="pZF-7p-ssY" secondAttribute="leading" id="vHk-YP-YOS"/>
                             <constraint firstItem="SiK-Kk-SL0" firstAttribute="top" secondItem="QYl-OI-Ghc" secondAttribute="bottom" constant="20" id="x1l-td-jRF"/>
@@ -727,12 +727,12 @@
     </scenes>
     <resources>
         <image name="back" width="13" height="23"/>
-        <image name="btnn" width="589" height="79"/>
         <image name="dignup-btn" width="540" height="73"/>
         <image name="email" width="30" height="22"/>
         <image name="lc" width="34" height="34"/>
         <image name="login-btn" width="540" height="73"/>
         <image name="logo" width="422" height="399"/>
+        <image name="submit" width="540" height="73"/>
         <image name="user" width="25" height="29"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

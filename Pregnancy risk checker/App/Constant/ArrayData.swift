@@ -243,7 +243,7 @@ let subArrayDes13 = [     "",
                           "",
                           ""]
 
-let subArrayImg13 = ["big_baby","small_baby","too_much_fluid","","heart_prob","brain_problem","spine_prob","kideney_prob","placenta_prob"]
+let subArrayImg13 = ["big_baby","small_baby","too_much_fluid","little_fluid","heart_prob","brain_problem","spine_prob","kideney_prob","placenta_prob"]
 
 let subArray14 = [ "Coronavirus(Covid19)",
                    "Common cold",
@@ -402,9 +402,9 @@ let subArrayDes23 = [  "",
 let subArrayImg23 = ["","",""]
 
 
-let detailsArray = ["Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency",
-                    "Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenenc",
-                    "Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenenc",
-                    "Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenenc"]
+let detailsArray = ["Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency",
+                    "Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency",
+                    "Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency",
+                    "Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency Risk associated with bleeding during pregenency"]
 
 let detailsTitleArray = ["Genetic Family","Genetic Family","Genetic Family","Genetic Family"]

@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ChangePasswordVC: UIViewController {
+class ChangePasswordVC: UIViewController , UITextFieldDelegate{
     
+    @IBOutlet weak var confirmPasswordView: UIView!
+    @IBOutlet weak var newPasswordView: UIView!
+    @IBOutlet weak var currntPasswordView: UIView!
     var password = String()
     var message = String()
     @IBOutlet weak var confirmPasswordTxtFld: UITextField!
@@ -53,6 +56,26 @@ class ChangePasswordVC: UIViewController {
             
         }else{
             self.changePassword()
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == currentPasswordTxtFld {
+            currntPasswordView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            newPasswordView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            confirmPasswordView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            
+        } else if textField == newPasswordTxtFld{
+            
+            currntPasswordView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            newPasswordView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            confirmPasswordView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            
+        } else if textField == confirmPasswordTxtFld {
+            
+            currntPasswordView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            newPasswordView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            confirmPasswordView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
         }
     }
     

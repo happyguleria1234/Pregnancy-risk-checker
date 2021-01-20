@@ -90,6 +90,13 @@ class SettingVC: UIViewController {
             alert(Constant.shared.appTitle, message: "Check internet connection", view: self)
         }
     }
+    
+    func logout()  {
+        UserDefaults.standard.removeObject(forKey: "tokenFString")
+        let appDel = UIApplication.shared.delegate as! AppDelegate
+        appDel.Logout1()
+    }
+    
 }
 
 class settingTBViewCell: UITableViewCell {
@@ -126,12 +133,12 @@ extension SettingVC : UITableViewDelegate , UITableViewDataSource {
             
         }else if indexPath.row == 2{
             
-            let vc = TermsAndConitions.instantiate(fromAppStoryboard: .Home)
+            let vc = PrivecyPolicyVC.instantiate(fromAppStoryboard: .Home)
             self.navigationController?.pushViewController(vc, animated: true)
             
         }else if indexPath.row == 3{
             
-            let vc = PrivecyPolicyVC.instantiate(fromAppStoryboard: .Home)
+            let vc = TermsAndConitions.instantiate(fromAppStoryboard: .Home)
             self.navigationController?.pushViewController(vc, animated: true)
             
         }else if indexPath.row == 4{
@@ -141,7 +148,8 @@ extension SettingVC : UITableViewDelegate , UITableViewDataSource {
             let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
                 print("Ok button click...")
                 UserDefaults.standard.set(false, forKey: "tokenFString")
-                //                            self.logout()
+                                            self.logout()
+                
                 
             })
             

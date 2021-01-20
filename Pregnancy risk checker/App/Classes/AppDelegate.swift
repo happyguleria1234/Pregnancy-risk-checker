@@ -60,5 +60,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            }
        }
     
+    func Logout1(){
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Auth", bundle: nil)
+        let homeViewController = mainStoryboard.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
+        let nav = UINavigationController(rootViewController: homeViewController)
+        nav.setNavigationBarHidden(true, animated: true)
+        appdelegate.window?.rootViewController = nav
+    }
+    
 }
 

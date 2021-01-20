@@ -10,10 +10,11 @@ import UIKit
 import SKCountryPicker
 import Alamofire
 
-class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate , UITextFieldDelegate{
     
     var message = String()
 
+    @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var countryImage: UIImageView!
     @IBOutlet weak var countryButton: UIButton!
     @IBOutlet weak var nameTxtFld: UITextField!
@@ -36,11 +37,12 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
         getData()
         // Do any additional setup after loading the view.
         
-        
+        passwordTxtFld.isUserInteractionEnabled = false
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         getData()
         guard let country = CountryManager.shared.currentCountry else {
             self.countryImage.isHidden = true
+            
             return
         }
 
@@ -53,6 +55,26 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
         profileImage.layer.cornerRadius = profileImage.frame.height/2
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == nameTxtFld {
+            nameView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            emailView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            passwordView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            
+        } else if textField == emailTxtFld{
+            
+            nameView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            emailView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            passwordView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            
+        } else if textField == passwordTxtFld {
+            
+//            nameView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//            emailView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//            passwordView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+        }
+    }
+    
     
     @IBAction func countryButtonAction(_ sender: Any) {
         
@@ -62,9 +84,26 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
             
             self.flagBase64 = country.flag?.toString() ?? ""
             self.countryName = country.countryName
+            
+            UserDefaults.standard.setValue(country.countryName, forKey: "name")
+            self.flagBase64 = country.flag?.toString() ?? ""
+//            print(self.flagImage.image)
             print(self.flagBase64)
             
+            
+            
          }
+        if base64String != nil {
+                let decodedData = NSData(base64Encoded: flagBase64, options: [])
+                if let data = decodedData {
+                    let decodedimage = UIImage(data: data as Data)
+                    countryImage.image = decodedimage
+                } else {
+                    print("error with decodedData")
+                }
+            } else {
+                print("error with base64String")
+            }
 
          countryController.detailColor = UIColor.red
     }
@@ -109,6 +148,22 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
                             self.profileImage.image = UIImage(named: "img")
                         }
 
+                        let urls = URL(string:allData["countryImage"] as? String ?? "")
+                        if urls != nil{
+                            if let data = try? Data(contentsOf: urls!)
+                            {
+                                if let image: UIImage = (UIImage(data: data)){
+                                    self.countryImage.image = image
+                                    self.countryImage.contentMode = .scaleToFill
+                                    IJProgressView.shared.hideProgressView()
+                                }
+                            }
+                        }
+                        else{
+                            self.countryImage.image = UIImage(named: "")
+                        }
+
+                        
                     }
                 }else{
                     IJProgressView.shared.hideProgressView()
@@ -251,7 +306,7 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
             let id = UserDefaults.standard.value(forKey: "id") ?? ""
             
             userDetails = ["userID" : id,"name" : nameTxtFld.text ?? "","bio" : bioTxtView.text ?? "","countryName" : countryName]
-            
+       
             let url = Constant.shared.baseUrl + Constant.shared.editProfile
             IJProgressView.shared.showProgressView()
             print(self.userDetails)
@@ -262,6 +317,9 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
                 print(multipartFormData)
                 let imageData1 = self.profileImage.image!.jpegData(compressionQuality: 0.3)
                     multipartFormData.append(imageData1!, withName: "profileImage" , fileName: "\(String.random(length: 8))", mimeType: "image/jpeg")
+                
+                let imageData2 = self.countryImage.image!.jpegData(compressionQuality: 0.3)
+                    multipartFormData.append(imageData2!, withName: "countryImage" , fileName: "\(String.random(length: 8))", mimeType: "image/jpeg")
                 
             }, to: url, usingThreshold: UInt64.init(), method: .post, headers: nil, interceptor: nil, fileManager: .default)
                 
@@ -308,7 +366,21 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
     }
     
     @IBAction func submitButton(_ sender: Any) {
-        updateData()
+        
+        if (nameTxtFld.text?.isEmpty)!{
+            
+            ValidateData(strMessage: " Name should not be empty")
+            
+        }else if (emailTxtFld.text?.isEmpty)!{
+            
+            ValidateData(strMessage: "Email should not be empty")
+            
+        }else{
+            
+            self.updateData()
+
+        }
+        
     }
     
 }
