@@ -103,7 +103,7 @@
                                     <constraint firstItem="Cgg-md-EEM" firstAttribute="centerY" secondItem="PQd-iI-2Lg" secondAttribute="centerY" id="z9X-1V-S5P"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pregnancy Risk Checker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bm-Rj-7Rn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pregnancy Risk Checker" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bm-Rj-7Rn">
                                 <rect key="frame" x="19" y="138.5" width="337.5" height="33"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -328,14 +328,14 @@
                                     <constraint firstItem="BZj-Bd-SKD" firstAttribute="centerX" secondItem="Ch4-6l-Rvq" secondAttribute="centerX" id="vkr-zl-K4s"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clb-c4-Kq5" userLabel="Title">
-                                <rect key="frame" x="28" y="88.5" width="319" height="25.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clb-c4-Kq5" userLabel="Title">
+                                <rect key="frame" x="28" y="88.5" width="319" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hmw-B7-0mC">
-                                <rect key="frame" x="19" y="129" width="337.5" height="538"/>
+                                <rect key="frame" x="19" y="103.5" width="337.5" height="563.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailsTBViewCell" rowHeight="180" id="zjW-eo-yaz" customClass="DetailsTBViewCell" customModule="Pregnancy_risk_checker" customModuleProvider="target">
@@ -547,10 +547,10 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsO-Rb-Ci7">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsO-Rb-Ci7">
                                                         <rect key="frame" x="0.0" y="40" width="345" height="40"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -725,8 +725,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zf0-th-eOH">
                                 <rect key="frame" x="0.0" y="26.5" width="375" height="47"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHs-mC-ucc">
-                                        <rect key="frame" x="157.5" y="13.5" width="60" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHs-mC-ucc">
+                                        <rect key="frame" x="161.5" y="13.5" width="52.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -749,7 +749,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxS-4u-OKA">
                                 <rect key="frame" x="19" y="93.5" width="337.5" height="66.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img" translatesAutoresizingMaskIntoConstraints="NO" id="vIn-wD-H53">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-1" translatesAutoresizingMaskIntoConstraints="NO" id="vIn-wD-H53">
                                         <rect key="frame" x="5" y="-2" width="70.5" height="70.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="vIn-wD-H53" secondAttribute="height" multiplier="1:1" id="Xqf-Xb-gYf"/>
@@ -1075,7 +1075,7 @@
                                     <constraint firstItem="PVk-CZ-Kat" firstAttribute="width" secondItem="M0y-qa-abt" secondAttribute="width" id="ulm-Mb-1uT"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img" translatesAutoresizingMaskIntoConstraints="NO" id="v43-bi-T85">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-1" translatesAutoresizingMaskIntoConstraints="NO" id="v43-bi-T85">
                                 <rect key="frame" x="137" y="98.5" width="101" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="v43-bi-T85" secondAttribute="height" multiplier="1:1" id="YNX-01-64d"/>
@@ -1588,7 +1588,7 @@
             </objects>
             <point key="canvasLocation" x="3485.5999999999999" y="1520.6896551724139"/>
         </scene>
-        <!--Funds-->
+        <!--Fund-->
         <scene sceneID="Rqj-kr-DjQ">
             <objects>
                 <viewController storyboardIdentifier="FundsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="URg-WT-FXS" customClass="FundsVC" customModule="Pregnancy_risk_checker" customModuleProvider="target" sceneMemberID="viewController">
@@ -1644,7 +1644,7 @@
                             <constraint firstItem="2bK-vr-Qh1" firstAttribute="leading" secondItem="uTK-ml-SeY" secondAttribute="leading" id="pyU-ly-MX4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Funds" image="fund" selectedImage="fund-act" id="gwc-em-zfJ"/>
+                    <tabBarItem key="tabBarItem" title="Fund" image="fund" selectedImage="fund-act" id="gwc-em-zfJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhn-4g-j3v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1710,7 +1710,7 @@
                                     <constraint firstItem="nA7-zR-fYq" firstAttribute="centerX" secondItem="EG2-AJ-NV0" secondAttribute="centerX" id="wwZ-Fy-OjL"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img" translatesAutoresizingMaskIntoConstraints="NO" id="kvj-rN-T7i">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-1" translatesAutoresizingMaskIntoConstraints="NO" id="kvj-rN-T7i">
                                 <rect key="frame" x="137" y="98.5" width="101" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kvj-rN-T7i" secondAttribute="height" multiplier="1:1" id="z7e-L3-njZ"/>
@@ -2602,7 +2602,7 @@
         <image name="fund-act" width="24" height="31.5"/>
         <image name="home" width="24" height="25.5"/>
         <image name="home-act" width="24" height="25.5"/>
-        <image name="img" width="224" height="223"/>
+        <image name="img-1" width="205" height="203"/>
         <image name="lc" width="34" height="34"/>
         <image name="search" width="33" height="33"/>
         <image name="setting" width="24" height="24"/>

@@ -87,7 +87,8 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
                     if let allData = response["userDetails"] as? [String:Any]{
                         self.nameLbl.text = allData["name"] as? String ?? ""
                         self.emailTxtFld.text = allData["email"] as? String ?? ""
-                        self.passwordTxtFld.text = allData["password"] as? String ?? ""
+//                        self.passwordTxtFld.text = allData["password"] as? String ?? ""
+                        self.passwordTxtFld.text = "12345678"
                         self.bioTxtView.text = allData["bio"] as? String ?? ""
                         self.nameTxtFld.text = allData["name"] as? String ?? ""
                         self.profileImage.sd_setImage(with: URL(string:allData["profileImage"] as? String ?? ""), placeholderImage: UIImage(named: "img"))

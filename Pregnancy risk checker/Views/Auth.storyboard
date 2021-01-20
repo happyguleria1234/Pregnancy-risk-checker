@@ -367,7 +367,7 @@
                                                         <rect key="frame" x="50" y="9.5" width="270" height="19.5"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="iTM-r0-Rbo" id="d91-Bf-Mb9"/>
                                                         </connections>
@@ -633,7 +633,7 @@
                                                 <rect key="frame" x="50" y="11.5" width="270" height="21"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="JJG-he-2aW" id="Rtf-pO-lHV"/>
                                                 </connections>

@@ -30,8 +30,14 @@ class FeedBackVC: UIViewController {
             
             ValidateData(strMessage: " Please enter email")
             
+        }else if (feedbackTxtView.text.isEmpty)!{
+            
+            ValidateData(strMessage: "Please enter somrthing here")
+            
         }else{
+            
             self.feedback()
+
         }
     }
     
