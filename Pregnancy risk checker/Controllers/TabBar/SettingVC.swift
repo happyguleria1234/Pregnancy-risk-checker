@@ -71,7 +71,7 @@ class SettingVC: UIViewController {
                             }
                         }
                         else{
-                            self.profileImage.image = UIImage(named: "img")
+                            self.profileImage.image = UIImage(named: "img-1")
                         }
 
                     }

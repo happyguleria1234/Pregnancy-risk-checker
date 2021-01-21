@@ -72,7 +72,7 @@ let subArrayDes3 = [   "Risks when you go into labour naturally",
                        "Risks when you go into labour naturally",
                        "Risks when you go into labour naturally"]
 
-let subArrayImg3 = ["spotaneous_vaginal","induced_vaginal","forceps_delivery","vaccum_cup_deli","planned_caesaerean","emergency_cas","breech","twin_vaginal"]
+let subArrayImg3 = ["spotaneous_vaginal","induced_vaginal","forceps_delivery","vaccum_cup_deli","planned_caesaerean","genital","breech","twin_vaginal"]
 
 
 
@@ -131,7 +131,7 @@ let subArrayDes5 = [ "Low blood count",
                      "",
                      ""]
 
-let subArrayImg5 = ["anemia","placenta_prob","blood_clot_risk","sickle_cell","thalasemia","rbc_prob","factov_leiden","anti_thrombin_defi","proteinc_defi","proteins_defi","proteins_defi","little_fluid","hepatits","hepatits","facto_xiii_defi","facto_xiii_defi","facto_xiii_defi","facto_xiii_defi"]
+let subArrayImg5 = ["anemia","platelet_prob","blood_clot_risk","sickle_cell","thalasemia","rbc_prob","factov_leiden","anti_thrombin_defi","proteinc_defi","proteins_defi","pro-throm","little_fluid","hepatits","hepatits","facto_xiii_defi","facto_xiii_defi","facto_xiii_defi","facto_xiii_defi"]
 
 
 let subArray6 = [String]()
@@ -178,7 +178,6 @@ let subArray9 = [ "Depression",
                   "Bipolar disorder",
                   "Psychosis"]
 
-
 let subArrayDes9 = [  "",
                       "",
                       "",
@@ -186,7 +185,6 @@ let subArrayDes9 = [  "",
                       ""]
 
 let subArrayImg9 = ["depress","anxiety","schizo","bipolar","pcychosis"]
-
 
 let subArray10 = [ "Previous loop excision of cervix",
                    "Cervical biopsy only",
@@ -209,7 +207,7 @@ let subArrayDes11 = ["High blood pressure conditions before or during pregnancy"
                      "High blood pressure and increased protein in the urine",
                      "High blood pressure, increased protein and seizure"]
 
-let subArrayImg11 = ["high_bp","pre_eclampsia","eclampsia"]
+let subArrayImg11 = ["high_bp-1","pre_eclampsia","eclampsia"]
 
 
 let subArray12 = [   "Gestational Diabetes",
@@ -283,7 +281,7 @@ let subArrayDes14 = [   "","","","","","Group A throat infection","Parvovirus","
                         "Candidiasis",
                         ""]
 
-let subArrayImg14 = ["corona","common_cold","flu","groupb_strep","groupb_strep-1","scarlet_fiver","slapped_cheek","measles","hand_foot_mouth","chicken_pox","toxoplamosis","hepatits","chlamydia","herpes","gonorhoea","hiv","tuberculosis","genital_thrush","cytomegalovirus","syphilis","genital","bacterial_vaginosis"]
+let subArrayImg14 = ["corona","common_cold","flu","groupb_strep","groupb_strep-1","scarlet_fiver","slapped_cheek","measles","hand_foot_mouth","chicken_pox","toxoplamosis","hepatits","chlamydia","herpes","gonorhoea","hiv","tuberculosis","genital","cytomegalovirus","syphilis","genital_thrush","bacterial_vaginosis"]
 
 let subArray15 = [ "Paracetamol",
                    "Ibuprofen",

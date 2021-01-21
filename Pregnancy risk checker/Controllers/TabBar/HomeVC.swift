@@ -92,15 +92,17 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     }
     
     @IBAction func backButtonAction(_ sender: UIButton) {
-        self.dataTBView.reloadData()
+        
         isdetailSelected = false
         backButton.isHidden = true
         homeLbl.isHidden = false
         backButtonImage.isHidden = true
         self.titleLbl.text = "Pregnancy Risk Checker"
-        DispatchQueue.main.async {
-            self.dataTBView.reloadData()
-        }
+//        self.dataTBView.setContentOffset(.zero, animated: false)
+        let indexPath = NSIndexPath(row: 0, section: 0)
+        self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
+        self.dataTBView.reloadData()
+        
     }
     @IBAction func cloaseButton(_ sender: UIButton) {
         searchViewHeight.constant = 0
@@ -374,7 +376,6 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 cell.descriptionLbl.text = descriptionArray[indexPath.row]
                 cell.showImage.image = UIImage(named: imagesArray[indexPath.row])
                 return cell
-                
             }
         }
     }
@@ -388,11 +389,11 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
         
         if isdetailSelected == true{
             
-            
             let vc = SubCatDetailsVC.instantiate(fromAppStoryboard: .Home)
             self.navigationController?.pushViewController(vc, animated: true)
             vc.subcatTitle = selectedArrayForTitle[indexPath.row]
             self.issubCatSelected = false
+            self.searchTxtFld.text = ""
             
         }else{
             isdetailSelected = true
@@ -402,10 +403,6 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
             backButtonImage.isHidden = false
             self.titleLbl.text = titleArray[indexPath.row]
             self.dataTBView.reloadData()
-            DispatchQueue.main.async {
-                self.dataTBView.reloadData()
-                
-            }
         }
     }
 }

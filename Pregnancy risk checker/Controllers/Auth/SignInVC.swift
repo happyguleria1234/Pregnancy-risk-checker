@@ -41,6 +41,7 @@ class SignInVC: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func signInButtonAction(_ sender: Any) {
+        
         if (emailTxtFld.text?.isEmpty)!{
             
             ValidateData(strMessage: " Please enter username")
@@ -48,9 +49,10 @@ class SignInVC: UIViewController,UITextFieldDelegate {
             
             ValidateData(strMessage: " Please enter password")
         }else{
+            
             self.signIn()
+            
         }
-        
     }
     
     
@@ -67,7 +69,7 @@ class SignInVC: UIViewController,UITextFieldDelegate {
             print("Internet connection OK")
             IJProgressView.shared.showProgressView()
             let url = Constant.shared.baseUrl + Constant.shared.SignIN
-            let params = ["name":emailTxtFld.text ?? "","password":passwordTxtFld.text ?? ""] as [String : Any]
+            let params = ["email":emailTxtFld.text ?? "","password":passwordTxtFld.text ?? ""] as [String : Any]
             AFWrapperClass.requestPOSTURL(url, params: params, success: { (response) in
                 IJProgressView.shared.hideProgressView()
                 self.messgae = response["message"] as? String ?? ""
@@ -75,11 +77,9 @@ class SignInVC: UIViewController,UITextFieldDelegate {
                 if status == "1"{
                     let allData = response as? [String:Any] ?? [:]
                     print(allData)
-                    if let data = allData["user_detail"] as? [String:Any]  {
-                        //                        UserDefaults.standard.set(true, forKey: "tokenFString")
+                    if let data = allData["data"] as? [String:Any]  {
                         UserDefaults.standard.set(1, forKey: "tokenFString")
                         UserDefaults.standard.set(data["userID"], forKey: "id")
-                        UserDefaults.standard.set(data["device_token"], forKey: "authToken")
                         print(data)
                     }
                     let vc = TabBarVC.instantiate(fromAppStoryboard: .Home)
@@ -98,8 +98,5 @@ class SignInVC: UIViewController,UITextFieldDelegate {
             print("Internet connection FAILED")
             alert(Constant.shared.appTitle, message: "Check internet connection", view: self)
         }
-        
     }
-    
-    
 }
