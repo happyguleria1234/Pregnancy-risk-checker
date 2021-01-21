@@ -26,8 +26,10 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     var currentArrayDes = [String]()
     var selectedIndex = Int()
     var alldataArray = [AllData]()
+//    var selectedArrayForTitle = [String]()
     var selectedArrayForTitle = [String]()
-    
+    var selectedArrayForDes = [String]()
+    var selectedArrayForImg = [String]()
     var filteredData: [String]!
     var searchResults = [String]()
     var titleArray = ["Previous pregnancy and birth",
@@ -90,6 +92,7 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     }
     
     @IBAction func backButtonAction(_ sender: UIButton) {
+        self.dataTBView.reloadData()
         isdetailSelected = false
         backButton.isHidden = true
         homeLbl.isHidden = false
@@ -135,18 +138,35 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     
     func searchData(word : String) {
         
-        searchResults.removeAll()
-        for item in titleArray {
-            if item.lowercased().contains(word.lowercased()) {
-                searchResults.append(item)
-                
+        if isdetailSelected == true {
+            searchResults.removeAll()
+            for item in selectedArrayForTitle {
+                if item.lowercased().contains(word.lowercased()) {
+                    searchResults.append(item)
+                    
+                }
             }
-        }
-        print(searchResults)
-        issearchSelected = true
-        
-        DispatchQueue.main.async {
-            self.dataTBView.reloadData()
+            print(searchResults)
+            issearchSelected = true
+            
+            DispatchQueue.main.async {
+                self.dataTBView.reloadData()
+            }
+        }else{
+            
+            searchResults.removeAll()
+            for item in titleArray {
+                if item.lowercased().contains(word.lowercased()) {
+                    searchResults.append(item)
+                    
+                }
+            }
+            print(searchResults)
+            issearchSelected = true
+            
+            DispatchQueue.main.async {
+                self.dataTBView.reloadData()
+            }
         }
     }
 }
@@ -244,10 +264,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
             
             if isdetailSelected == true{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "DataTBViewCell") as! DataTBViewCell
-//                var selectedArrayForTitle = [String]()
-                var selectedArrayForDes = [String]()
-                var selectedArrayForImg = [String]()
-                //            var imgArray = [String]()
+                
                 switch selectedIndex {
                 case 0:
                     selectedArrayForTitle = subArray1
@@ -364,7 +381,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 220
+        return 200
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -384,6 +401,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
             backButton.isHidden = false
             backButtonImage.isHidden = false
             self.titleLbl.text = titleArray[indexPath.row]
+            self.dataTBView.reloadData()
             DispatchQueue.main.async {
                 self.dataTBView.reloadData()
                 

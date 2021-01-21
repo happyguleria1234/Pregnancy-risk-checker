@@ -33,6 +33,10 @@ class FeedBackVC: UIViewController , UITextFieldDelegate{
             
             ValidateData(strMessage: " Please enter email")
             
+        } else if isValidEmail(testStr: (emailTxtFld.text)!) == false{
+            
+            ValidateData(strMessage: "Enter valid email")
+            
         }else if (feedbackTxtView.text.isEmpty){
             
             ValidateData(strMessage: "Please enter somrthing here")
@@ -44,28 +48,28 @@ class FeedBackVC: UIViewController , UITextFieldDelegate{
         }
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == nameTxtFld {
-            
-            nameView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
-            emailView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            feedbacView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            
-        } else if textField == emailTxtFld{
-            
-            nameView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            emailView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
-            feedbacView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            
-        } else if textField == feedbackTxtView {
-            
-            nameView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            emailView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            feedbacView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
-            
-            
-        }
-    }
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        if textField == nameTxtFld {
+//
+//            nameView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+//            emailView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//            feedbacView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//
+//        } else if textField == emailTxtFld{
+//
+//            nameView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//            emailView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+//            feedbacView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//
+//        } else if textField == feedbackTxtView {
+//
+//            nameView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//            emailView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//            feedbacView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+//            
+//
+//        }
+//    }
     
     
     func feedback() {
@@ -82,6 +86,9 @@ class FeedBackVC: UIViewController , UITextFieldDelegate{
                 if status == "1"{
                     let allData = response as? [String:Any] ?? [:]
                     print(allData)
+                    self.nameTxtFld.text = ""
+                    self.emailTxtFld.text = ""
+                    self.feedbackTxtView.text = ""
                     alert(Constant.shared.appTitle, message: self.messgae, view: self)
                 }else{
                     IJProgressView.shared.hideProgressView()
