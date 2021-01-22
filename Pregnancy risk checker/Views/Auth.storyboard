@@ -55,7 +55,7 @@
                                                             <constraint firstAttribute="width" secondItem="hpM-Gf-X3Q" secondAttribute="height" multiplier="1:1" id="94r-vg-02N"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="86i-PL-dle">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="86i-PL-dle">
                                                         <rect key="frame" x="50" y="9.5" width="270" height="19.5"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>

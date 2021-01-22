@@ -171,6 +171,15 @@ class HomeVC: UIViewController , UITextFieldDelegate{
             }
         }
     }
+     
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        if textField == searchtxtFld {
+//            categorySearch()
+//            searchtxtFld.resignFirstResponder()
+//        }
+//        return true
+//    }
+    
 }
 
 
