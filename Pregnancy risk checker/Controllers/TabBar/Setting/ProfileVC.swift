@@ -89,7 +89,7 @@ class ProfileVC: UIViewController , UITextFieldDelegate{
                             }
                         }
                         else{
-                            self.profileImage.image = UIImage(named: "img")
+                            self.profileImage.image = UIImage(named: "img-1")
                         }
                         
                         let urls = URL(string:allData["countryImage"] as? String ?? "")

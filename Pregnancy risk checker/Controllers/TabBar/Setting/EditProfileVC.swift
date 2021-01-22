@@ -13,7 +13,7 @@ import Alamofire
 class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate , UITextFieldDelegate{
     
     var message = String()
-
+    
     @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var countryImage: UIImageView!
     @IBOutlet weak var countryButton: UIButton!
@@ -45,7 +45,7 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
             
             return
         }
-
+        
         countryButton.clipsToBounds = true
     }
     
@@ -69,9 +69,9 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
             
         } else if textField == passwordTxtFld {
             
-//            nameView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-//            emailView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-//            passwordView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            //            nameView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            //            emailView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            //            passwordView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
         }
     }
     
@@ -79,33 +79,21 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
     @IBAction func countryButtonAction(_ sender: Any) {
         
         let countryController = CountryPickerWithSectionViewController.presentController(on: self) { [weak self] (country: Country) in
-
-           guard let self = self else { return }
+            
+            guard let self = self else { return }
             
             self.flagBase64 = country.flag?.toString() ?? ""
             self.countryName = country.countryName
             
             UserDefaults.standard.setValue(country.countryName, forKey: "name")
             self.flagBase64 = country.flag?.toString() ?? ""
-//            print(self.flagImage.image)
+            //            print(self.flagImage.image)
             print(self.flagBase64)
             
             
             
-         }
-        if base64String != nil {
-                let decodedData = NSData(base64Encoded: flagBase64, options: [])
-                if let data = decodedData {
-                    let decodedimage = UIImage(data: data as Data)
-                    countryImage.image = decodedimage
-                } else {
-                    print("error with decodedData")
-                }
-            } else {
-                print("error with base64String")
-            }
-
-         countryController.detailColor = UIColor.red
+        }
+        countryController.detailColor = UIColor.red
     }
     
     func getData() {
@@ -126,13 +114,13 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
                     if let allData = response["userDetails"] as? [String:Any]{
                         self.nameLbl.text = allData["name"] as? String ?? ""
                         self.emailTxtFld.text = allData["email"] as? String ?? ""
-//                        self.passwordTxtFld.text = allData["password"] as? String ?? ""
+                        //                        self.passwordTxtFld.text = allData["password"] as? String ?? ""
                         self.passwordTxtFld.text = "12345678"
                         self.bioTxtView.text = allData["bio"] as? String ?? ""
                         self.nameTxtFld.text = allData["name"] as? String ?? ""
                         self.profileImage.sd_setImage(with: URL(string:allData["profileImage"] as? String ?? ""), placeholderImage: UIImage(named: "img"))
-//                        self.flagImage.sd_setImage(with: URL(string:allData["country_image"] as? String ?? ""), placeholderImage: UIImage(named: "img"))
-
+                        //                        self.flagImage.sd_setImage(with: URL(string:allData["country_image"] as? String ?? ""), placeholderImage: UIImage(named: "img"))
+                        
                         let url = URL(string:allData["profileImage"] as? String ?? "")
                         if url != nil{
                             if let data = try? Data(contentsOf: url!)
@@ -145,9 +133,9 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
                             }
                         }
                         else{
-                            self.profileImage.image = UIImage(named: "img")
+                            self.profileImage.image = UIImage(named: "img-1")
                         }
-
+                        
                         let urls = URL(string:allData["countryImage"] as? String ?? "")
                         if urls != nil{
                             if let data = try? Data(contentsOf: urls!)
@@ -162,7 +150,7 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
                         else{
                             self.countryImage.image = UIImage(named: "")
                         }
-
+                        
                         
                     }
                 }else{
@@ -241,8 +229,8 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         //        guard let image = info[UIImagePickerController.InfoKey.originalImage]
         guard let image = info[UIImagePickerController.InfoKey.editedImage]
-            as? UIImage else {
-                return
+                as? UIImage else {
+            return
         }
         //        let imgData3 = image.jpegData(compressionQuality: 0.4)
         self.profileImage.contentMode = .scaleToFill
@@ -270,6 +258,8 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
             let id = UserDefaults.standard.value(forKey: "id") ?? ""
             let url = Constant.shared.baseUrl + Constant.shared.editProfile
             print(url)
+            
+            
             let parms : [String:Any] = ["userID" : id,"name" : nameTxtFld.text ?? "","bio" : bioTxtView.text ?? "","profileImage" : base64String,"countryName" : countryName ?? ""]
             print(parms)
             AFWrapperClass.requestPOSTURL(url, params: parms, success: { (response) in
@@ -302,58 +292,71 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
     
     
     func updateData()  {
-            
-            let id = UserDefaults.standard.value(forKey: "id") ?? ""
-            
-            userDetails = ["userID" : id,"name" : nameTxtFld.text ?? "","bio" : bioTxtView.text ?? "","countryName" : countryName]
-       
-            let url = Constant.shared.baseUrl + Constant.shared.editProfile
-            IJProgressView.shared.showProgressView()
-            print(self.userDetails)
-            AF.upload(multipartFormData: { (multipartFormData) in
-                for (key, value) in self.userDetails {
-                    multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
-                }
-                print(multipartFormData)
-                let imageData1 = self.profileImage.image!.jpegData(compressionQuality: 0.3)
-                    multipartFormData.append(imageData1!, withName: "profileImage" , fileName: "\(String.random(length: 8))", mimeType: "image/jpeg")
-                
-                let imageData2 = self.countryImage.image!.jpegData(compressionQuality: 0.3)
-                    multipartFormData.append(imageData2!, withName: "countryImage" , fileName: "\(String.random(length: 8))", mimeType: "image/jpeg")
-                
-            }, to: url, usingThreshold: UInt64.init(), method: .post, headers: nil, interceptor: nil, fileManager: .default)
-                
-                .uploadProgress(closure: { (progress) in
-                    print("Upload Progress: \(progress.fractionCompleted)")
-                })
-                .responseJSON { (response) in
-                    IJProgressView.shared.hideProgressView()
-                    switch response.result {
-                    case .success(let value):
-                        if let JSON = value as? [String: Any] {
-                            if let dataDict = JSON as? NSDictionary{
-                                let message = dataDict["message"] as? String ?? ""
-                                let status = JSON["status"] as? String ?? ""
-                                if status == "1"{
-                                    showAlertMessage(title: Constant.shared.appTitle, message: message, okButton: "Ok", controller: self) {
-                                        self.navigationController?.popViewController(animated: true)
-                                    }
-                                }else{
-                                    alert(Constant.shared.appTitle, message: message, view: self)
-                                }
-                            }
-                        }
-                        
-                    case .failure(let error):
-                        if let JSON2 = error as? AFError {
-                            print(JSON2)
-                            alert(Constant.shared.appTitle, message: "\(JSON2)", view: self)
-                        }
-                        break
-                        
-                    }
-                    self.userDetails.removeAll()
+        
+        let id = UserDefaults.standard.value(forKey: "id") ?? ""
+        
+        userDetails = ["userID" : id,"name" : nameTxtFld.text ?? "","bio" : bioTxtView.text ?? "","countryName" : countryName]
+        
+        if base64String != nil {
+            let decodedData = NSData(base64Encoded: flagBase64, options: [])
+            if let data = decodedData {
+                let decodedimage = UIImage(data: data as Data)
+                countryImage.image = decodedimage
+            } else {
+                print("error with decodedData")
             }
+        } else {
+            print("error with base64String")
+        }
+        
+        
+        let url = Constant.shared.baseUrl + Constant.shared.editProfile
+        IJProgressView.shared.showProgressView()
+        print(self.userDetails)
+        AF.upload(multipartFormData: { (multipartFormData) in
+            for (key, value) in self.userDetails {
+                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+            }
+            print(multipartFormData)
+            let imageData1 = self.profileImage.image!.jpegData(compressionQuality: 0.3)
+            multipartFormData.append(imageData1!, withName: "profileImage" , fileName: "\(String.random(length: 8))", mimeType: "image/jpeg")
+            
+            let imageData2 = self.countryImage.image!.jpegData(compressionQuality: 0.3)
+            multipartFormData.append(imageData2!, withName: "countryImage" , fileName: "\(String.random(length: 8))", mimeType: "image/jpeg")
+            
+        }, to: url, usingThreshold: UInt64.init(), method: .post, headers: nil, interceptor: nil, fileManager: .default)
+        
+        .uploadProgress(closure: { (progress) in
+            print("Upload Progress: \(progress.fractionCompleted)")
+        })
+        .responseJSON { (response) in
+            IJProgressView.shared.hideProgressView()
+            switch response.result {
+            case .success(let value):
+                if let JSON = value as? [String: Any] {
+                    if let dataDict = JSON as? NSDictionary{
+                        let message = dataDict["message"] as? String ?? ""
+                        let status = JSON["status"] as? String ?? ""
+                        if status == "1"{
+                            showAlertMessage(title: Constant.shared.appTitle, message: message, okButton: "Ok", controller: self) {
+                                self.navigationController?.popViewController(animated: true)
+                            }
+                        }else{
+                            alert(Constant.shared.appTitle, message: message, view: self)
+                        }
+                    }
+                }
+                
+            case .failure(let error):
+                if let JSON2 = error as? AFError {
+                    print(JSON2)
+                    alert(Constant.shared.appTitle, message: "\(JSON2)", view: self)
+                }
+                break
+                
+            }
+            self.userDetails.removeAll()
+        }
     }
     
     
@@ -378,7 +381,7 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
         }else{
             
             self.updateData()
-
+            
         }
         
     }

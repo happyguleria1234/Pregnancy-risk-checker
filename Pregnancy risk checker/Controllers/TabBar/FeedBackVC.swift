@@ -39,7 +39,7 @@ class FeedBackVC: UIViewController , UITextFieldDelegate{
             
         }else if (feedbackTxtView.text.isEmpty){
             
-            ValidateData(strMessage: "Please enter somrthing here")
+            ValidateData(strMessage: "Feedback field is mandatory")
             
         }else{
             
