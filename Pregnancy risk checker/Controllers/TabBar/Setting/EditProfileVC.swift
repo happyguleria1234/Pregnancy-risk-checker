@@ -87,9 +87,23 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
             
             UserDefaults.standard.setValue(country.countryName, forKey: "name")
             self.flagBase64 = country.flag?.toString() ?? ""
+            UserDefaults.standard.setValue(self.flagBase64, forKey: "flag")
             //            print(self.flagImage.image)
             print(self.flagBase64)
             
+            
+            if self.base64String != nil {
+                self.flagBase64 = UserDefaults.standard.value(forKey: "flag") as! String
+                let decodedData = NSData(base64Encoded: self.flagBase64, options: [])
+                if let data = decodedData {
+                    let decodedimage = UIImage(data: data as Data)
+                    self.countryImage.image = decodedimage
+                } else {
+                    print("error with decodedData")
+                }
+            } else {
+                print("error with base64String")
+            }
             
             
         }
@@ -298,6 +312,7 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
         userDetails = ["userID" : id,"name" : nameTxtFld.text ?? "","bio" : bioTxtView.text ?? "","countryName" : countryName]
         
         if base64String != nil {
+            flagBase64 = UserDefaults.standard.value(forKey: "flag") as! String
             let decodedData = NSData(base64Encoded: flagBase64, options: [])
             if let data = decodedData {
                 let decodedimage = UIImage(data: data as Data)

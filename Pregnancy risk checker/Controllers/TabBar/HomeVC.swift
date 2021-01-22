@@ -411,6 +411,8 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
             backButton.isHidden = false
             backButtonImage.isHidden = false
             self.titleLbl.text = titleArray[indexPath.row]
+//            self.dataTBView.setContentOffset(.zero, animated: true)
+            self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
             self.dataTBView.reloadData()
         }
     }

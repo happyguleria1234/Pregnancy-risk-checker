@@ -131,7 +131,7 @@ let subArrayDes5 = [ "Low blood count",
                      "",
                      ""]
 
-let subArrayImg5 = ["anemia","platelet_prob","blood_clot_risk","sickle_cell","thalasemia","rbc_prob","factov_leiden","anti_thrombin_defi","proteinc_defi","proteins_defi","pro-throm","little_fluid","hepatits","hepatits","facto_xiii_defi","facto_xiii_defi","facto_xiii_defi","facto_xiii_defi"]
+let subArrayImg5 = ["anemia","platelet_prob","blood_clot_risk","sickle_cell","thalasemia","rbc_prob","factov_leiden","anti_thrombin_defi","proteinc_defi","proteins_defi","pro-throm","little_fluid","hepatits","previous_major_vaginal","facto_xiii_defi","facto_xiii_defi","facto_xiii_defi","facto_xiii_defi"]
 
 
 let subArray6 = [String]()
