@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedBackVC: UIViewController , UITextFieldDelegate{
+class FeedBackVC: UIViewController , UITextFieldDelegate , UITextViewDelegate{
 
     @IBOutlet weak var feedbacView: UIView!
     @IBOutlet weak var emailView: UIView!
@@ -61,12 +61,14 @@ class FeedBackVC: UIViewController , UITextFieldDelegate{
             emailView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
             feedbacView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 
-        } else if textField == feedbackTxtView {
-            
+        }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView == feedbackTxtView {
             nameView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             emailView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             feedbacView.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
-            
         }
     }
     

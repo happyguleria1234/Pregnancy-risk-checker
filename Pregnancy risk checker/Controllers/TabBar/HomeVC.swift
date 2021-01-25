@@ -80,6 +80,11 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         self.dataTBView.separatorStyle = .none
         filteredData = titleArray
         searchViewHeight.constant = 0
@@ -88,7 +93,6 @@ class HomeVC: UIViewController , UITextFieldDelegate{
         backButtonImage.isHidden = true
         currentArray = titleArray
         currentArrayDes = descriptionArray
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func backButtonAction(_ sender: UIButton) {
@@ -97,6 +101,9 @@ class HomeVC: UIViewController , UITextFieldDelegate{
         backButton.isHidden = true
         homeLbl.isHidden = false
         backButtonImage.isHidden = true
+//        searchResults.removeAll()
+        self.searchViewHeight.constant = 0
+        self.closeButton.isHidden = true
         self.titleLbl.text = "Pregnancy Risk Checker"
 //        self.dataTBView.setContentOffset(.zero, animated: false)
         let indexPath = NSIndexPath(row: 0, section: 0)
@@ -110,6 +117,7 @@ class HomeVC: UIViewController , UITextFieldDelegate{
         issearchSelected = false
         searchTxtFld.text = ""
         searchResults.removeAll()
+        
         DispatchQueue.main.async {
             self.dataTBView.reloadData()
         }
@@ -171,14 +179,6 @@ class HomeVC: UIViewController , UITextFieldDelegate{
             }
         }
     }
-     
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        if textField == searchtxtFld {
-//            categorySearch()
-//            searchtxtFld.resignFirstResponder()
-//        }
-//        return true
-//    }
     
 }
 
@@ -255,7 +255,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                     return 0
                 }
             }else{
-                return filteredData.count
+                return titleArray.count
                 
             }
         }
@@ -268,7 +268,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "DataTBViewCell") as! DataTBViewCell
             cell.titleLbl.text = searchResults[indexPath.row]
-            //            cell.descriptionLbl.text = currentArrayDes[indexPath.row]
+            cell.descriptionLbl.text = currentArrayDes[indexPath.row]
             return cell
             
         }else{
@@ -381,7 +381,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 return cell
             }else{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "DataTBViewCell") as! DataTBViewCell
-                cell.titleLbl.text = filteredData[indexPath.row]
+                cell.titleLbl.text = titleArray[indexPath.row]
                 cell.descriptionLbl.text = descriptionArray[indexPath.row]
                 cell.showImage.image = UIImage(named: imagesArray[indexPath.row])
                 return cell
@@ -403,16 +403,36 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
             vc.subcatTitle = selectedArrayForTitle[indexPath.row]
             self.issubCatSelected = false
             self.searchTxtFld.text = ""
+            self.searchViewHeight.constant = 0
+            self.closeButton.isHidden = true
+            self.searchResults.removeAll()
             
         }else{
+            
+            if issearchSelected == true {
+                
+//                isdetailSelected = true
+                selectedIndex = indexPath.row
+                homeLbl.isHidden = true
+                backButton.isHidden = false
+                backButtonImage.isHidden = false
+                self.titleLbl.text = searchResults[indexPath.row]
+                DispatchQueue.main.async {
+                    self.dataTBView.reloadData()
+
+                }
+            }else{
+                
+            }
+            
             isdetailSelected = true
+            //            searchResults.removeAll()
             selectedIndex = indexPath.row
             homeLbl.isHidden = true
             backButton.isHidden = false
             backButtonImage.isHidden = false
             self.titleLbl.text = titleArray[indexPath.row]
-//            self.dataTBView.setContentOffset(.zero, animated: true)
-            self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
+//            self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
             self.dataTBView.reloadData()
         }
     }
