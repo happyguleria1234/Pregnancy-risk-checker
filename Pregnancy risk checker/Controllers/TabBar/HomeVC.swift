@@ -32,6 +32,7 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     var selectedArrayForImg = [String]()
     var filteredData: [String]!
     var searchResults = [String]()
+    var searchedIndex = 0
     var titleArray = ["Previous pregnancy and birth",
                       "Where to deliver",
                       "Delivery",
@@ -80,11 +81,6 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         self.dataTBView.separatorStyle = .none
         filteredData = titleArray
         searchViewHeight.constant = 0
@@ -93,6 +89,13 @@ class HomeVC: UIViewController , UITextFieldDelegate{
         backButtonImage.isHidden = true
         currentArray = titleArray
         currentArrayDes = descriptionArray
+        // Do any additional setup after loading the view.
+    }
+    
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        dataTBView.reloadData()
     }
     
     @IBAction func backButtonAction(_ sender: UIButton) {
@@ -101,14 +104,14 @@ class HomeVC: UIViewController , UITextFieldDelegate{
         backButton.isHidden = true
         homeLbl.isHidden = false
         backButtonImage.isHidden = true
-//        searchResults.removeAll()
+        filteredData = titleArray
         self.searchViewHeight.constant = 0
         self.closeButton.isHidden = true
         self.titleLbl.text = "Pregnancy Risk Checker"
-//        self.dataTBView.setContentOffset(.zero, animated: false)
         let indexPath = NSIndexPath(row: 0, section: 0)
         self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
-        self.dataTBView.reloadData()
+//        self.dataTBView.reloadData()
+        self.reloadTBVIew()
         
     }
     @IBAction func cloaseButton(_ sender: UIButton) {
@@ -121,6 +124,8 @@ class HomeVC: UIViewController , UITextFieldDelegate{
         DispatchQueue.main.async {
             self.dataTBView.reloadData()
         }
+        
+        
     }
     
     @IBAction func searchButtonAction(_ sender: UIButton) {
@@ -147,36 +152,54 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     
     
     func searchData(word : String) {
-        
+       
         if isdetailSelected == true {
+            
             searchResults.removeAll()
+            var indexxx = 0
             for item in selectedArrayForTitle {
                 if item.lowercased().contains(word.lowercased()) {
                     searchResults.append(item)
-                    
+                    searchedIndex = indexxx
                 }
+                indexxx += 1
             }
             print(searchResults)
             issearchSelected = true
             
             DispatchQueue.main.async {
-                self.dataTBView.reloadData()
+//                self.dataTBView.reloadData()
+                self.reloadTBVIew()
             }
+
         }else{
             
             searchResults.removeAll()
+            var indexxx = 0
             for item in titleArray {
                 if item.lowercased().contains(word.lowercased()) {
                     searchResults.append(item)
-                    
+                    searchedIndex = indexxx
                 }
+                indexxx += 1
             }
             print(searchResults)
             issearchSelected = true
-            
+            print(searchedIndex)
             DispatchQueue.main.async {
-                self.dataTBView.reloadData()
+//                self.dataTBView.reloadData()
+                self.reloadTBVIew()
             }
+        }
+    }
+    
+    func reloadTBVIew() {
+//        UIView.transition(with: dataTBView, duration: 0.3, options: .transitionCrossDissolve, animations: {self.dataTBView.reloadData()}, completion: nil)
+        DispatchQueue.main.async {
+            self.dataTBView.performBatchUpdates({
+                let indexSet = IndexSet(integersIn: 0...0)
+                self.dataTBView.reloadSections(indexSet, with: .fade)
+            }, completion: nil)
         }
     }
     
@@ -255,7 +278,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                     return 0
                 }
             }else{
-                return titleArray.count
+                return filteredData.count
                 
             }
         }
@@ -377,6 +400,8 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                     cell.titleLbl.text = selectedArrayForTitle[indexPath.row]
                     cell.descriptionLbl.text = selectedArrayForDes[indexPath.row]
                     cell.showImage.image = UIImage(named: selectedArrayForImg[indexPath.row])
+                    let indexPath = NSIndexPath(row: 0, section: 0)
+                    self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
                 }
                 return cell
             }else{
@@ -402,17 +427,15 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
             self.navigationController?.pushViewController(vc, animated: true)
             vc.subcatTitle = selectedArrayForTitle[indexPath.row]
             self.issubCatSelected = false
-            self.searchTxtFld.text = ""
-            self.searchViewHeight.constant = 0
-            self.closeButton.isHidden = true
-            self.searchResults.removeAll()
-            
+//            self.searchTxtFld.text = ""
+//            self.searchViewHeight.constant = 40
+//            self.closeButton.isHidden = false
         }else{
             
             if issearchSelected == true {
-                
-//                isdetailSelected = true
-                selectedIndex = indexPath.row
+                issearchSelected = false
+                isdetailSelected = true
+                selectedIndex = searchedIndex
                 homeLbl.isHidden = true
                 backButton.isHidden = false
                 backButtonImage.isHidden = false
@@ -421,19 +444,17 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                     self.dataTBView.reloadData()
 
                 }
-            }else{
                 
+            }else{
+                isdetailSelected = true
+                selectedIndex = indexPath.row
+                homeLbl.isHidden = true
+                backButton.isHidden = false
+                backButtonImage.isHidden = false
+                self.titleLbl.text = titleArray[indexPath.row]
+    //            self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
+                self.dataTBView.reloadData()
             }
-            
-            isdetailSelected = true
-            //            searchResults.removeAll()
-            selectedIndex = indexPath.row
-            homeLbl.isHidden = true
-            backButton.isHidden = false
-            backButtonImage.isHidden = false
-            self.titleLbl.text = titleArray[indexPath.row]
-//            self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
-            self.dataTBView.reloadData()
         }
     }
 }
@@ -447,4 +468,5 @@ struct AllData {
         self.description = description
     }
 }
+
 
