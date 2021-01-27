@@ -162,7 +162,7 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
                             }
                         }
                         else{
-                            self.countryImage.image = UIImage(named: "")
+                            self.countryImage.image = UIImage(named: "flag")
                         }
                         
                         

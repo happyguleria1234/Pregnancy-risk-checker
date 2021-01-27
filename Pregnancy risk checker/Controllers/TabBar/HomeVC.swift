@@ -102,7 +102,7 @@ class HomeVC: UIViewController , UITextFieldDelegate{
         
         isdetailSelected = false
         backButton.isHidden = true
-        homeLbl.isHidden = false
+//        homeLbl.isHidden = false
         backButtonImage.isHidden = true
         filteredData = titleArray
         self.searchViewHeight.constant = 0
@@ -400,8 +400,8 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                     cell.titleLbl.text = selectedArrayForTitle[indexPath.row]
                     cell.descriptionLbl.text = selectedArrayForDes[indexPath.row]
                     cell.showImage.image = UIImage(named: selectedArrayForImg[indexPath.row])
-                    let indexPath = NSIndexPath(row: 0, section: 0)
-                    self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
+//                    let indexPath = NSIndexPath(row: 0, section: 0)
+//                    self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
                 }
                 return cell
             }else{
@@ -423,20 +423,30 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
         
         if isdetailSelected == true{
             
+            if issearchSelected == true {
+                let vc = SubCatDetailsVC.instantiate(fromAppStoryboard: .Home)
+                self.navigationController?.pushViewController(vc, animated: true)
+                vc.subcatTitle = searchResults[indexPath.row]
+                selectedIndex = searchedIndex
+                self.issubCatSelected = false
+            }else{
+            
             let vc = SubCatDetailsVC.instantiate(fromAppStoryboard: .Home)
             self.navigationController?.pushViewController(vc, animated: true)
             vc.subcatTitle = selectedArrayForTitle[indexPath.row]
+            selectedIndex = searchedIndex
             self.issubCatSelected = false
 //            self.searchTxtFld.text = ""
 //            self.searchViewHeight.constant = 40
 //            self.closeButton.isHidden = false
+            }
         }else{
             
             if issearchSelected == true {
                 issearchSelected = false
                 isdetailSelected = true
                 selectedIndex = searchedIndex
-                homeLbl.isHidden = true
+//                homeLbl.isHidden = true
                 backButton.isHidden = false
                 backButtonImage.isHidden = false
                 self.titleLbl.text = searchResults[indexPath.row]

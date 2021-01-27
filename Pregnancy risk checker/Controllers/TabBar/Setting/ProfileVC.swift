@@ -104,7 +104,7 @@ class ProfileVC: UIViewController , UITextFieldDelegate{
                             }
                         }
                         else{
-                            self.flagImage.image = UIImage(named: "")
+                            self.flagImage.image = UIImage(named: "flag")
                         }
 
                     }
