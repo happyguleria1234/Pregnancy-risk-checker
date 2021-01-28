@@ -33,6 +33,7 @@ class Singleton  {
     var lat = Double()
     var long = Double()
     var authToken = String()
-    
+    var isComingFromSubDetailsScreen =  false
+    var lastSelectedIndex = 0
 
 }

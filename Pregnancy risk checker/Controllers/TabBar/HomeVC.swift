@@ -32,6 +32,8 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     var selectedArrayForImg = [String]()
     var filteredData: [String]!
     var searchResults = [String]()
+    var searchImages = [String]()
+    var searchDes = [String]()
     var searchedIndex = 0
     var titleArray = ["Previous pregnancy and birth",
                       "Where to deliver",
@@ -92,11 +94,17 @@ class HomeVC: UIViewController , UITextFieldDelegate{
         // Do any additional setup after loading the view.
     }
     
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        dataTBView.reloadData()
+    override func viewWillAppear(_ animated: Bool) {
+        if Singleton.sharedInstance.isComingFromSubDetailsScreen == true{
+            self.selectedIndex = Singleton.sharedInstance.lastSelectedIndex
+            dataTBView.reloadData()
+            Singleton.sharedInstance.isComingFromSubDetailsScreen = false
+        }else{
+            dataTBView.reloadData()
+        }
     }
+    
+    
     
     @IBAction func backButtonAction(_ sender: UIButton) {
         
@@ -154,47 +162,76 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     func searchData(word : String) {
        
         if isdetailSelected == true {
-            
             searchResults.removeAll()
+            searchImages.removeAll()
+            searchDes.removeAll()
             var indexxx = 0
             for item in selectedArrayForTitle {
                 if item.lowercased().contains(word.lowercased()) {
                     searchResults.append(item)
                     searchedIndex = indexxx
+                    var imageIndx = 0
+                    for img in selectedArrayForImg {
+                        if imageIndx == indexxx {
+                            searchImages.append(img)
+                        }
+                        imageIndx += 1
+                    }
+                    var desIndx = 0
+                    for des in selectedArrayForDes {
+                        if desIndx == indexxx {
+                            searchDes.append(des)
+                        }
+                        desIndx += 1
+                    }
                 }
                 indexxx += 1
             }
             print(searchResults)
             issearchSelected = true
-            
             DispatchQueue.main.async {
-//                self.dataTBView.reloadData()
                 self.reloadTBVIew()
             }
-
         }else{
             
             searchResults.removeAll()
+            searchImages.removeAll()
+            searchDes.removeAll()
             var indexxx = 0
             for item in titleArray {
                 if item.lowercased().contains(word.lowercased()) {
                     searchResults.append(item)
                     searchedIndex = indexxx
+                    
+                    var imageIndx = 0
+                    for img in imagesArray {
+                        if imageIndx == indexxx {
+                            searchImages.append(img)
+                        }
+                        imageIndx += 1
+                    }
+                    var desIndx = 0
+                    for des in descriptionArray {
+                        if desIndx == indexxx {
+                            searchDes.append(des)
+                        }
+                        desIndx += 1
+                    }
+
                 }
+                
                 indexxx += 1
             }
             print(searchResults)
             issearchSelected = true
             print(searchedIndex)
             DispatchQueue.main.async {
-//                self.dataTBView.reloadData()
                 self.reloadTBVIew()
             }
         }
     }
     
     func reloadTBVIew() {
-//        UIView.transition(with: dataTBView, duration: 0.3, options: .transitionCrossDissolve, animations: {self.dataTBView.reloadData()}, completion: nil)
         DispatchQueue.main.async {
             self.dataTBView.performBatchUpdates({
                 let indexSet = IndexSet(integersIn: 0...0)
@@ -291,7 +328,9 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "DataTBViewCell") as! DataTBViewCell
             cell.titleLbl.text = searchResults[indexPath.row]
-            cell.descriptionLbl.text = currentArrayDes[indexPath.row]
+            cell.descriptionLbl.text = searchDes[indexPath.row]
+            cell.showImage.image = UIImage(named: searchImages[indexPath.row])
+            self.dataTBView.setContentOffset(.zero, animated: false)
             return cell
             
         }else{
@@ -397,11 +436,11 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                     print(subArray1)
                 }
                 if selectedArrayForTitle.count > 0 {
+                    
                     cell.titleLbl.text = selectedArrayForTitle[indexPath.row]
                     cell.descriptionLbl.text = selectedArrayForDes[indexPath.row]
                     cell.showImage.image = UIImage(named: selectedArrayForImg[indexPath.row])
-//                    let indexPath = NSIndexPath(row: 0, section: 0)
-//                    self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
+                    
                 }
                 return cell
             }else{
@@ -424,21 +463,25 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
         if isdetailSelected == true{
             
             if issearchSelected == true {
+                
                 let vc = SubCatDetailsVC.instantiate(fromAppStoryboard: .Home)
-                self.navigationController?.pushViewController(vc, animated: true)
                 vc.subcatTitle = searchResults[indexPath.row]
                 selectedIndex = searchedIndex
+                Singleton.sharedInstance.isComingFromSubDetailsScreen = true
+//                Singleton.sharedInstance.lastSelectedIndex = selectedIndex
                 self.issubCatSelected = false
+                self.navigationController?.pushViewController(vc, animated: true)
+
+                
             }else{
             
             let vc = SubCatDetailsVC.instantiate(fromAppStoryboard: .Home)
-            self.navigationController?.pushViewController(vc, animated: true)
             vc.subcatTitle = selectedArrayForTitle[indexPath.row]
             selectedIndex = searchedIndex
+            Singleton.sharedInstance.isComingFromSubDetailsScreen = true
             self.issubCatSelected = false
-//            self.searchTxtFld.text = ""
-//            self.searchViewHeight.constant = 40
-//            self.closeButton.isHidden = false
+            self.navigationController?.pushViewController(vc, animated: true)
+
             }
         }else{
             
@@ -447,6 +490,8 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 isdetailSelected = true
                 selectedIndex = searchedIndex
 //                homeLbl.isHidden = true
+                Singleton.sharedInstance.lastSelectedIndex = selectedIndex
+
                 backButton.isHidden = false
                 backButtonImage.isHidden = false
                 self.titleLbl.text = searchResults[indexPath.row]
@@ -456,13 +501,16 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 }
                 
             }else{
+                
                 isdetailSelected = true
                 selectedIndex = indexPath.row
                 homeLbl.isHidden = true
+                Singleton.sharedInstance.lastSelectedIndex = selectedIndex
                 backButton.isHidden = false
                 backButtonImage.isHidden = false
                 self.titleLbl.text = titleArray[indexPath.row]
-    //            self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
+                self.dataTBView.scrollToRow(at: indexPath, at: .top, animated: true)
+                
                 self.dataTBView.reloadData()
             }
         }
@@ -478,5 +526,3 @@ struct AllData {
         self.description = description
     }
 }
-
-
