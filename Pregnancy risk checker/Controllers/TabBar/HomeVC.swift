@@ -108,12 +108,13 @@ class HomeVC: UIViewController , UITextFieldDelegate{
         }else{
             dataTBView.reloadData()
         }
+        self.searchTxtFld.text = ""
     }
     
     
     
     @IBAction func backButtonAction(_ sender: UIButton) {
-        
+        issearchSelected = false
         isdetailSelected = false
         backButton.isHidden = true
         homeLbl.isHidden = false
@@ -121,6 +122,7 @@ class HomeVC: UIViewController , UITextFieldDelegate{
         filteredData = titleArray
         self.searchViewHeight.constant = 0
         self.closeButton.isHidden = true
+        self.searchTxtFld.text = ""
         self.titleLbl.text = "Pregnancy Risk Checker"
         let indexPath = NSIndexPath(row: 0, section: 0)
         self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
@@ -336,7 +338,6 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
             cell.titleLbl.text = searchResults[indexPath.row]
             cell.descriptionLbl.text = searchDes[indexPath.row]
             cell.showImage.image = UIImage(named: searchImages[indexPath.row])
-            self.dataTBView.setContentOffset(.zero, animated: false)
             return cell
             
         }else{
