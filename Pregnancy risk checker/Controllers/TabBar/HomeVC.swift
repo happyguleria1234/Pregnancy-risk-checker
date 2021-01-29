@@ -97,6 +97,12 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     override func viewWillAppear(_ animated: Bool) {
         if Singleton.sharedInstance.isComingFromSubDetailsScreen == true{
             self.selectedIndex = Singleton.sharedInstance.lastSelectedIndex
+            backButtonImage.isHidden = true
+            filteredData = selectedArrayForTitle
+            self.searchViewHeight.constant = 0
+            self.closeButton.isHidden = true
+            backButton.isHidden = false
+            backButtonImage.isHidden = false
             dataTBView.reloadData()
             Singleton.sharedInstance.isComingFromSubDetailsScreen = false
         }else{
@@ -110,7 +116,7 @@ class HomeVC: UIViewController , UITextFieldDelegate{
         
         isdetailSelected = false
         backButton.isHidden = true
-//        homeLbl.isHidden = false
+        homeLbl.isHidden = false
         backButtonImage.isHidden = true
         filteredData = titleArray
         self.searchViewHeight.constant = 0
@@ -467,6 +473,8 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 let vc = SubCatDetailsVC.instantiate(fromAppStoryboard: .Home)
                 vc.subcatTitle = searchResults[indexPath.row]
                 selectedIndex = searchedIndex
+                self.issearchSelected = false
+                self.searchTxtFld.text = ""
                 Singleton.sharedInstance.isComingFromSubDetailsScreen = true
 //                Singleton.sharedInstance.lastSelectedIndex = selectedIndex
                 self.issubCatSelected = false
@@ -489,9 +497,9 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 issearchSelected = false
                 isdetailSelected = true
                 selectedIndex = searchedIndex
-//                homeLbl.isHidden = true
+                homeLbl.isHidden = true
                 Singleton.sharedInstance.lastSelectedIndex = selectedIndex
-
+                self.searchTxtFld.text = ""
                 backButton.isHidden = false
                 backButtonImage.isHidden = false
                 self.titleLbl.text = searchResults[indexPath.row]

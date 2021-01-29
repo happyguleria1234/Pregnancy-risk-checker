@@ -17,6 +17,7 @@ class AboutUS: UIViewController {
 
         let link = URL(string:"https://www.dharmani.com/pregnancyApp/AboutUs.html")!
         let request = URLRequest(url: link)
+        webKitView.contentMode = .scaleToFill
         webKitView.load(request)
         // Do any additional setup after loading the view.
     }
