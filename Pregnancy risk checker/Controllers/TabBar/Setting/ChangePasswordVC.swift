@@ -27,7 +27,7 @@ class ChangePasswordVC: UIViewController , UITextFieldDelegate{
     @IBAction func submitButton(_ sender: Any) {
         if (currentPasswordTxtFld.text!.isEmpty){
             
-            ValidateData(strMessage: "Please enter old password")
+            ValidateData(strMessage: "Please enter current password")
             
         }else if (password == currentPasswordTxtFld.text){
             

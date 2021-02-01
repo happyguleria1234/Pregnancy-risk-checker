@@ -27,7 +27,7 @@ class FeedBackVC: UIViewController , UITextFieldDelegate , UITextViewDelegate{
     @IBAction func submitButton(_ sender: Any) {
         if (nameTxtFld.text?.isEmpty)!{
             
-            ValidateData(strMessage: " Please enter username")
+            ValidateData(strMessage: " Please enter name")
             
         }else if (emailTxtFld.text?.isEmpty)!{
             

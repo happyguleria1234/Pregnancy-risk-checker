@@ -78,12 +78,12 @@ class ProfileVC: UIViewController , UITextFieldDelegate{
                         self.nameLbl.text = allData["name"] as? String ?? ""
                         self.emailTxtFld.text = allData["email"] as? String ?? ""
                         self.passwordTxtFld.text = "12345678"
-                        let dataStr = Data((allData["bio"] as? String ?? "").utf8)
+//                        let dataStr = Data((allData["bio"] as? String ?? "").utf8)
 
-                        let str = String(data: dataStr, encoding: .utf8)
-                        print(dataStr)
-                        self.bioTxtView.text = (allData["bio"] as? String ?? "")
-//                      self.bioTxtView.text = allData["bio"] as? String ?? ""
+//                        let str = String(data: dataStr, encoding: .utf8)
+//                        print(dataStr)
+//                        self.bioTxtView.text = (allData["bio"] as? String ?? "")
+                      self.bioTxtView.text = allData["bio"] as? String ?? ""
                         self.nameTxtFld.text = allData["name"] as? String ?? ""
                         self.profileImage.sd_setImage(with: URL(string:allData["profileImage"] as? String ?? ""), placeholderImage: UIImage(named: "img"))
 //                        self.flagImage.sd_setImage(with: URL(string:allData["country_image"] as? String ?? ""), placeholderImage: UIImage(named: "img"))

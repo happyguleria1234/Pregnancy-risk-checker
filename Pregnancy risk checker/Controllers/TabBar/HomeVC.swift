@@ -163,6 +163,7 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchData(word: searchTxtFld.text ?? "")
+        searchTxtFld.resignFirstResponder()
         return true
     }
     
