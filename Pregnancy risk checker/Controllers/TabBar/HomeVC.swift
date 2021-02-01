@@ -290,7 +290,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 case 7:
                     return subArray8.count
                 case 8:
-                    return subArray8.count
+                    return subArray9.count
                 case 9:
                     return subArray10.count
                 case 10:
@@ -447,7 +447,6 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                     cell.titleLbl.text = selectedArrayForTitle[indexPath.row]
                     cell.descriptionLbl.text = selectedArrayForDes[indexPath.row]
                     cell.showImage.image = UIImage(named: selectedArrayForImg[indexPath.row])
-                    
                 }
                 return cell
             }else{
@@ -495,6 +494,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
         }else{
             
             if issearchSelected == true {
+                
                 issearchSelected = false
                 isdetailSelected = true
                 selectedIndex = searchedIndex
@@ -519,7 +519,6 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 backButtonImage.isHidden = false
                 self.titleLbl.text = titleArray[indexPath.row]
                 self.dataTBView.scrollToRow(at: indexPath, at: .top, animated: true)
-                
                 self.dataTBView.reloadData()
             }
         }

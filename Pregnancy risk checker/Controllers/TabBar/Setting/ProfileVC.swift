@@ -25,7 +25,7 @@ class ProfileVC: UIViewController , UITextFieldDelegate{
         super.viewDidLoad()
         nameTxtFld.isUserInteractionEnabled = false
         emailTxtFld.isUserInteractionEnabled = false
-        bioTxtView.isUserInteractionEnabled = false
+//        bioTxtView.isUserInteractionEnabled = false
         passwordTxtFld.isUserInteractionEnabled = false
         
         // Do any additional setup after loading the view.
@@ -44,13 +44,20 @@ class ProfileVC: UIViewController , UITextFieldDelegate{
     
     override func viewDidAppear(_ animated: Bool) {
         getData()
-
     }
     
     @IBAction func backButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
+   
+    func randomEmoji() -> String {
+        let range = 0x1F300...0x1F3F0
+        let index = Int(arc4random_uniform(UInt32(range.count)))
+        let ord = range.lowerBound + index
+        guard let scalar = UnicodeScalar(ord) else { return "❓" }
+        return String(scalar)
+    }
     
     func getData() {
         let id = UserDefaults.standard.value(forKey: "id") ?? ""
@@ -70,9 +77,13 @@ class ProfileVC: UIViewController , UITextFieldDelegate{
                     if let allData = response["userDetails"] as? [String:Any]{
                         self.nameLbl.text = allData["name"] as? String ?? ""
                         self.emailTxtFld.text = allData["email"] as? String ?? ""
-//                        self.passwordTxtFld.text = allData["password"] as? String ?? ""
                         self.passwordTxtFld.text = "12345678"
-                        self.bioTxtView.text = allData["bio"] as? String ?? ""
+                        let dataStr = Data((allData["bio"] as? String ?? "").utf8)
+
+                        let str = String(data: dataStr, encoding: .utf8)
+                        print(dataStr)
+                        self.bioTxtView.text = (allData["bio"] as? String ?? "")
+//                      self.bioTxtView.text = allData["bio"] as? String ?? ""
                         self.nameTxtFld.text = allData["name"] as? String ?? ""
                         self.profileImage.sd_setImage(with: URL(string:allData["profileImage"] as? String ?? ""), placeholderImage: UIImage(named: "img"))
 //                        self.flagImage.sd_setImage(with: URL(string:allData["country_image"] as? String ?? ""), placeholderImage: UIImage(named: "img"))

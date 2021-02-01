@@ -44,10 +44,12 @@ class SignInVC: UIViewController,UITextFieldDelegate {
         
         if (emailTxtFld.text?.isEmpty)!{
             
-            ValidateData(strMessage: " Please enter username")
-        }        else if (passwordTxtFld.text?.isEmpty)!{
+            ValidateData(strMessage: " Please enter email")
+            
+        } else if (passwordTxtFld.text?.isEmpty)!{
             
             ValidateData(strMessage: " Please enter password")
+            
         }else{
             
             self.signIn()

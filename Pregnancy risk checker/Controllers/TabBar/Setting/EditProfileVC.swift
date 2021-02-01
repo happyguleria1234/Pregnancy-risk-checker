@@ -92,7 +92,7 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
             print(self.flagBase64)
             
             
-            if self.base64String != nil {
+            if self.base64String != "" {
                 self.flagBase64 = UserDefaults.standard.value(forKey: "flag") as! String
                 let decodedData = NSData(base64Encoded: self.flagBase64, options: [])
                 if let data = decodedData {
@@ -265,53 +265,13 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func editProfile() {
-        if Reachability.isConnectedToNetwork() == true {
-            print("Internet connection OK")
-            IJProgressView.shared.showProgressView()
-            let id = UserDefaults.standard.value(forKey: "id") ?? ""
-            let url = Constant.shared.baseUrl + Constant.shared.editProfile
-            print(url)
-            
-            
-            let parms : [String:Any] = ["userID" : id,"name" : nameTxtFld.text ?? "","bio" : bioTxtView.text ?? "","profileImage" : base64String,"countryName" : countryName ?? ""]
-            print(parms)
-            AFWrapperClass.requestPOSTURL(url, params: parms, success: { (response) in
-                IJProgressView.shared.hideProgressView()
-                self.message = response["message"] as? String ?? ""
-                let status = response["status"] as? String
-                if status == "1"{
-                    if let allData = response["userDetails"] as? [String:Any] {
-                        IJProgressView.shared.hideProgressView()
-                    }
-                    showAlertMessage(title: Constant.shared.appTitle, message: self.message, okButton: "Ok", controller: self) {
-                        let vc = TabBarVC.instantiate(fromAppStoryboard: .Home)
-                        self.navigationController?.pushViewController(vc, animated: true)
-                    }
-                }else{
-                    IJProgressView.shared.hideProgressView()
-                    alert(Constant.shared.appTitle, message: self.message, view: self)
-                }
-            }) { (error) in
-                IJProgressView.shared.hideProgressView()
-                alert(Constant.shared.appTitle, message: error.localizedDescription, view: self)
-                print(error)
-            }
-            
-        } else {
-            print("Internet connection FAILED")
-            alert(Constant.shared.appTitle, message: "Check internet connection", view: self)
-        }
-    }
-    
-    
     func updateData()  {
         
         let id = UserDefaults.standard.value(forKey: "id") ?? ""
         
         userDetails = ["userID" : id,"name" : nameTxtFld.text ?? "","bio" : bioTxtView.text ?? "","countryName" : countryName]
         
-        if base64String != nil {
+        if base64String != "" {
             flagBase64 = UserDefaults.standard.value(forKey: "flag") as! String
             let decodedData = NSData(base64Encoded: flagBase64, options: [])
             if let data = decodedData {
@@ -388,6 +348,10 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
         if (nameTxtFld.text?.isEmpty)!{
             
             ValidateData(strMessage: " Name should not be empty")
+            
+        }else if (nameTxtFld.text!.trimmingCharacters(in: .whitespaces)).isEmpty {
+            
+            ValidateData(strMessage: "Name field should not contains space")
             
         }else if (emailTxtFld.text?.isEmpty)!{
             
