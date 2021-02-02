@@ -95,6 +95,7 @@ class HomeVC: UIViewController , UITextFieldDelegate{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         if Singleton.sharedInstance.isComingFromSubDetailsScreen == true{
             self.selectedIndex = Singleton.sharedInstance.lastSelectedIndex
             backButtonImage.isHidden = true
@@ -103,6 +104,8 @@ class HomeVC: UIViewController , UITextFieldDelegate{
             self.closeButton.isHidden = true
             backButton.isHidden = false
             backButtonImage.isHidden = false
+//            let indexPath = NSIndexPath(row: 0, section: 0)
+//            self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
             dataTBView.reloadData()
             Singleton.sharedInstance.isComingFromSubDetailsScreen = false
         }else{
@@ -124,10 +127,11 @@ class HomeVC: UIViewController , UITextFieldDelegate{
         self.closeButton.isHidden = true
         self.searchTxtFld.text = ""
         self.titleLbl.text = "Pregnancy Risk Checker"
-        let indexPath = NSIndexPath(row: 0, section: 0)
-        self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
-//        self.dataTBView.reloadData()
         self.reloadTBVIew()
+        self.dataTBView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+
+//        let indexPath = NSIndexPath(row: 0, section: 0)
+//        self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)        
         
     }
     @IBAction func cloaseButton(_ sender: UIButton) {
@@ -443,12 +447,14 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 default:
                     print(subArray1)
                 }
-                if selectedArrayForTitle.count > 0 {
+                if selectedArrayForTitle.count > 0 && selectedArrayForDes.count > 0 && selectedArrayForImg.count > 0 {
                     
-                    cell.titleLbl.text = selectedArrayForTitle[indexPath.row]
-                    cell.descriptionLbl.text = selectedArrayForDes[indexPath.row]
-                    cell.showImage.image = UIImage(named: selectedArrayForImg[indexPath.row])
+                        cell.titleLbl.text = selectedArrayForTitle[indexPath.row]
+                        cell.descriptionLbl.text = selectedArrayForDes[indexPath.row]
+                        cell.showImage.image = UIImage(named: selectedArrayForImg[indexPath.row])
+                    
                 }
+                
                 return cell
             }else{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "DataTBViewCell") as! DataTBViewCell
@@ -480,7 +486,6 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
 //                Singleton.sharedInstance.lastSelectedIndex = selectedIndex
                 self.issubCatSelected = false
                 self.navigationController?.pushViewController(vc, animated: true)
-
                 
             }else{
             
@@ -519,7 +524,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 backButton.isHidden = false
                 backButtonImage.isHidden = false
                 self.titleLbl.text = titleArray[indexPath.row]
-                self.dataTBView.scrollToRow(at: indexPath, at: .top, animated: true)
+                self.dataTBView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
                 self.dataTBView.reloadData()
             }
         }

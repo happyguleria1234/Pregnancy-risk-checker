@@ -84,7 +84,7 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
             
             self.flagBase64 = country.flag?.toString() ?? ""
             self.countryName = country.countryName
-            
+            self.countryImage.image = country.flag
             UserDefaults.standard.setValue(country.countryName, forKey: "name")
             self.flagBase64 = country.flag?.toString() ?? ""
             UserDefaults.standard.setValue(self.flagBase64, forKey: "flag")
