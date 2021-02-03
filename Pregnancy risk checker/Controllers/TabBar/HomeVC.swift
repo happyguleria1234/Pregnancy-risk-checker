@@ -106,10 +106,10 @@ class HomeVC: UIViewController , UITextFieldDelegate{
             backButtonImage.isHidden = false
 //            let indexPath = NSIndexPath(row: 0, section: 0)
 //            self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
-            dataTBView.reloadData()
+//            dataTBView.reloadData()
             Singleton.sharedInstance.isComingFromSubDetailsScreen = false
         }else{
-            dataTBView.reloadData()
+//            dataTBView.reloadData()
         }
         self.searchTxtFld.text = ""
     }
@@ -128,7 +128,7 @@ class HomeVC: UIViewController , UITextFieldDelegate{
         self.searchTxtFld.text = ""
         self.titleLbl.text = "Pregnancy Risk Checker"
         self.reloadTBVIew()
-        self.dataTBView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+//        self.dataTBView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
 
 //        let indexPath = NSIndexPath(row: 0, section: 0)
 //        self.dataTBView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)        
