@@ -61,6 +61,10 @@
 		18833EE225A57ADA00390BFE /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833EDF25A57ADA00390BFE /* AppConstants.swift */; };
 		18833EE325A57ADA00390BFE /* DisplayAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833EE025A57ADA00390BFE /* DisplayAlertManager.swift */; };
 		18C2A76625ADB8340060C9B0 /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2A76525ADB8340060C9B0 /* ChangePasswordVC.swift */; };
+		18D2F12725CD5A3E0009DE2F /* SubscriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2F12625CD5A3E0009DE2F /* SubscriptionVC.swift */; };
+		18D2F14925CD5E070009DE2F /* IAPProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2F14625CD5E060009DE2F /* IAPProduct.swift */; };
+		18D2F14A25CD5E070009DE2F /* PurchaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2F14725CD5E060009DE2F /* PurchaseHelper.swift */; };
+		18D2F14B25CD5E070009DE2F /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2F14825CD5E070009DE2F /* IAPService.swift */; };
 		18EC35EC25C2830F004CC196 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EC35EB25C2830F004CC196 /* WebKit.framework */; };
 		873B5076B6124DD14A3BA971 /* Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671EE0B9F364F87B15DC5052 /* Pods_Pregnancy_risk_checker_Pregnancy_risk_checkerUITests.framework */; };
 		B7B0B3C3306851B24E3FC96B /* Pods_Pregnancy_risk_checker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AFC80F5C665D2DFCDBEBBD /* Pods_Pregnancy_risk_checker.framework */; };
@@ -143,6 +147,10 @@
 		18833EDF25A57ADA00390BFE /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		18833EE025A57ADA00390BFE /* DisplayAlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayAlertManager.swift; sourceTree = "<group>"; };
 		18C2A76525ADB8340060C9B0 /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		18D2F12625CD5A3E0009DE2F /* SubscriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionVC.swift; sourceTree = "<group>"; };
+		18D2F14625CD5E060009DE2F /* IAPProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPProduct.swift; sourceTree = "<group>"; };
+		18D2F14725CD5E060009DE2F /* PurchaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseHelper.swift; sourceTree = "<group>"; };
+		18D2F14825CD5E070009DE2F /* IAPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
 		18EC35EB25C2830F004CC196 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1B4FCD98864F22E088068B5C /* Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.release.xcconfig"; path = "Target Support Files/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests/Pods-Pregnancy risk checker-Pregnancy risk checkerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3C44850C55A4B0B6A5986B28 /* Pods-Pregnancy risk checkerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pregnancy risk checkerTests.debug.xcconfig"; path = "Target Support Files/Pods-Pregnancy risk checkerTests/Pods-Pregnancy risk checkerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -372,6 +380,7 @@
 		1827BA9925A48C7300D2EE9C /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				18D2F12525CD5A250009DE2F /* InAppPurchase */,
 				1827BA9A25A48C8300D2EE9C /* SignInVC.swift */,
 				1827BA9C25A48C9100D2EE9C /* SignUpVC.swift */,
 				1827BAA025A4905900D2EE9C /* ForgotPasswordVC.swift */,
@@ -412,6 +421,17 @@
 				1827BA6525A4870A00D2EE9C /* Assets.xcassets */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		18D2F12525CD5A250009DE2F /* InAppPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				18D2F14625CD5E060009DE2F /* IAPProduct.swift */,
+				18D2F14825CD5E070009DE2F /* IAPService.swift */,
+				18D2F14725CD5E060009DE2F /* PurchaseHelper.swift */,
+				18D2F12625CD5A3E0009DE2F /* SubscriptionVC.swift */,
+			);
+			path = InAppPurchase;
 			sourceTree = "<group>";
 		};
 		921135D046EE5D062B550980 /* Pods */ = {
@@ -690,6 +710,8 @@
 				1827BAA425A4908E00D2EE9C /* TabBarVC.swift in Sources */,
 				18833EE225A57ADA00390BFE /* AppConstants.swift in Sources */,
 				180686F825A5E1B300297E06 /* PrivecyPolicyVC.swift in Sources */,
+				18D2F14B25CD5E070009DE2F /* IAPService.swift in Sources */,
+				18D2F14925CD5E070009DE2F /* IAPProduct.swift in Sources */,
 				18833ED625A57A9300390BFE /* Constant.swift in Sources */,
 				18C2A76625ADB8340060C9B0 /* ChangePasswordVC.swift in Sources */,
 				1827BAA625A490AE00D2EE9C /* HomeVC.swift in Sources */,
@@ -700,7 +722,9 @@
 				1827BA6125A4870700D2EE9C /* ViewController.swift in Sources */,
 				180686FC25A5E68D00297E06 /* AboutUS.swift in Sources */,
 				1827BAA825A490BE00D2EE9C /* FeedBackVC.swift in Sources */,
+				18D2F14A25CD5E070009DE2F /* PurchaseHelper.swift in Sources */,
 				1827BA5D25A4870700D2EE9C /* AppDelegate.swift in Sources */,
+				18D2F12725CD5A3E0009DE2F /* SubscriptionVC.swift in Sources */,
 				1827BAA125A4905900D2EE9C /* ForgotPasswordVC.swift in Sources */,
 				18833EDD25A57AC600390BFE /* Activityloader.swift in Sources */,
 				1827BA9B25A48C8300D2EE9C /* SignInVC.swift in Sources */,

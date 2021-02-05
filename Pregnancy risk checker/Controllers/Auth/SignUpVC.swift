@@ -102,8 +102,12 @@ class SignUpVC: UIViewController ,UITextFieldDelegate{
                             UserDefaults.standard.set(data["userID"], forKey: "id")
                             print(data)
                         }
-                         let vc = TabBarVC.instantiate(fromAppStoryboard: .Home)
-                         self.navigationController?.pushViewController(vc, animated: true)
+                        
+                        let vc = SubscriptionVC.instantiate(fromAppStoryboard: .Home)
+                        self.navigationController?.pushViewController(vc, animated: true)
+                        
+//                         let vc = TabBarVC.instantiate(fromAppStoryboard: .Home)
+//                         self.navigationController?.pushViewController(vc, animated: true)
                     }else{
                         IJProgressView.shared.hideProgressView()
                         alert(Constant.shared.appTitle, message: self.messgae, view: self)

@@ -13,6 +13,8 @@ target 'Pregnancy risk checker' do
     pod 'SVProgressHUD-0.8.1'
     pod 'SDWebImage', '~> 4.0'
     pod 'SKCountryPicker'
+    pod 'SwiftyStoreKit'
+
 
 
   target 'Pregnancy risk checkerTests' do

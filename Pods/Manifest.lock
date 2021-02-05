@@ -7,6 +7,7 @@ PODS:
   - SDWebImage/Core (4.4.8)
   - SKCountryPicker (1.2.9)
   - SVProgressHUD-0.8.1 (0.8)
+  - SwiftyStoreKit (0.16.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - SDWebImage (~> 4.0)
   - SKCountryPicker
   - SVProgressHUD-0.8.1
+  - SwiftyStoreKit
 
 SPEC REPOS:
   trunk:
@@ -24,6 +26,7 @@ SPEC REPOS:
     - SDWebImage
     - SKCountryPicker
     - SVProgressHUD-0.8.1
+    - SwiftyStoreKit
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
@@ -32,7 +35,8 @@ SPEC CHECKSUMS:
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SKCountryPicker: 7ad1e7dfb482cfb26855e33c2d70dbf1eaf218fe
   SVProgressHUD-0.8.1: ee9e6e58b5b5ffaf3f1a62c2dc409763470df143
+  SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: 56689007491b324b8d535a9fd95222deee5a04bf
+PODFILE CHECKSUM: fa4017031152c39f77fa8389bb71225329b66a18
 
 COCOAPODS: 1.9.3
