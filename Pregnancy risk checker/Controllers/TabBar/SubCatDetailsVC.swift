@@ -12,12 +12,16 @@ class SubCatDetailsVC: UIViewController {
 
     @IBOutlet weak var titleLbl: UILabel!
     var subcatTitle = String()
+    var allDataDetailsArray = [AllDataDetails]()
+
     @IBOutlet weak var detailsTBView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLbl.text = subcatTitle
         self.detailsTBView.separatorStyle = .none
         // Do any additional setup after loading the view.
+        
+        allDataDetailsArray.append(AllDataDetails(headline: spontaneousVaginalBirthHeadingArrayBlack, images: spontaneousVaginalBirthImagesArrayBlack, description: spontaneousVaginalBirthDetailsArrayBlack, source: pontaneousVaginalBirthSourceHeadingData, sourceDetails: pontaneousVaginalBirthSourceData))
     }
     @IBAction func backButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -37,18 +41,21 @@ class DetailsTBViewCell: UITableViewCell {
 
 extension SubCatDetailsVC : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return detailsTitleArray.count
+        return allDataDetailsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsTBViewCell", for: indexPath) as! DetailsTBViewCell
-        cell.titleLbl.text = detailsTitleArray[indexPath.row]
-        cell.desLbl.text = detailsArray[indexPath.row]
+//        cell.titleLbl.text = detailsTitleArray[indexPath.row]
+//        cell.desLbl.text = detailsArray[indexPath.row]
+        cell.titleLbl.text = allDataDetailsArray[indexPath.row].headline[indexPath.row]
+        cell.desLbl.text = allDataDetailsArray[indexPath.row].description[indexPath.row]
         cell.setColorView.backgroundColor = UIColor.random
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 210
+//        return 210
+        return UITableView.automaticDimension
     }
     
 }

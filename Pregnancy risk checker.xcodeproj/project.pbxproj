@@ -50,6 +50,7 @@
 		185F37F425AF11F4009ABA72 /* LATO-MEDIUMITALIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 185F37E425AF11F4009ABA72 /* LATO-MEDIUMITALIC.TTF */; };
 		185F37F525AF11F4009ABA72 /* LATO-SEMIBOLD.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 185F37E525AF11F4009ABA72 /* LATO-SEMIBOLD.TTF */; };
 		185F37F625AF11F4009ABA72 /* LATO-THIN.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 185F37E625AF11F4009ABA72 /* LATO-THIN.TTF */; };
+		1868610325DE31D600B9B578 /* DetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1868610225DE31D600B9B578 /* DetailsData.swift */; };
 		1879A94225B182970042AEA6 /* SubCatDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A94125B182970042AEA6 /* SubCatDetailsVC.swift */; };
 		18833ED525A57A9300390BFE /* AFWrapperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833ED125A57A9300390BFE /* AFWrapperClass.swift */; };
 		18833ED625A57A9300390BFE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833ED225A57A9300390BFE /* Constant.swift */; };
@@ -136,6 +137,7 @@
 		185F37E525AF11F4009ABA72 /* LATO-SEMIBOLD.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-SEMIBOLD.TTF"; sourceTree = "<group>"; };
 		185F37E625AF11F4009ABA72 /* LATO-THIN.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-THIN.TTF"; sourceTree = "<group>"; };
 		185F384225AF16C1009ABA72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Pregnancy risk checker/Info.plist"; sourceTree = "<group>"; };
+		1868610225DE31D600B9B578 /* DetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsData.swift; sourceTree = "<group>"; };
 		1879A94125B182970042AEA6 /* SubCatDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCatDetailsVC.swift; sourceTree = "<group>"; };
 		18833ED125A57A9300390BFE /* AFWrapperClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFWrapperClass.swift; sourceTree = "<group>"; };
 		18833ED225A57A9300390BFE /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				18833ED225A57A9300390BFE /* Constant.swift */,
 				18833ED325A57A9300390BFE /* Reachability.swift */,
 				180C225F25B05D9300CF955E /* ArrayData.swift */,
+				1868610225DE31D600B9B578 /* DetailsData.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 				1827BA9D25A48C9100D2EE9C /* SignUpVC.swift in Sources */,
 				18833EDC25A57AC600390BFE /* HelperMethods.swift in Sources */,
 				180686FA25A5E20D00297E06 /* TermsAndConitions.swift in Sources */,
+				1868610325DE31D600B9B578 /* DetailsData.swift in Sources */,
 				18833EDB25A57AC600390BFE /* ChangeBottamColor.swift in Sources */,
 				18833EE325A57ADA00390BFE /* DisplayAlertManager.swift in Sources */,
 				1827BAB125A4911F00D2EE9C /* EditProfileVC.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 
 class SignUpVC: UIViewController ,UITextFieldDelegate{
 
+    @IBOutlet weak var checkuncheckButton: UIButton!
     @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var passwordTxtFld: UITextField!
     @IBOutlet weak var emailView: UIView!
@@ -17,6 +18,8 @@ class SignUpVC: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var nameTxtFld: UITextField!
     var messgae = String()
+    var unchecked = Bool()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,6 +51,22 @@ class SignUpVC: UIViewController ,UITextFieldDelegate{
         }
     }
     
+    @IBAction func termsAndCondition(_ sender: Any) {
+    }
+    
+    @IBAction func checkUncheckButton(_ sender: Any) {
+        if (unchecked == false)
+        {
+            checkuncheckButton.setBackgroundImage(UIImage(named: "checkbox"), for: UIControl.State.normal)
+            unchecked = true
+        }
+        else
+        {
+            checkuncheckButton.setBackgroundImage(UIImage(named: "uncheck"), for: UIControl.State.normal)
+            unchecked = false
+        }
+    }
+    
     @IBAction func signupButtonAction(_ sender: Any) {
         
         if (nameTxtFld.text?.isEmpty)!{
@@ -71,10 +90,10 @@ class SignUpVC: UIViewController ,UITextFieldDelegate{
                   UserDefaults.standard.string(forKey: "password")
                   
               }
-//            else if unchecked == false{
-//
-//                  ValidateData(strMessage: "Please agree terms and conditions")
-//              }
+            else if unchecked == false{
+
+                  ValidateData(strMessage: "Please agree terms and conditions")
+              }
               else{
                   signUp()
               }

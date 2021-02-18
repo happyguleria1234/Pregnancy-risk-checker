@@ -18,6 +18,9 @@
         <array key="LATO-REGULAR.TTF">
             <string>Lato-Regular</string>
         </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Sign InVC-->
@@ -470,7 +473,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiv-OY-Fbe">
-                                <rect key="frame" x="19" y="481" width="337.5" height="42"/>
+                                <rect key="frame" x="19" y="521" width="337.5" height="42"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qiv-OY-Fbe" secondAttribute="height" multiplier="48:6" id="QyN-ZC-g6D"/>
@@ -488,7 +491,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="L5C-gC-8Bl">
-                                <rect key="frame" x="79.5" y="617" width="216" height="30"/>
+                                <rect key="frame" x="79.5" y="627" width="216" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9e-NT-Wzm">
                                         <rect key="frame" x="0.0" y="0.0" width="168" height="30"/>
@@ -521,29 +524,63 @@
                                     <constraint firstAttribute="width" secondItem="rr8-Et-blE" secondAttribute="height" multiplier="1:1" id="kaY-fa-Mvt"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpo-Vu-IHa">
+                                <rect key="frame" x="19" y="461" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rpo-Vu-IHa" secondAttribute="height" multiplier="1:1" id="myD-Tt-aY4"/>
+                                </constraints>
+                                <state key="normal" image="uncheck"/>
+                                <connections>
+                                    <action selector="checkUncheckButton:" destination="iTM-r0-Rbo" eventType="touchUpInside" id="Ydk-AT-0ED"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agree with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHF-RD-wL2">
+                                <rect key="frame" x="39" y="460.5" width="62" height="15.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G31-JD-Ylo">
+                                <rect key="frame" x="102" y="454.5" width="114" height="28"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                <state key="normal" title="Terms &amp; Conditions">
+                                    <color key="titleColor" red="0.99796444179999999" green="0.19058144090000001" blue="0.324742794" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="termsAndCondition:" destination="iTM-r0-Rbo" eventType="touchUpInside" id="cQE-8F-YTZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zMQ-n0-9Z8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7fu-hs-vWy" firstAttribute="top" secondItem="zMQ-n0-9Z8" secondAttribute="top" id="3jw-YT-P9a"/>
                             <constraint firstItem="lYa-XJ-kon" firstAttribute="top" secondItem="rr8-Et-blE" secondAttribute="bottom" constant="10" id="9X5-Dn-cS6"/>
+                            <constraint firstItem="rpo-Vu-IHa" firstAttribute="top" secondItem="lYa-XJ-kon" secondAttribute="bottom" constant="10" id="9iE-Ph-vOQ"/>
+                            <constraint firstItem="XHF-RD-wL2" firstAttribute="leading" secondItem="rpo-Vu-IHa" secondAttribute="trailing" constant="5" id="G6t-HZ-c9P"/>
+                            <constraint firstItem="G31-JD-Ylo" firstAttribute="centerY" secondItem="XHF-RD-wL2" secondAttribute="centerY" id="Hru-2l-0X9"/>
+                            <constraint firstItem="rpo-Vu-IHa" firstAttribute="leading" secondItem="lYa-XJ-kon" secondAttribute="leading" id="IuH-DB-W3S"/>
                             <constraint firstItem="L5C-gC-8Bl" firstAttribute="centerX" secondItem="zMQ-n0-9Z8" secondAttribute="centerX" id="JVZ-fq-MZn"/>
+                            <constraint firstItem="rpo-Vu-IHa" firstAttribute="width" secondItem="bnO-Sk-6EI" secondAttribute="width" multiplier="0.04" id="LLM-78-gsG"/>
                             <constraint firstItem="rr8-Et-blE" firstAttribute="centerX" secondItem="zMQ-n0-9Z8" secondAttribute="centerX" id="LyR-4k-s67"/>
                             <constraint firstItem="7fu-hs-vWy" firstAttribute="height" secondItem="bnO-Sk-6EI" secondAttribute="height" multiplier="0.05" id="RwN-xm-9Pl"/>
                             <constraint firstItem="rr8-Et-blE" firstAttribute="top" secondItem="7fu-hs-vWy" secondAttribute="bottom" id="bXW-1z-gXs"/>
+                            <constraint firstItem="G31-JD-Ylo" firstAttribute="leading" secondItem="XHF-RD-wL2" secondAttribute="trailing" constant="1" id="dYo-OU-JEO"/>
                             <constraint firstItem="rr8-Et-blE" firstAttribute="width" secondItem="bnO-Sk-6EI" secondAttribute="width" multiplier="0.5" id="ffa-OF-vHv"/>
                             <constraint firstItem="lYa-XJ-kon" firstAttribute="width" secondItem="bnO-Sk-6EI" secondAttribute="width" multiplier="0.9" id="hPU-ad-udr"/>
                             <constraint firstItem="7fu-hs-vWy" firstAttribute="leading" secondItem="zMQ-n0-9Z8" secondAttribute="leading" id="hhB-jY-Yhw"/>
                             <constraint firstItem="qiv-OY-Fbe" firstAttribute="width" secondItem="bnO-Sk-6EI" secondAttribute="width" multiplier="0.9" id="j6s-lv-29g"/>
+                            <constraint firstItem="XHF-RD-wL2" firstAttribute="centerY" secondItem="rpo-Vu-IHa" secondAttribute="centerY" id="k2h-XT-blJ"/>
                             <constraint firstItem="lYa-XJ-kon" firstAttribute="height" secondItem="bnO-Sk-6EI" secondAttribute="height" multiplier="0.33" id="klQ-EX-Oko"/>
                             <constraint firstItem="qiv-OY-Fbe" firstAttribute="centerX" secondItem="zMQ-n0-9Z8" secondAttribute="centerX" id="pNb-X5-TKY"/>
-                            <constraint firstItem="qiv-OY-Fbe" firstAttribute="top" secondItem="lYa-XJ-kon" secondAttribute="bottom" constant="30" id="pq9-Uc-qyz"/>
+                            <constraint firstItem="qiv-OY-Fbe" firstAttribute="top" secondItem="lYa-XJ-kon" secondAttribute="bottom" constant="70" id="pq9-Uc-qyz"/>
                             <constraint firstItem="zMQ-n0-9Z8" firstAttribute="trailing" secondItem="7fu-hs-vWy" secondAttribute="trailing" id="wUg-ys-zmc"/>
-                            <constraint firstItem="zMQ-n0-9Z8" firstAttribute="bottom" secondItem="L5C-gC-8Bl" secondAttribute="bottom" constant="20" id="wy8-PE-ZnM"/>
+                            <constraint firstItem="zMQ-n0-9Z8" firstAttribute="bottom" secondItem="L5C-gC-8Bl" secondAttribute="bottom" constant="10" id="wy8-PE-ZnM"/>
                             <constraint firstItem="lYa-XJ-kon" firstAttribute="centerX" secondItem="zMQ-n0-9Z8" secondAttribute="centerX" id="yCd-Mm-kPO"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="checkuncheckButton" destination="rpo-Vu-IHa" id="gO5-vy-cSK"/>
                         <outlet property="emailTxtView" destination="s2Y-bd-4Lq" id="XtT-LB-4in"/>
                         <outlet property="emailView" destination="M0i-oo-JyM" id="w0c-Ll-LwS"/>
                         <outlet property="nameTxtFld" destination="2q1-Q5-1Ou" id="MvP-4m-6za"/>
@@ -554,7 +591,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFQ-7C-jdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1945" y="-205"/>
+            <point key="canvasLocation" x="1944.8" y="-205.54722638680661"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="opr-cj-RDI">
@@ -733,6 +770,7 @@
         <image name="login-btn" width="540" height="73"/>
         <image name="logo" width="422" height="399"/>
         <image name="submit" width="540" height="73"/>
+        <image name="uncheck" width="120" height="120"/>
         <image name="user" width="25" height="29"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
