@@ -15,6 +15,10 @@
 		180686FA25A5E20D00297E06 /* TermsAndConitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180686F925A5E20D00297E06 /* TermsAndConitions.swift */; };
 		180686FC25A5E68D00297E06 /* AboutUS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180686FB25A5E68D00297E06 /* AboutUS.swift */; };
 		180C226025B05D9300CF955E /* ArrayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C225F25B05D9300CF955E /* ArrayData.swift */; };
+		181F9A0C25DE82BB007176A3 /* FourthCellXIB's.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F9A0A25DE82BB007176A3 /* FourthCellXIB's.swift */; };
+		181F9A0D25DE82BB007176A3 /* FourthCellXIB's.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181F9A0B25DE82BB007176A3 /* FourthCellXIB's.xib */; };
+		181F9A2025DE84E0007176A3 /* FifthCellXIB's.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F9A1E25DE84E0007176A3 /* FifthCellXIB's.swift */; };
+		181F9A2125DE84E0007176A3 /* FifthCellXIB's.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181F9A1F25DE84E0007176A3 /* FifthCellXIB's.xib */; };
 		1827BA5D25A4870700D2EE9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA5C25A4870700D2EE9C /* AppDelegate.swift */; };
 		1827BA6125A4870700D2EE9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BA6025A4870700D2EE9C /* ViewController.swift */; };
 		1827BA6425A4870700D2EE9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1827BA6225A4870700D2EE9C /* Main.storyboard */; };
@@ -51,6 +55,10 @@
 		185F37F525AF11F4009ABA72 /* LATO-SEMIBOLD.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 185F37E525AF11F4009ABA72 /* LATO-SEMIBOLD.TTF */; };
 		185F37F625AF11F4009ABA72 /* LATO-THIN.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 185F37E625AF11F4009ABA72 /* LATO-THIN.TTF */; };
 		1868610325DE31D600B9B578 /* DetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1868610225DE31D600B9B578 /* DetailsData.swift */; };
+		1868611025DE7BCE00B9B578 /* SecondCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1868610E25DE7BCE00B9B578 /* SecondCellTableViewCell.swift */; };
+		1868611125DE7BCE00B9B578 /* SecondCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1868610F25DE7BCE00B9B578 /* SecondCellTableViewCell.xib */; };
+		1868611725DE810C00B9B578 /* ThirdCellXIB's.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1868611525DE810C00B9B578 /* ThirdCellXIB's.swift */; };
+		1868611825DE810C00B9B578 /* ThirdCellXIB's.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1868611625DE810C00B9B578 /* ThirdCellXIB's.xib */; };
 		1879A94225B182970042AEA6 /* SubCatDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A94125B182970042AEA6 /* SubCatDetailsVC.swift */; };
 		18833ED525A57A9300390BFE /* AFWrapperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833ED125A57A9300390BFE /* AFWrapperClass.swift */; };
 		18833ED625A57A9300390BFE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833ED225A57A9300390BFE /* Constant.swift */; };
@@ -96,6 +104,10 @@
 		180686F925A5E20D00297E06 /* TermsAndConitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConitions.swift; sourceTree = "<group>"; };
 		180686FB25A5E68D00297E06 /* AboutUS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUS.swift; sourceTree = "<group>"; };
 		180C225F25B05D9300CF955E /* ArrayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayData.swift; sourceTree = "<group>"; };
+		181F9A0A25DE82BB007176A3 /* FourthCellXIB's.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FourthCellXIB's.swift"; sourceTree = "<group>"; };
+		181F9A0B25DE82BB007176A3 /* FourthCellXIB's.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "FourthCellXIB's.xib"; sourceTree = "<group>"; };
+		181F9A1E25DE84E0007176A3 /* FifthCellXIB's.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FifthCellXIB's.swift"; sourceTree = "<group>"; };
+		181F9A1F25DE84E0007176A3 /* FifthCellXIB's.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "FifthCellXIB's.xib"; sourceTree = "<group>"; };
 		1827BA5925A4870700D2EE9C /* Pregnancy risk checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pregnancy risk checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1827BA5C25A4870700D2EE9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1827BA6025A4870700D2EE9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +150,10 @@
 		185F37E625AF11F4009ABA72 /* LATO-THIN.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LATO-THIN.TTF"; sourceTree = "<group>"; };
 		185F384225AF16C1009ABA72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Pregnancy risk checker/Info.plist"; sourceTree = "<group>"; };
 		1868610225DE31D600B9B578 /* DetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsData.swift; sourceTree = "<group>"; };
+		1868610E25DE7BCE00B9B578 /* SecondCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCellTableViewCell.swift; sourceTree = "<group>"; };
+		1868610F25DE7BCE00B9B578 /* SecondCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCellTableViewCell.xib; sourceTree = "<group>"; };
+		1868611525DE810C00B9B578 /* ThirdCellXIB's.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThirdCellXIB's.swift"; sourceTree = "<group>"; };
+		1868611625DE810C00B9B578 /* ThirdCellXIB's.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "ThirdCellXIB's.xib"; sourceTree = "<group>"; };
 		1879A94125B182970042AEA6 /* SubCatDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCatDetailsVC.swift; sourceTree = "<group>"; };
 		18833ED125A57A9300390BFE /* AFWrapperClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFWrapperClass.swift; sourceTree = "<group>"; };
 		18833ED225A57A9300390BFE /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -394,6 +410,7 @@
 		1827BAA225A4906300D2EE9C /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				1868610D25DE7B6300B9B578 /* SubDetailsXIB's */,
 				1827BAA325A4908E00D2EE9C /* TabBarVC.swift */,
 				1827BAA525A490AE00D2EE9C /* HomeVC.swift */,
 				1879A94125B182970042AEA6 /* SubCatDetailsVC.swift */,
@@ -416,6 +433,21 @@
 				18C2A76525ADB8340060C9B0 /* ChangePasswordVC.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		1868610D25DE7B6300B9B578 /* SubDetailsXIB's */ = {
+			isa = PBXGroup;
+			children = (
+				1868610E25DE7BCE00B9B578 /* SecondCellTableViewCell.swift */,
+				1868610F25DE7BCE00B9B578 /* SecondCellTableViewCell.xib */,
+				1868611525DE810C00B9B578 /* ThirdCellXIB's.swift */,
+				1868611625DE810C00B9B578 /* ThirdCellXIB's.xib */,
+				181F9A0A25DE82BB007176A3 /* FourthCellXIB's.swift */,
+				181F9A0B25DE82BB007176A3 /* FourthCellXIB's.xib */,
+				181F9A1E25DE84E0007176A3 /* FifthCellXIB's.swift */,
+				181F9A1F25DE84E0007176A3 /* FifthCellXIB's.xib */,
+			);
+			path = "SubDetailsXIB's";
 			sourceTree = "<group>";
 		};
 		187EB0EB25AD746A0080D75A /* Images */ = {
@@ -560,11 +592,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1827BA9825A4899400D2EE9C /* Auth.storyboard in Resources */,
+				181F9A0D25DE82BB007176A3 /* FourthCellXIB's.xib in Resources */,
 				185F37E925AF11F4009ABA72 /* LATO-MEDIUM.TTF in Resources */,
 				185F37EF25AF11F4009ABA72 /* LATO-HEAVY.TTF in Resources */,
+				1868611825DE810C00B9B578 /* ThirdCellXIB's.xib in Resources */,
 				185F37F425AF11F4009ABA72 /* LATO-MEDIUMITALIC.TTF in Resources */,
 				1827BA9F25A48EE600D2EE9C /* Home.storyboard in Resources */,
 				185F37F225AF11F4009ABA72 /* LATO-BLACKITALIC.TTF in Resources */,
+				181F9A2125DE84E0007176A3 /* FifthCellXIB's.xib in Resources */,
 				185F37EC25AF11F4009ABA72 /* LATO-HEAVYITALIC.TTF in Resources */,
 				185F37F125AF11F4009ABA72 /* LATO-THINITALIC.TTF in Resources */,
 				1827BA6925A4870A00D2EE9C /* LaunchScreen.storyboard in Resources */,
@@ -576,6 +611,7 @@
 				185F37E825AF11F4009ABA72 /* LATO-BOLD.TTF in Resources */,
 				185F37EA25AF11F4009ABA72 /* LATO-LIGHT.TTF in Resources */,
 				185F37ED25AF11F4009ABA72 /* LATO-ITALIC.TTF in Resources */,
+				1868611125DE7BCE00B9B578 /* SecondCellTableViewCell.xib in Resources */,
 				185F37F325AF11F4009ABA72 /* LATO-LIGHTITALIC.TTF in Resources */,
 				185F37F025AF11F4009ABA72 /* LATO-BLACK.TTF in Resources */,
 				185F37F625AF11F4009ABA72 /* LATO-THIN.TTF in Resources */,
@@ -716,11 +752,14 @@
 				18D2F14B25CD5E070009DE2F /* IAPService.swift in Sources */,
 				18D2F14925CD5E070009DE2F /* IAPProduct.swift in Sources */,
 				18833ED625A57A9300390BFE /* Constant.swift in Sources */,
+				181F9A0C25DE82BB007176A3 /* FourthCellXIB's.swift in Sources */,
 				18C2A76625ADB8340060C9B0 /* ChangePasswordVC.swift in Sources */,
+				181F9A2025DE84E0007176A3 /* FifthCellXIB's.swift in Sources */,
 				1827BAA625A490AE00D2EE9C /* HomeVC.swift in Sources */,
 				1879A94225B182970042AEA6 /* SubCatDetailsVC.swift in Sources */,
 				18833EE125A57ADA00390BFE /* ValidationManager.swift in Sources */,
 				18833ED725A57A9300390BFE /* Reachability.swift in Sources */,
+				1868611725DE810C00B9B578 /* ThirdCellXIB's.swift in Sources */,
 				180686E425A5906E00297E06 /* AppFunctions.swift in Sources */,
 				1827BA6125A4870700D2EE9C /* ViewController.swift in Sources */,
 				180686FC25A5E68D00297E06 /* AboutUS.swift in Sources */,
@@ -738,6 +777,7 @@
 				1827BA9D25A48C9100D2EE9C /* SignUpVC.swift in Sources */,
 				18833EDC25A57AC600390BFE /* HelperMethods.swift in Sources */,
 				180686FA25A5E20D00297E06 /* TermsAndConitions.swift in Sources */,
+				1868611025DE7BCE00B9B578 /* SecondCellTableViewCell.swift in Sources */,
 				1868610325DE31D600B9B578 /* DetailsData.swift in Sources */,
 				18833EDB25A57AC600390BFE /* ChangeBottamColor.swift in Sources */,
 				18833EE325A57ADA00390BFE /* DisplayAlertManager.swift in Sources */,

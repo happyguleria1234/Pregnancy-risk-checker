@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LATO-MEDIUM.TTF">
+            <string>Lato-Medium</string>
+        </array>
+        <array key="LATO-SEMIBOLD.TTF">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThirdCellXIB_s" rowHeight="160" id="KGk-i7-Jjw" customClass="ThirdCellXIB_s" customModule="Pregnancy_risk_checker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldt-IU-tHV">
+                        <rect key="frame" x="0.0" y="0.0" width="10" height="160"/>
+                        <color key="backgroundColor" red="0.95318448604060912" green="0.55296732805884652" blue="0.012263972643570318" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="pHa-Ze-p07"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQK-VR-zoX">
+                        <rect key="frame" x="20" y="0.0" width="300" height="0.0"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIa-Vj-HEf">
+                        <rect key="frame" x="20" y="10" width="300" height="0.0"/>
+                        <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aec-zK-WBT">
+                        <rect key="frame" x="20" y="10" width="284" height="139"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aec-zK-WBT" firstAttribute="leading" secondItem="ldt-IU-tHV" secondAttribute="trailing" constant="10" id="415-HU-gyP"/>
+                    <constraint firstItem="FIa-Vj-HEf" firstAttribute="top" secondItem="sQK-VR-zoX" secondAttribute="bottom" constant="10" id="51h-UX-Zbv"/>
+                    <constraint firstItem="sQK-VR-zoX" firstAttribute="leading" secondItem="ldt-IU-tHV" secondAttribute="trailing" constant="10" id="7Rx-PS-7Qy"/>
+                    <constraint firstItem="aec-zK-WBT" firstAttribute="top" secondItem="FIa-Vj-HEf" secondAttribute="bottom" id="CSb-9b-DhD"/>
+                    <constraint firstAttribute="trailing" secondItem="sQK-VR-zoX" secondAttribute="trailing" id="OkK-LJ-hwy"/>
+                    <constraint firstItem="FIa-Vj-HEf" firstAttribute="leading" secondItem="ldt-IU-tHV" secondAttribute="trailing" constant="10" id="OwT-bg-Jfv"/>
+                    <constraint firstAttribute="bottom" secondItem="ldt-IU-tHV" secondAttribute="bottom" id="T2U-hv-Lwq"/>
+                    <constraint firstItem="ldt-IU-tHV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cAA-Cc-uxB"/>
+                    <constraint firstItem="sQK-VR-zoX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="f3I-Qu-Omx"/>
+                    <constraint firstItem="ldt-IU-tHV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ge3-bo-Ckg"/>
+                    <constraint firstItem="FIa-Vj-HEf" firstAttribute="trailing" secondItem="sQK-VR-zoX" secondAttribute="trailing" id="ota-QG-tYj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="aec-zK-WBT" secondAttribute="trailing" id="qUp-uc-WAa"/>
+                    <constraint firstItem="aec-zK-WBT" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="wXa-ta-5Bm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="detailsLbl" destination="FIa-Vj-HEf" id="8M7-XC-yVM"/>
+                <outlet property="showImage" destination="aec-zK-WBT" id="2zV-ms-Qp4"/>
+                <outlet property="titleLbl" destination="sQK-VR-zoX" id="ukj-Ie-uyq"/>
+            </connections>
+            <point key="canvasLocation" x="111.59420289855073" y="132.58928571428572"/>
+        </tableViewCell>
+    </objects>
+</document>

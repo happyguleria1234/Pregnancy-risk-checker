@@ -9,25 +9,101 @@
 import Foundation
 
 
-struct AllDataDetails {
+struct AllDataDetailsForBlack {
     var headline : [String]
     var images : [String]
     var description : [String]
     var source : [String]
     var sourceDetails : [String]
+    var type : [String]
     
-    init(headline : [String],images : [String],description : [String],source : [String ] , sourceDetails : [String]) {
+    init(headline : [String],images : [String],description : [String],source : [String ] , sourceDetails : [String] ,type : [String]) {
         self.headline = headline
         self.images = images
         self.description = description
         self.source = source
         self.sourceDetails = sourceDetails
+        self.type = type
     }
 }
 
-var spontaneousVaginalBirthHeadingArrayBlack = ["Headline"]
-var spontaneousVaginalBirthDetailsArrayBlack = ["Rates of normal vaginal delivery, interventions and complications differ in different countries and even in different hospitals in the same country. Our ultimate goal is to collate all this information so that you will have a live update of these figures wherever you are. Please visit our fund page to see how you can help us achieve this goal."]
-var spontaneousVaginalBirthImagesArrayBlack = [""]
+struct AllDataDetailsForGreen {
+    var headline : [String]
+    var images : [String]
+    var description : [String]
+    var source : [String]
+    var sourceDetails : [String]
+    var type : [String]
+    
+    init(headline : [String],images : [String],description : [String],source : [String ] , sourceDetails : [String] ,type : [String]) {
+        self.headline = headline
+        self.images = images
+        self.description = description
+        self.source = source
+        self.sourceDetails = sourceDetails
+        self.type = type
+    }
+}
+
+struct AllDataDetailsForOrange {
+    var headline : [String]
+    var images : [String]
+    var description : [String]
+    var source : [String]
+    var sourceDetails : [String]
+    var type : [String]
+    
+    init(headline : [String],images : [String],description : [String],source : [String ] , sourceDetails : [String] ,type : [String]) {
+        self.headline = headline
+        self.images = images
+        self.description = description
+        self.source = source
+        self.sourceDetails = sourceDetails
+        self.type = type
+    }
+}
+
+
+struct AllDataDetailsForRed {
+    var headline : [String]
+    var images : [String]
+    var description : [String]
+    var source : [String]
+    var sourceDetails : [String]
+    var type : [String]
+    
+    init(headline : [String],images : [String],description : [String],source : [String ] , sourceDetails : [String] ,type : [String]) {
+        self.headline = headline
+        self.images = images
+        self.description = description
+        self.source = source
+        self.sourceDetails = sourceDetails
+        self.type = type
+    }
+}
+
+
+struct AllDataDetailsForWhite {
+    var headline : [String]
+    var images : [String]
+    var description : [String]
+    var source : [String]
+    var sourceDetails : [String]
+    var type : [String]
+    
+    init(headline : [String],images : [String],description : [String],source : [String ] , sourceDetails : [String] ,type : [String]) {
+        self.headline = headline
+        self.images = images
+        self.description = description
+        self.source = source
+        self.sourceDetails = sourceDetails
+        self.type = type
+    }
+}
+
+var spontaneousVaginalBirthHeadingArrayBlack = ["Headline",""]
+var spontaneousVaginalBirthDetailsArrayBlack = ["Rates of normal vaginal delivery, interventions and complications differ in different countries and even in different hospitals in the same country. Our ultimate goal is to collate all this information so that you will have a live update of these figures wherever you are. Please visit our fund page to see how you can help us achieve this goal.",""]
+var spontaneousVaginalBirthImagesArrayBlack = ["stemetil","stemetil"]
 //var spontaneousVaginalBirthImagesArrayType = [""]
 
 
@@ -61,3 +137,5 @@ var spontaneousVaginalBirthImagesArrayRed = ["",""]
 
 var pontaneousVaginalBirthSourceHeadingData = ["Sources"]
 var pontaneousVaginalBirthSourceData = ["Perinatal and maternal outcomes by planned place of birth for healthy women with low risk pregnancies: the Birthplace in England national prospective cohort study BMJ 2011\n\nPerinatal and maternal outcomes by planned place of birth for healthy women with low risk pregnancies: the Birthplace in England national prospective cohort study BMJ 2011\n\nData supplement. Appendix 6. Birthplace in England national prospective cohort study. BMJ. 2011\n\nTies Boerma, Carine Ronsmans, Dessalegn Y Melesse, Aluisio J D Barros, Fernando C Barros, Liang Juan, Ann-Beth Moller, Lale Say, Ahmad Reza Hosseinpoor, Mu Yi, Dácio de Lyra Rabello Neto, Marleen Temmerman, Global epidemiology of use of and disparities in caesarean sections, The Lancet, Volume 392, Issue 10155, 2018, Pages 1341-1348,\n\nMaternity Services Monthly Statistics March 2018, NHS Digital Services, Maternity Services Data Set\n\nRoyal college of Obstetrics and Gynaecology. Assisted vaginal birth. 2020\n\nPatricia C. Devine, Obstetric Hemorrhage, Seminars in Perinatology, Volume 33, Issue 2, 2009, Pages 76-81,\n\nMBRRACE-UK: Mothers and Babies: Reducing Risk through Audits and Confidential Enquiries across the UK, 2019\n\nPrendiville  WJP, Elbourne  D, McDonald  SJ. Active versus expectant management in the third stage of labour. Cochrane Database of Systematic Reviews 2000, Issue 3.\n\nRoyal College of Obstetrics and Gynaecology. Prevention and Management of Postpartum Haemorrhage Guideline 52 2016\n\nWastlund D, Moraitis AA, Dacey A, Sovio U, Wilson ECF, et al. (2019) Screening for breech presentation using universal late-pregnancy ultrasonography: A prospective cohort study and cost effectiveness analysis. PLOS Medicine 16(4)\n\nWalker, S. and Cochrane, V. (2015). Unexpected breech: what can midwives do?. The Practising Midwife, 18(10), pp. 26-29\n\nImpey LWM, Murphy DJ, Grifﬁths M, Penna LK on behalf of the Royal College of Obstetriciansand Gynaecologists. Management of Breech Presentation. BJOG 2017\n\n"]
+
+var colorType = ["Black","Green","Orange","Red","White"]

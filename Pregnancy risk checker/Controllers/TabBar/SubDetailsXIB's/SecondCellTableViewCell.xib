@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LATO-MEDIUM.TTF">
+            <string>Lato-Medium</string>
+        </array>
+        <array key="LATO-SEMIBOLD.TTF">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondCellTableViewCell" rowHeight="107" id="KGk-i7-Jjw" customClass="SecondCellTableViewCell" customModule="Pregnancy_risk_checker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08D-Xc-W3d">
+                        <rect key="frame" x="0.0" y="0.0" width="10" height="107"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="baz-Zv-spL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemGreenColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLS-zP-Vye">
+                        <rect key="frame" x="20" y="0.0" width="300" height="0.0"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSc-za-mXz">
+                        <rect key="frame" x="20" y="0.0" width="284" height="0.0"/>
+                        <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sJt-Bm-Q87">
+                        <rect key="frame" x="20" y="0.0" width="284" height="96"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="08D-Xc-W3d" secondAttribute="bottom" id="6Fx-HP-blb"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="NSc-za-mXz" secondAttribute="trailing" id="7Eb-LW-i4u"/>
+                    <constraint firstItem="sJt-Bm-Q87" firstAttribute="top" secondItem="NSc-za-mXz" secondAttribute="bottom" id="9vn-hI-kMh"/>
+                    <constraint firstItem="NSc-za-mXz" firstAttribute="leading" secondItem="08D-Xc-W3d" secondAttribute="trailing" constant="10" id="F4R-8C-dJc"/>
+                    <constraint firstItem="sJt-Bm-Q87" firstAttribute="leading" secondItem="08D-Xc-W3d" secondAttribute="trailing" constant="10" id="Jql-QN-nau"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="sJt-Bm-Q87" secondAttribute="trailing" id="MB2-o2-HdX"/>
+                    <constraint firstItem="sJt-Bm-Q87" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="SWI-cZ-l9L"/>
+                    <constraint firstAttribute="trailing" secondItem="OLS-zP-Vye" secondAttribute="trailing" id="V3l-vc-NgS"/>
+                    <constraint firstItem="08D-Xc-W3d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Xls-FE-NdM"/>
+                    <constraint firstItem="NSc-za-mXz" firstAttribute="top" secondItem="OLS-zP-Vye" secondAttribute="bottom" id="bta-50-n2O"/>
+                    <constraint firstItem="OLS-zP-Vye" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ejX-vd-hdq"/>
+                    <constraint firstItem="08D-Xc-W3d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gVK-na-2e4"/>
+                    <constraint firstItem="OLS-zP-Vye" firstAttribute="leading" secondItem="08D-Xc-W3d" secondAttribute="trailing" constant="10" id="pC3-va-IJO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="detailsLbl" destination="NSc-za-mXz" id="M4I-RU-YWu"/>
+                <outlet property="showImage" destination="sJt-Bm-Q87" id="s9b-Zc-Ta0"/>
+                <outlet property="titleLbl" destination="OLS-zP-Vye" id="8ab-vz-zZR"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="110.15625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

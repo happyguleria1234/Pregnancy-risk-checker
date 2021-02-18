@@ -241,12 +241,10 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigat
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        //        guard let image = info[UIImagePickerController.InfoKey.originalImage]
         guard let image = info[UIImagePickerController.InfoKey.editedImage]
                 as? UIImage else {
             return
         }
-        //        let imgData3 = image.jpegData(compressionQuality: 0.4)
         self.profileImage.contentMode = .scaleToFill
         self.profileImage.image = image
         guard let imgData3 = image.jpegData(compressionQuality: 0.2) else {return}
