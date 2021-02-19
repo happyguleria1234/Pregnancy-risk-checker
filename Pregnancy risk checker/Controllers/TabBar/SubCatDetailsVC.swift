@@ -12,13 +12,21 @@ class SubCatDetailsVC: UIViewController {
 
     @IBOutlet weak var titleLbl: UILabel!
     var subcatTitle = String()
+    var mainDataArray = [MainData]()
     var allDataDetailsArrayForBlack = [AllDataDetailsForBlack]()
     var allDataDetailsArrayForGreen = [AllDataDetailsForGreen]()
     var allDataDetailsArrayForOrange = [AllDataDetailsForOrange]()
     var allDataDetailsArrayForRed = [AllDataDetailsForRed]()
-    var allDataDetailsArrayForWhite = [AllDataDetailsForRed]()
-
+    var allDataDetailsArrayForWhite = [AllDataDetailsForWhite]()
     
+    var deliveryFirstBlackk = (["title" : spontaneousVaginalBirthHeadingArrayBlack, "des" : spontaneousVaginalBirthDetailsArrayBlack , "image" : spontaneousVaginalBirthImagesArrayBlack])
+    var deliveryFirstGreenn = (["title" : spontaneousVaginalBirthHeadingArrayGreen, "des" : spontaneousVaginalBirthDetailsArrayGreen , "image" : spontaneousVaginalBirthImagesArrayGreen])
+    var deliveryFirstOrangee = (["title" : spontaneousVaginalBirthHeadingArrayOrange, "des" : spontaneousVaginalBirthDetailsArrayOrange , "image" : spontaneousVaginalBirthImagesArrayOrange])
+    var deliveryFirstRedd = (["title" : spontaneousVaginalBirthHeadingArrayRed, "des" : spontaneousVaginalBirthDetailsArrayRede , "image" : spontaneousVaginalBirthImagesArrayRed])
+    
+    
+    
+    var type = ["Black","Green","Orange","Red"]
 
     @IBOutlet weak var detailsTBView: UITableView!
     override func viewDidLoad() {
@@ -40,19 +48,17 @@ class SubCatDetailsVC: UIViewController {
         let nib3 = UINib(nibName: "FifthCellXIB_s", bundle: nil)
         detailsTBView.register(nib3, forHeaderFooterViewReuseIdentifier: "FifthCellXIB_s")
         
-//        detailsTBView.register(UINib(nibName: "SecondCellTableViewCell", bundle: nil), forCellReuseIdentifier: "SecondCellTableViewCell")
-//        detailsTBView.register(UINib(nibName: "ThirdCellXIB_s", bundle: nil), forCellReuseIdentifier: "ThirdCellXIB_s")
-//        detailsTBView.register(UINib(nibName: "FourthCellXIB_s", bundle: nil), forCellReuseIdentifier: "FourthCellXIB_s")
-//        detailsTBView.register(UINib(nibName: "FifthCellXIB_s", bundle: nil), forCellReuseIdentifier: "FifthCellXIB_s")
-
+        allDataDetailsArrayForBlack.append(AllDataDetailsForBlack(headline: spontaneousVaginalBirthHeadingArrayBlack, images: spontaneousVaginalBirthImagesArrayBlack, description: spontaneousVaginalBirthDetailsArrayBlack, source: pontaneousVaginalBirthSourceHeadingData, sourceDetails: pontaneousVaginalBirthSourceData, type: "Black"))
         
-        allDataDetailsArrayForBlack.append(AllDataDetailsForBlack(headline: spontaneousVaginalBirthHeadingArrayBlack, images: spontaneousVaginalBirthImagesArrayBlack, description: spontaneousVaginalBirthDetailsArrayBlack, source: pontaneousVaginalBirthSourceHeadingData, sourceDetails: pontaneousVaginalBirthSourceData, type: colorType))
+        allDataDetailsArrayForGreen.append(AllDataDetailsForGreen(headline: spontaneousVaginalBirthHeadingArrayGreen, images: spontaneousVaginalBirthImagesArrayGreen, description: spontaneousVaginalBirthDetailsArrayGreen, source: pontaneousVaginalBirthSourceHeadingData, sourceDetails: pontaneousVaginalBirthSourceData, type: "Green"))
         
-        allDataDetailsArrayForGreen.append(AllDataDetailsForGreen(headline: spontaneousVaginalBirthHeadingArrayGreen, images: spontaneousVaginalBirthImagesArrayGreen, description: spontaneousVaginalBirthDetailsArrayGreen, source: pontaneousVaginalBirthSourceHeadingData, sourceDetails: pontaneousVaginalBirthSourceData, type: colorType))
+        allDataDetailsArrayForOrange.append(AllDataDetailsForOrange(headline: spontaneousVaginalBirthHeadingArrayOrange, images: spontaneousVaginalBirthImagesArrayOrange, description: spontaneousVaginalBirthDetailsArrayOrange, source: pontaneousVaginalBirthSourceHeadingData, sourceDetails: pontaneousVaginalBirthSourceData, type: "Orange"))
         
-        allDataDetailsArrayForOrange.append(AllDataDetailsForOrange(headline: spontaneousVaginalBirthHeadingArrayOrange, images: spontaneousVaginalBirthImagesArrayOrange, description: spontaneousVaginalBirthDetailsArrayOrange, source: pontaneousVaginalBirthSourceHeadingData, sourceDetails: pontaneousVaginalBirthSourceData, type: colorType))
+        allDataDetailsArrayForRed.append(AllDataDetailsForRed(headline: spontaneousVaginalBirthHeadingArrayRed, images: spontaneousVaginalBirthImagesArrayRed, description: spontaneousVaginalBirthDetailsArrayRede, source: pontaneousVaginalBirthSourceHeadingData, sourceDetails: pontaneousVaginalBirthSourceData, type: "Rad"))
         
-        allDataDetailsArrayForRed.append(AllDataDetailsForRed(headline: spontaneousVaginalBirthHeadingArrayRed, images: spontaneousVaginalBirthImagesArrayRed, description: spontaneousVaginalBirthDetailsArrayRede, source: pontaneousVaginalBirthSourceHeadingData, sourceDetails: pontaneousVaginalBirthSourceData, type: colorType))
+        
+        self.mainDataArray.append(MainData(dataforBlack: allDataDetailsArrayForBlack, dataforGreen: allDataDetailsArrayForGreen, dataforOrange: allDataDetailsArrayForOrange, dataforRed: allDataDetailsArrayForRed, dataforWhite: allDataDetailsArrayForWhite, type: colorType))
+        
         
         detailsTBView.reloadData()
         
@@ -73,65 +79,114 @@ class DetailsTBViewCell: UITableViewCell {
 }
 
 extension SubCatDetailsVC : UITableViewDelegate , UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+       return 5
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allDataDetailsArrayForBlack[section].headline.count
+        
+        if section == 0{
+            
+            return 1
+            
+        }else if section == 1{
+            
+            return 8
+            
+        }else if section == 2 {
+            
+            return 8
+            
+        }else if section == 3{
+            
+            return 2
+            
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if allDataDetailsArrayForBlack[indexPath.section].type[0] == "Black"{
-            let cell1 = tableView.dequeueReusableCell(withIdentifier: "DetailsTBViewCell", for: indexPath) as! DetailsTBViewCell
-            cell1.titleLbl.text = allDataDetailsArrayForBlack[indexPath.section].headline[indexPath.row]
-            cell1.detailsLbl.text = allDataDetailsArrayForBlack[indexPath.section].description[indexPath.row]
-            cell1.showImage.image = UIImage(named: allDataDetailsArrayForBlack[indexPath.section].images[indexPath.row])
-            return cell1
-            
-        }else if allDataDetailsArrayForGreen[indexPath.section].type[1] == "Green"{
-            
-            var cell2: SecondCellTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "SecondCellTableViewCell") as? SecondCellTableViewCell
-            tableView.register(UINib(nibName: "SecondCellTableViewCell", bundle: nil), forCellReuseIdentifier: "SecondCellTableViewCell")
-            cell2 = tableView.dequeueReusableCell(withIdentifier: "SecondCellTableViewCell") as? SecondCellTableViewCell
-            cell2!.titleLbl.text = allDataDetailsArrayForGreen[indexPath.section].headline[indexPath.row]
-            cell2!.detailsLbl.text = allDataDetailsArrayForGreen[indexPath.section].description[indexPath.row]
-            cell2!.showImage.image = UIImage(named: allDataDetailsArrayForGreen[indexPath.section].images[indexPath.row])
-            return cell2!
-            
-        }else if allDataDetailsArrayForOrange[indexPath.section].type[2] == "Orange"{
-            
-            var cell3: ThirdCellXIB_s? = tableView.dequeueReusableCell(withIdentifier: "ThirdCellXIB_s") as? ThirdCellXIB_s
-            tableView.register(UINib(nibName: "ThirdCellXIB_s", bundle: nil), forCellReuseIdentifier: "ThirdCellXIB_s")
-            cell3 = tableView.dequeueReusableCell(withIdentifier: "ThirdCellXIB_s") as? ThirdCellXIB_s
-            cell3!.titleLbl.text = allDataDetailsArrayForOrange[indexPath.section].headline[indexPath.row]
-            cell3!.detailsLbl.text = allDataDetailsArrayForOrange[indexPath.section].description[indexPath.row]
-            cell3!.showImage.image = UIImage(named: allDataDetailsArrayForOrange[indexPath.section].images[indexPath.row])
-            return cell3!
-            
-        }else if allDataDetailsArrayForRed[indexPath.section].type[3] == "Red"{
-            
-            var cell4: FourthCellXIB_s? = tableView.dequeueReusableCell(withIdentifier: "FourthCellXIB_s") as? FourthCellXIB_s
-            tableView.register(UINib(nibName: "FourthCellXIB_s", bundle: nil), forCellReuseIdentifier: "FourthCellXIB_s")
-            cell4 = tableView.dequeueReusableCell(withIdentifier: "FourthCellXIB_s") as? FourthCellXIB_s
-            cell4!.titleLbl.text = allDataDetailsArrayForRed[indexPath.section].headline[indexPath.row]
-            cell4!.detailsLbl.text = allDataDetailsArrayForRed[indexPath.section].description[indexPath.row]
-            cell4!.showImage.image = UIImage(named: allDataDetailsArrayForRed[indexPath.section].images[indexPath.row])
-            return cell4!
-            
-        }else if allDataDetailsArrayForWhite[indexPath.section].type[4] == "White"{
-            
-            var cell5: FifthCellXIB_s? = tableView.dequeueReusableCell(withIdentifier: "FifthCellXIB_s") as? FifthCellXIB_s
-            tableView.register(UINib(nibName: "FifthCellXIB_s", bundle: nil), forCellReuseIdentifier: "FifthCellXIB_s")
-            cell5 = tableView.dequeueReusableCell(withIdentifier: "FifthCellXIB_s") as? FifthCellXIB_s
-            cell5!.titleLbl.text = allDataDetailsArrayForWhite[indexPath.section].headline[indexPath.row]
-            cell5!.detailsLbl.text = allDataDetailsArrayForWhite[indexPath.section].description[indexPath.row]
-            return cell5!
-        }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsTBViewCell", for: indexPath) as! DetailsTBViewCell
-            cell.titleLbl.text = allDataDetailsArrayForBlack[indexPath.section].headline[indexPath.row]
-            cell.detailsLbl.text = allDataDetailsArrayForBlack[indexPath.section].description[indexPath.row]
-            cell.showImage.image = UIImage(named: allDataDetailsArrayForBlack[indexPath.section].images[indexPath.row])
-            return cell
-        }
+        //        if mainDataArray[indexPath.section].type?[0] == "Black"{
+        //            let cell1 = tableView.dequeueReusableCell(withIdentifier: "DetailsTBViewCell", for: indexPath) as! DetailsTBViewCell
+        //            cell1.titleLbl.text = allDataDetailsArrayForBlack[indexPath.section].headline[indexPath.row]
+        //            cell1.detailsLbl.text = allDataDetailsArrayForBlack[indexPath.section].description[indexPath.row]
+        //            cell1.showImage.image = UIImage(named: allDataDetailsArrayForBlack[indexPath.section].images[indexPath.row])
+        //            return cell1
+        //
+        //        }else if mainDataArray[indexPath.section].type?[1] == "Green"{
+        //
+        //            var cell2: SecondCellTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "SecondCellTableViewCell") as? SecondCellTableViewCell
+        //            tableView.register(UINib(nibName: "SecondCellTableViewCell", bundle: nil), forCellReuseIdentifier: "SecondCellTableViewCell")
+        //            cell2 = tableView.dequeueReusableCell(withIdentifier: "SecondCellTableViewCell") as? SecondCellTableViewCell
+        //            cell2!.titleLbl.text = allDataDetailsArrayForGreen[indexPath.section].headline[indexPath.row]
+        //            cell2!.detailsLbl.text = allDataDetailsArrayForGreen[indexPath.section].description[indexPath.row]
+        //            cell2!.showImage.image = UIImage(named: allDataDetailsArrayForGreen[indexPath.section].images[indexPath.row])
+        //            return cell2!
+        //
+        //        }else if mainDataArray[indexPath.section].type?[2] == "Orange"{
+        //
+        //            var cell3: ThirdCellXIB_s? = tableView.dequeueReusableCell(withIdentifier: "ThirdCellXIB_s") as? ThirdCellXIB_s
+        //            tableView.register(UINib(nibName: "ThirdCellXIB_s", bundle: nil), forCellReuseIdentifier: "ThirdCellXIB_s")
+        //            cell3 = tableView.dequeueReusableCell(withIdentifier: "ThirdCellXIB_s") as? ThirdCellXIB_s
+        //            cell3!.titleLbl.text = allDataDetailsArrayForOrange[indexPath.section].headline[indexPath.row]
+        //            cell3!.detailsLbl.text = allDataDetailsArrayForOrange[indexPath.section].description[indexPath.row]
+        //            cell3!.showImage.image = UIImage(named: allDataDetailsArrayForOrange[indexPath.section].images[indexPath.row])
+        //            return cell3!
+        //
+        //        }else if mainDataArray[indexPath.section].type?[3] == "Red"{
+        //
+        //            var cell4: FourthCellXIB_s? = tableView.dequeueReusableCell(withIdentifier: "FourthCellXIB_s") as? FourthCellXIB_s
+        //            tableView.register(UINib(nibName: "FourthCellXIB_s", bundle: nil), forCellReuseIdentifier: "FourthCellXIB_s")
+        //            cell4 = tableView.dequeueReusableCell(withIdentifier: "FourthCellXIB_s") as? FourthCellXIB_s
+        //            cell4!.titleLbl.text = allDataDetailsArrayForRed[indexPath.section].headline[indexPath.row]
+        //            cell4!.detailsLbl.text = allDataDetailsArrayForRed[indexPath.section].description[indexPath.row]
+        //            cell4!.showImage.image = UIImage(named: allDataDetailsArrayForRed[indexPath.section].images[indexPath.row])
+        //            return cell4!
+        //
+        //        }else{
+        //
+        //            var cell5: FifthCellXIB_s? = tableView.dequeueReusableCell(withIdentifier: "FifthCellXIB_s") as? FifthCellXIB_s
+        //            tableView.register(UINib(nibName: "FifthCellXIB_s", bundle: nil), forCellReuseIdentifier: "FifthCellXIB_s")
+        //            cell5 = tableView.dequeueReusableCell(withIdentifier: "FifthCellXIB_s") as? FifthCellXIB_s
+        //            cell5!.titleLbl.text = allDataDetailsArrayForWhite[indexPath.section].headline[indexPath.row]
+        //            cell5!.detailsLbl.text = allDataDetailsArrayForWhite[indexPath.section].description[indexPath.row]
+        //            return cell5!
         
+        
+        //        }
+        
+        let cell1 = tableView.dequeueReusableCell(withIdentifier: "DetailsTBViewCell", for: indexPath) as! DetailsTBViewCell
+        if indexPath.section == 0{
+            
+            cell1.titleLbl.text = deliveryFirstBlack["title"]
+            cell1.detailsLbl.text = deliveryFirstBlack["des"]
+            cell1.showImage.image = UIImage(named: deliveryFirstBlack["image"] ?? "")
+            
+        }else if indexPath.section == 1{
+            
+            cell1.titleLbl.text = deliveryFirstBlack["title"]
+            cell1.detailsLbl.text = deliveryFirstBlack["des"]
+            cell1.showImage.image = UIImage(named: deliveryFirstBlack["image"] ?? "")
+            
+            
+        }else if indexPath.section == 2{
+            
+            cell1.titleLbl.text = deliveryFirstBlack["title"]
+            cell1.detailsLbl.text = deliveryFirstBlack["des"]
+            cell1.showImage.image = UIImage(named: deliveryFirstBlack["image"] ?? "")
+            
+            
+        }else if indexPath.section == 3{
+            
+            cell1.titleLbl.text = deliveryFirstBlack["title"]
+            cell1.detailsLbl.text = deliveryFirstBlack["des"]
+            cell1.showImage.image = UIImage(named: deliveryFirstBlack["image"] ?? "")
+            
+            
+        }
+        return cell1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

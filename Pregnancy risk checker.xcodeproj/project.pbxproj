@@ -59,6 +59,7 @@
 		1868611125DE7BCE00B9B578 /* SecondCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1868610F25DE7BCE00B9B578 /* SecondCellTableViewCell.xib */; };
 		1868611725DE810C00B9B578 /* ThirdCellXIB's.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1868611525DE810C00B9B578 /* ThirdCellXIB's.swift */; };
 		1868611825DE810C00B9B578 /* ThirdCellXIB's.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1868611625DE810C00B9B578 /* ThirdCellXIB's.xib */; };
+		187763D525DFA77B00C8452B /* AllDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187763D425DFA77B00C8452B /* AllDetailsData.swift */; };
 		1879A94225B182970042AEA6 /* SubCatDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A94125B182970042AEA6 /* SubCatDetailsVC.swift */; };
 		18833ED525A57A9300390BFE /* AFWrapperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833ED125A57A9300390BFE /* AFWrapperClass.swift */; };
 		18833ED625A57A9300390BFE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18833ED225A57A9300390BFE /* Constant.swift */; };
@@ -154,6 +155,7 @@
 		1868610F25DE7BCE00B9B578 /* SecondCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCellTableViewCell.xib; sourceTree = "<group>"; };
 		1868611525DE810C00B9B578 /* ThirdCellXIB's.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThirdCellXIB's.swift"; sourceTree = "<group>"; };
 		1868611625DE810C00B9B578 /* ThirdCellXIB's.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "ThirdCellXIB's.xib"; sourceTree = "<group>"; };
+		187763D425DFA77B00C8452B /* AllDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDetailsData.swift; sourceTree = "<group>"; };
 		1879A94125B182970042AEA6 /* SubCatDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCatDetailsVC.swift; sourceTree = "<group>"; };
 		18833ED125A57A9300390BFE /* AFWrapperClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFWrapperClass.swift; sourceTree = "<group>"; };
 		18833ED225A57A9300390BFE /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				18833ED325A57A9300390BFE /* Reachability.swift */,
 				180C225F25B05D9300CF955E /* ArrayData.swift */,
 				1868610225DE31D600B9B578 /* DetailsData.swift */,
+				187763D425DFA77B00C8452B /* AllDetailsData.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -767,6 +770,7 @@
 				18D2F14A25CD5E070009DE2F /* PurchaseHelper.swift in Sources */,
 				1827BA5D25A4870700D2EE9C /* AppDelegate.swift in Sources */,
 				18D2F12725CD5A3E0009DE2F /* SubscriptionVC.swift in Sources */,
+				187763D525DFA77B00C8452B /* AllDetailsData.swift in Sources */,
 				1827BAA125A4905900D2EE9C /* ForgotPasswordVC.swift in Sources */,
 				18833EDD25A57AC600390BFE /* Activityloader.swift in Sources */,
 				1827BA9B25A48C8300D2EE9C /* SignInVC.swift in Sources */,
