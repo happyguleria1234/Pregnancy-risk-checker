@@ -10,21 +10,10 @@ import UIKit
 
 class SubCatDetailsVC: UIViewController {
 
+    @IBOutlet weak var detailsLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
     var subcatTitle = String()
-    var mainDataArray = [MainData]()
-    var allDataDetailsArrayForBlack = [AllDataDetailsForBlack]()
-    var allDataDetailsArrayForGreen = [AllDataDetailsForGreen]()
-    var allDataDetailsArrayForOrange = [AllDataDetailsForOrange]()
-    var allDataDetailsArrayForRed = [AllDataDetailsForRed]()
-    var allDataDetailsArrayForWhite = [AllDataDetailsForWhite]()
-    
-    var deliveryFirstBlackk = (["title" : spontaneousVaginalBirthHeadingArrayBlack, "des" : spontaneousVaginalBirthDetailsArrayBlack , "image" : spontaneousVaginalBirthImagesArrayBlack])
-    var deliveryFirstGreenn = (["title" : spontaneousVaginalBirthHeadingArrayGreen, "des" : spontaneousVaginalBirthDetailsArrayGreen , "image" : spontaneousVaginalBirthImagesArrayGreen])
-    var deliveryFirstOrangee = (["title" : spontaneousVaginalBirthHeadingArrayOrange, "des" : spontaneousVaginalBirthDetailsArrayOrange , "image" : spontaneousVaginalBirthImagesArrayOrange])
-    var deliveryFirstRedd = (["title" : spontaneousVaginalBirthHeadingArrayRed, "des" : spontaneousVaginalBirthDetailsArrayRede , "image" : spontaneousVaginalBirthImagesArrayRed])
-    
-    
+    var subCatDetails = String()
     
     var type = ["Black","Green","Orange","Red"]
 
@@ -32,9 +21,10 @@ class SubCatDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLbl.text = subcatTitle
+        detailsLbl.text = subCatDetails
         self.detailsTBView.separatorStyle = .none
         // Do any additional setup after loading the view.
-        
+        print(subcatTitle)
         let nib = UINib(nibName: "SecondCellTableViewCell", bundle: nil)
         detailsTBView.register(nib, forHeaderFooterViewReuseIdentifier: "SecondCellTableViewCell")
 
@@ -48,18 +38,6 @@ class SubCatDetailsVC: UIViewController {
         let nib3 = UINib(nibName: "FifthCellXIB_s", bundle: nil)
         detailsTBView.register(nib3, forHeaderFooterViewReuseIdentifier: "FifthCellXIB_s")
         
-        allDataDetailsArrayForBlack.append(AllDataDetailsForBlack(headline: spontaneousVaginalBirthHeadingArrayBlack, images: spontaneousVaginalBirthImagesArrayBlack, description: spontaneousVaginalBirthDetailsArrayBlack, source: pontaneousVaginalBirthSourceHeadingData, sourceDetails: pontaneousVaginalBirthSourceData, type: "Black"))
-        
-        allDataDetailsArrayForGreen.append(AllDataDetailsForGreen(headline: spontaneousVaginalBirthHeadingArrayGreen, images: spontaneousVaginalBirthImagesArrayGreen, description: spontaneousVaginalBirthDetailsArrayGreen, source: pontaneousVaginalBirthSourceHeadingData, sourceDetails: pontaneousVaginalBirthSourceData, type: "Green"))
-        
-        allDataDetailsArrayForOrange.append(AllDataDetailsForOrange(headline: spontaneousVaginalBirthHeadingArrayOrange, images: spontaneousVaginalBirthImagesArrayOrange, description: spontaneousVaginalBirthDetailsArrayOrange, source: pontaneousVaginalBirthSourceHeadingData, sourceDetails: pontaneousVaginalBirthSourceData, type: "Orange"))
-        
-        allDataDetailsArrayForRed.append(AllDataDetailsForRed(headline: spontaneousVaginalBirthHeadingArrayRed, images: spontaneousVaginalBirthImagesArrayRed, description: spontaneousVaginalBirthDetailsArrayRede, source: pontaneousVaginalBirthSourceHeadingData, sourceDetails: pontaneousVaginalBirthSourceData, type: "Rad"))
-        
-        
-        self.mainDataArray.append(MainData(dataforBlack: allDataDetailsArrayForBlack, dataforGreen: allDataDetailsArrayForGreen, dataforOrange: allDataDetailsArrayForOrange, dataforRed: allDataDetailsArrayForRed, dataforWhite: allDataDetailsArrayForWhite, type: colorType))
-        
-        
         detailsTBView.reloadData()
         
     }
@@ -70,6 +48,7 @@ class SubCatDetailsVC: UIViewController {
 }
 class DetailsTBViewCell: UITableViewCell {
     
+    @IBOutlet weak var showColorLbl: UILabel!
     @IBOutlet weak var showImage: UIImageView!
     @IBOutlet weak var detailsLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
@@ -86,21 +65,84 @@ extension SubCatDetailsVC : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if section == 0{
+        
+        if subcatTitle == "Spontaneous vaginal birth" {
             
-            return 1
+            if section == 0{
+                
+                return spontaneousVaginalBirthHeadingArrayBlack.count
+                
+            }else if section == 1{
+                
+                return spontaneousVaginalBirthHeadingArrayGreen.count
+                
+            }else if section == 2 {
+                
+                return spontaneousVaginalBirthHeadingArrayOrange.count
+                
+            }else if section == 3{
+                
+                return spontaneousVaginalBirthHeadingArrayRed.count
+                
+            }else if section == 4{
+                
+                return spontaneousVaginalBirthSourceHeadingData.count
+                
+            }
+        }else{
             
-        }else if section == 1{
+        }
+        if subcatTitle == "Induced vaginal birth" {
             
-            return 8
+            if section == 0{
+                
+                return inducedVaginalBirthBlackTitle.count
+                
+            }else if section == 1{
+                
+                return inducedVaginalBirthGreenTitle.count
+                
+            }else if section == 2 {
+                
+                return inducedVaginalBirthOrangeTitle.count
+                
+            }else if section == 3{
+                
+                return inducedVaginalBirthRedTitle.count
+                
+            }else if section == 4{
+                
+                return spontaneousVaginalBirthSourceHeadingData.count
+                
+            }
+        }else{
             
-        }else if section == 2 {
+        }
+        
+        if subcatTitle == "Forceps delivery" {
             
-            return 8
-            
-        }else if section == 3{
-            
-            return 2
+            if section == 0{
+                
+                return forcepsDeliveryForBlackTitle.count
+                
+            }else if section == 1{
+                
+                return forcepsDeliveryForGreenTitle.count
+                
+            }else if section == 2 {
+                
+                return forcepsDeliveryForOrangeTitle.count
+                
+            }else if section == 3{
+                
+                return forcepsDeliveryForRedTitle.count
+                
+            }else if section == 4{
+                
+                return spontaneousVaginalBirthSourceHeadingData.count
+                
+            }
+        }else{
             
         }
         return 0
@@ -108,84 +150,156 @@ extension SubCatDetailsVC : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //        if mainDataArray[indexPath.section].type?[0] == "Black"{
-        //            let cell1 = tableView.dequeueReusableCell(withIdentifier: "DetailsTBViewCell", for: indexPath) as! DetailsTBViewCell
-        //            cell1.titleLbl.text = allDataDetailsArrayForBlack[indexPath.section].headline[indexPath.row]
-        //            cell1.detailsLbl.text = allDataDetailsArrayForBlack[indexPath.section].description[indexPath.row]
-        //            cell1.showImage.image = UIImage(named: allDataDetailsArrayForBlack[indexPath.section].images[indexPath.row])
-        //            return cell1
-        //
-        //        }else if mainDataArray[indexPath.section].type?[1] == "Green"{
-        //
-        //            var cell2: SecondCellTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "SecondCellTableViewCell") as? SecondCellTableViewCell
-        //            tableView.register(UINib(nibName: "SecondCellTableViewCell", bundle: nil), forCellReuseIdentifier: "SecondCellTableViewCell")
-        //            cell2 = tableView.dequeueReusableCell(withIdentifier: "SecondCellTableViewCell") as? SecondCellTableViewCell
-        //            cell2!.titleLbl.text = allDataDetailsArrayForGreen[indexPath.section].headline[indexPath.row]
-        //            cell2!.detailsLbl.text = allDataDetailsArrayForGreen[indexPath.section].description[indexPath.row]
-        //            cell2!.showImage.image = UIImage(named: allDataDetailsArrayForGreen[indexPath.section].images[indexPath.row])
-        //            return cell2!
-        //
-        //        }else if mainDataArray[indexPath.section].type?[2] == "Orange"{
-        //
-        //            var cell3: ThirdCellXIB_s? = tableView.dequeueReusableCell(withIdentifier: "ThirdCellXIB_s") as? ThirdCellXIB_s
-        //            tableView.register(UINib(nibName: "ThirdCellXIB_s", bundle: nil), forCellReuseIdentifier: "ThirdCellXIB_s")
-        //            cell3 = tableView.dequeueReusableCell(withIdentifier: "ThirdCellXIB_s") as? ThirdCellXIB_s
-        //            cell3!.titleLbl.text = allDataDetailsArrayForOrange[indexPath.section].headline[indexPath.row]
-        //            cell3!.detailsLbl.text = allDataDetailsArrayForOrange[indexPath.section].description[indexPath.row]
-        //            cell3!.showImage.image = UIImage(named: allDataDetailsArrayForOrange[indexPath.section].images[indexPath.row])
-        //            return cell3!
-        //
-        //        }else if mainDataArray[indexPath.section].type?[3] == "Red"{
-        //
-        //            var cell4: FourthCellXIB_s? = tableView.dequeueReusableCell(withIdentifier: "FourthCellXIB_s") as? FourthCellXIB_s
-        //            tableView.register(UINib(nibName: "FourthCellXIB_s", bundle: nil), forCellReuseIdentifier: "FourthCellXIB_s")
-        //            cell4 = tableView.dequeueReusableCell(withIdentifier: "FourthCellXIB_s") as? FourthCellXIB_s
-        //            cell4!.titleLbl.text = allDataDetailsArrayForRed[indexPath.section].headline[indexPath.row]
-        //            cell4!.detailsLbl.text = allDataDetailsArrayForRed[indexPath.section].description[indexPath.row]
-        //            cell4!.showImage.image = UIImage(named: allDataDetailsArrayForRed[indexPath.section].images[indexPath.row])
-        //            return cell4!
-        //
-        //        }else{
-        //
-        //            var cell5: FifthCellXIB_s? = tableView.dequeueReusableCell(withIdentifier: "FifthCellXIB_s") as? FifthCellXIB_s
-        //            tableView.register(UINib(nibName: "FifthCellXIB_s", bundle: nil), forCellReuseIdentifier: "FifthCellXIB_s")
-        //            cell5 = tableView.dequeueReusableCell(withIdentifier: "FifthCellXIB_s") as? FifthCellXIB_s
-        //            cell5!.titleLbl.text = allDataDetailsArrayForWhite[indexPath.section].headline[indexPath.row]
-        //            cell5!.detailsLbl.text = allDataDetailsArrayForWhite[indexPath.section].description[indexPath.row]
-        //            return cell5!
-        
-        
-        //        }
-        
         let cell1 = tableView.dequeueReusableCell(withIdentifier: "DetailsTBViewCell", for: indexPath) as! DetailsTBViewCell
-        if indexPath.section == 0{
+
+        if subcatTitle == "Spontaneous vaginal birth" {
+            if indexPath.section == 0{
+                
+//                cell1.showColorLbl.isHidden = false
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+                cell1.titleLbl.text = spontaneousVaginalBirthHeadingArrayBlack[indexPath.row]
+                cell1.detailsLbl.text = spontaneousVaginalBirthDetailsArrayBlack[indexPath.row]
+                cell1.showImage.image = UIImage(named: spontaneousVaginalBirthImagesArrayBlack[indexPath.row])
+                
+            }else if indexPath.section == 1{
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 0.002239175302, green: 0.7885866117, blue: 0.003474284358, alpha: 1)
+                cell1.titleLbl.text = spontaneousVaginalBirthHeadingArrayGreen[indexPath.row]
+                cell1.detailsLbl.text = spontaneousVaginalBirthDetailsArrayGreen[indexPath.row]
+                cell1.showImage.image = UIImage(named: spontaneousVaginalBirthImagesArrayGreen[indexPath.row])
+                
+                
+            }else if indexPath.section == 2{
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 0.902779981, green: 0.5237263523, blue: 0.01161545236, alpha: 1)
+                cell1.titleLbl.text = spontaneousVaginalBirthHeadingArrayOrange[indexPath.row]
+                cell1.detailsLbl.text = spontaneousVaginalBirthDetailsArrayOrange[indexPath.row]
+                cell1.showImage.image = UIImage(named: spontaneousVaginalBirthImagesArrayOrange[indexPath.row])
+                
+                
+            }else if indexPath.section == 3{
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+                cell1.titleLbl.text = spontaneousVaginalBirthHeadingArrayRed[indexPath.row]
+                cell1.detailsLbl.text = spontaneousVaginalBirthDetailsArrayRede[indexPath.row]
+                cell1.showImage.image = UIImage(named: spontaneousVaginalBirthImagesArrayRed[indexPath.row])
+                
+                
+            }else if indexPath.section == 4{
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                cell1.titleLbl.text = spontaneousVaginalBirthSourceHeadingData[indexPath.row]
+                cell1.detailsLbl.text = spontaneousVaginalBirthSourceData[indexPath.row]
+                
+            }
+        }else{
             
-            cell1.titleLbl.text = deliveryFirstBlack["title"]
-            cell1.detailsLbl.text = deliveryFirstBlack["des"]
-            cell1.showImage.image = UIImage(named: deliveryFirstBlack["image"] ?? "")
             
-        }else if indexPath.section == 1{
-            
-            cell1.titleLbl.text = deliveryFirstBlack["title"]
-            cell1.detailsLbl.text = deliveryFirstBlack["des"]
-            cell1.showImage.image = UIImage(named: deliveryFirstBlack["image"] ?? "")
-            
-            
-        }else if indexPath.section == 2{
-            
-            cell1.titleLbl.text = deliveryFirstBlack["title"]
-            cell1.detailsLbl.text = deliveryFirstBlack["des"]
-            cell1.showImage.image = UIImage(named: deliveryFirstBlack["image"] ?? "")
-            
-            
-        }else if indexPath.section == 3{
-            
-            cell1.titleLbl.text = deliveryFirstBlack["title"]
-            cell1.detailsLbl.text = deliveryFirstBlack["des"]
-            cell1.showImage.image = UIImage(named: deliveryFirstBlack["image"] ?? "")
-            
+//            cell1.showColorLbl.isHidden = true
             
         }
+        
+        
+        if subcatTitle == "Induced vaginal birth"{
+            
+//            cell1.showColorLbl.isHidden = false
+            
+            if indexPath.section == 0{
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+                cell1.titleLbl.text = inducedVaginalBirthBlackTitle[indexPath.row]
+                cell1.detailsLbl.text = inducedVaginalBirthBlackDetails[indexPath.row]
+                cell1.showImage.image = UIImage(named: inducedVaginalBirthBlackImages[indexPath.row])
+                
+            }else if indexPath.section == 1{
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 0.002239175302, green: 0.7885866117, blue: 0.003474284358, alpha: 1)
+                cell1.titleLbl.text = inducedVaginalBirthGreenTitle[indexPath.row]
+                cell1.detailsLbl.text = inducedVaginalBirthGreenDetails[indexPath.row]
+                cell1.showImage.image = UIImage(named: inducedVaginalBirthGreenImages[indexPath.row])
+                
+                
+            }else if indexPath.section == 2{
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 0.902779981, green: 0.5237263523, blue: 0.01161545236, alpha: 1)
+                cell1.titleLbl.text = inducedVaginalBirthOrangeTitle[indexPath.row]
+                cell1.detailsLbl.text = spontaneousVaginalBirthDetailsArrayOrange[indexPath.row]
+                cell1.showImage.image = UIImage(named: inducedVaginalBirthOrangeImages[indexPath.row])
+                
+                
+            }else if indexPath.section == 3{
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+                cell1.titleLbl.text = inducedVaginalBirthRedTitle[indexPath.row]
+                cell1.detailsLbl.text = inducedVaginalBirthRedTitle[indexPath.row]
+                cell1.showImage.image = UIImage(named: inducedVaginalBirthRedTitle[indexPath.row])
+                
+                
+            }else if indexPath.section == 4{
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                cell1.titleLbl.text = spontaneousVaginalBirthSourceHeadingData[indexPath.row]
+                cell1.detailsLbl.text = spontaneousVaginalBirthSourceData[indexPath.row]
+                
+            }
+            
+        }else{
+            
+//            cell1.showColorLbl.isHidden = true
+            
+        }
+        
+        if subcatTitle == "Forceps delivery"{
+            
+//            cell1.showColorLbl.isHidden = false
+            
+            if indexPath.section == 0{
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+                cell1.titleLbl.text = forcepsDeliveryForBlackTitle[indexPath.row]
+                cell1.detailsLbl.text = forcepsDeliveryForBlackDetails[indexPath.row]
+                cell1.showImage.image = UIImage(named: forcepsDeliveryForBlackImages[indexPath.row])
+                
+            }else if indexPath.section == 1{
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 0.002239175302, green: 0.7885866117, blue: 0.003474284358, alpha: 1)
+                cell1.titleLbl.text = forcepsDeliveryForGreenTitle[indexPath.row]
+                cell1.detailsLbl.text = forcepsDeliveryForGreenDetails[indexPath.row]
+                cell1.showImage.image = UIImage(named: forcepsDeliveryForGreenImages[indexPath.row])
+                
+                
+            }else if indexPath.section == 2{
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 0.902779981, green: 0.5237263523, blue: 0.01161545236, alpha: 1)
+                cell1.titleLbl.text = forcepsDeliveryForOrangeTitle[indexPath.row]
+                cell1.detailsLbl.text = forcepsDeliveryForOrangeDetails[indexPath.row]
+                cell1.showImage.image = UIImage(named: forcepsDeliveryForOrangeImages[indexPath.row])
+                
+                
+            }else if indexPath.section == 3{
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+                cell1.titleLbl.text = forcepsDeliveryForRedTitle[indexPath.row]
+                cell1.detailsLbl.text = forcepsDeliveryForredDetails[indexPath.row]
+                cell1.showImage.image = UIImage(named: forcepsDeliveryForRedImages[indexPath.row])
+                
+                
+            }else if indexPath.section == 4{
+                
+                cell1.showColorLbl.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                cell1.titleLbl.text = spontaneousVaginalBirthSourceHeadingData[indexPath.row]
+                cell1.detailsLbl.text = spontaneousVaginalBirthSourceData[indexPath.row]
+                
+            }
+            
+            
+        }else{
+            
+//            cell1.showColorLbl.isHidden = true
+            
+        }
+        
         return cell1
     }
     

@@ -479,6 +479,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
                 
                 let vc = SubCatDetailsVC.instantiate(fromAppStoryboard: .Home)
                 vc.subcatTitle = searchResults[indexPath.row]
+                vc.subCatDetails = searchDes[indexPath.row]
                 selectedIndex = searchedIndex
                 self.issearchSelected = false
                 self.searchTxtFld.text = ""
@@ -491,6 +492,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
             
             let vc = SubCatDetailsVC.instantiate(fromAppStoryboard: .Home)
             vc.subcatTitle = selectedArrayForTitle[indexPath.row]
+                vc.subCatDetails = selectedArrayForDes[indexPath.row]
             selectedIndex = searchedIndex
             Singleton.sharedInstance.isComingFromSubDetailsScreen = true
             self.issubCatSelected = false
