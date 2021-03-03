@@ -21,7 +21,7 @@
         <array key="LATO-SEMIBOLD.TTF">
             <string>Lato-Semibold</string>
         </array>
-        <array key="Poppins-Medium.ttf">
+        <array key="Poppins-Medium.otf">
             <string>Poppins-Medium</string>
         </array>
     </customFonts>
@@ -382,18 +382,19 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="UwR-QT-6F6" secondAttribute="trailing" id="07v-IB-OgI"/>
-                                                <constraint firstAttribute="bottom" secondItem="nQ3-qz-l0e" secondAttribute="bottom" id="0HY-zs-uFc"/>
                                                 <constraint firstItem="UwR-QT-6F6" firstAttribute="top" secondItem="BbZ-76-k2O" secondAttribute="bottom" id="0Ln-hr-F6B"/>
                                                 <constraint firstItem="cWA-nv-3zJ" firstAttribute="leading" secondItem="KLW-Gi-MCm" secondAttribute="leadingMargin" constant="5" id="58Z-O6-fSe"/>
                                                 <constraint firstItem="BbZ-76-k2O" firstAttribute="top" secondItem="cWA-nv-3zJ" secondAttribute="bottom" constant="5" id="GWb-Oc-sS1"/>
                                                 <constraint firstItem="BbZ-76-k2O" firstAttribute="leading" secondItem="KLW-Gi-MCm" secondAttribute="leadingMargin" constant="5" id="P3p-6x-XBn"/>
                                                 <constraint firstItem="UwR-QT-6F6" firstAttribute="leading" secondItem="KLW-Gi-MCm" secondAttribute="leadingMargin" constant="5" id="Zsn-B4-nAH"/>
                                                 <constraint firstItem="nQ3-qz-l0e" firstAttribute="leading" secondItem="KLW-Gi-MCm" secondAttribute="leading" id="igS-8x-wX7"/>
+                                                <constraint firstItem="nQ3-qz-l0e" firstAttribute="top" secondItem="KLW-Gi-MCm" secondAttribute="top" id="kyY-Rg-cPI"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="cWA-nv-3zJ" secondAttribute="trailing" id="lBb-OA-nJt"/>
                                                 <constraint firstItem="cWA-nv-3zJ" firstAttribute="top" secondItem="KLW-Gi-MCm" secondAttribute="topMargin" id="mNz-uW-kxl"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="BbZ-76-k2O" secondAttribute="trailing" id="odm-VE-x5p"/>
+                                                <constraint firstAttribute="bottom" secondItem="nQ3-qz-l0e" secondAttribute="bottom" id="qUf-Dw-vUF"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="UwR-QT-6F6" secondAttribute="bottom" id="qf4-fG-gGd"/>
-                                                <constraint firstItem="nQ3-qz-l0e" firstAttribute="top" secondItem="KLW-Gi-MCm" secondAttribute="top" id="zcJ-VG-pHw"/>
+                                                <constraint firstItem="nQ3-qz-l0e" firstAttribute="centerY" secondItem="KLW-Gi-MCm" secondAttribute="centerY" id="vKk-wm-foS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -409,6 +410,14 @@
                                     <outlet property="delegate" destination="mqd-kB-KSz" id="ag3-Ic-imE"/>
                                 </connections>
                             </tableView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJY-gR-zbZ">
+                                <rect key="frame" x="0.0" y="88.5" width="375" height="578.5"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AzP-lb-acp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -426,14 +435,18 @@
                             <constraint firstItem="Hmw-B7-0mC" firstAttribute="centerX" secondItem="AzP-lb-acp" secondAttribute="centerX" id="SeE-Fr-Wqj"/>
                             <constraint firstItem="hvL-Ri-Zy6" firstAttribute="width" secondItem="wm8-g3-HPv" secondAttribute="width" id="Xni-dX-CpR"/>
                             <constraint firstItem="gmh-Z5-U0y" firstAttribute="top" secondItem="wm8-g3-HPv" secondAttribute="top" id="ggb-Ij-eth"/>
+                            <constraint firstItem="MJY-gR-zbZ" firstAttribute="trailing" secondItem="AzP-lb-acp" secondAttribute="trailing" id="hCn-hW-kwq"/>
                             <constraint firstItem="hvL-Ri-Zy6" firstAttribute="top" secondItem="gmh-Z5-U0y" secondAttribute="bottom" id="hvW-h8-LLb"/>
                             <constraint firstItem="Pry-vM-ASU" firstAttribute="width" secondItem="wm8-g3-HPv" secondAttribute="width" id="jR6-Lq-qGT"/>
                             <constraint firstItem="wG4-gG-01v" firstAttribute="top" secondItem="clb-c4-Kq5" secondAttribute="bottom" constant="10" id="miw-Xj-R5k"/>
+                            <constraint firstItem="MJY-gR-zbZ" firstAttribute="bottom" secondItem="AzP-lb-acp" secondAttribute="bottom" id="nhw-Ed-4RX"/>
+                            <constraint firstItem="MJY-gR-zbZ" firstAttribute="leading" secondItem="AzP-lb-acp" secondAttribute="leading" id="qgL-it-FQJ"/>
                             <constraint firstItem="clb-c4-Kq5" firstAttribute="width" secondItem="wm8-g3-HPv" secondAttribute="width" multiplier="0.9" id="r2U-JL-pde"/>
                             <constraint firstItem="hvL-Ri-Zy6" firstAttribute="leading" secondItem="AzP-lb-acp" secondAttribute="leading" id="tNd-9V-xwu"/>
                             <constraint firstItem="clb-c4-Kq5" firstAttribute="top" secondItem="hvL-Ri-Zy6" secondAttribute="bottom" constant="15" id="uzf-7A-8bN"/>
                             <constraint firstItem="Hmw-B7-0mC" firstAttribute="top" secondItem="wG4-gG-01v" secondAttribute="bottom" constant="15" id="xBA-Ms-eVo"/>
                             <constraint firstItem="clb-c4-Kq5" firstAttribute="centerX" secondItem="AzP-lb-acp" secondAttribute="centerX" id="ySb-pk-uQ1"/>
+                            <constraint firstItem="MJY-gR-zbZ" firstAttribute="top" secondItem="clb-c4-Kq5" secondAttribute="bottom" id="ywL-hU-eY8"/>
                             <constraint firstItem="wG4-gG-01v" firstAttribute="leading" secondItem="clb-c4-Kq5" secondAttribute="leading" id="zJy-uP-KP1"/>
                             <constraint firstItem="gmh-Z5-U0y" firstAttribute="trailing" secondItem="AzP-lb-acp" secondAttribute="trailing" id="zUF-7X-ypX"/>
                         </constraints>
@@ -441,6 +454,7 @@
                     <connections>
                         <outlet property="detailsLbl" destination="wG4-gG-01v" id="mV3-PI-6R4"/>
                         <outlet property="detailsTBView" destination="Hmw-B7-0mC" id="hQ7-Gk-50A"/>
+                        <outlet property="showData" destination="MJY-gR-zbZ" id="dQ9-E2-aLf"/>
                         <outlet property="titleLbl" destination="clb-c4-Kq5" id="FNz-ed-Gnm"/>
                     </connections>
                 </viewController>
@@ -654,7 +668,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="337.5" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYb-D6-mwo">
-                                                                <rect key="frame" x="0.0" y="0.0" width="304" height="18"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="303.5" height="18"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -663,7 +677,7 @@
                                                                 <rect key="frame" x="0.0" y="28" width="337.5" height="32"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lad-SJ-3Yp">
-                                                                        <rect key="frame" x="17" y="6.5" width="303.5" height="19.5"/>
+                                                                        <rect key="frame" x="16.5" y="6.5" width="304" height="19.5"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -714,7 +728,7 @@
                                                         <rect key="frame" x="0.0" y="88.5" width="337.5" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0t-Sc-rLT">
-                                                                <rect key="frame" x="0.0" y="0.0" width="304" height="18"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="303.5" height="18"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -723,7 +737,7 @@
                                                                 <rect key="frame" x="0.0" y="28" width="337.5" height="32.5"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IP5-D5-bzP">
-                                                                        <rect key="frame" x="17" y="6.5" width="303.5" height="19.5"/>
+                                                                        <rect key="frame" x="16.5" y="6.5" width="304" height="19.5"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
@@ -1171,7 +1185,7 @@
                                 <rect key="frame" x="0.0" y="26.5" width="375" height="47"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63s-gW-wwg">
-                                        <rect key="frame" x="163.5" y="13.5" width="48" height="20"/>
+                                        <rect key="frame" x="161" y="11.5" width="53" height="24"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

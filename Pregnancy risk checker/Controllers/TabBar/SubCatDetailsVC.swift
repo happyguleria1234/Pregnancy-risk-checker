@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import WebKit
 
-class SubCatDetailsVC: UIViewController {
+class SubCatDetailsVC: UIViewController , WKNavigationDelegate{
 
+    @IBOutlet weak var showData: WKWebView!
     @IBOutlet weak var detailsLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
     var subcatTitle = String()
@@ -38,9 +40,29 @@ class SubCatDetailsVC: UIViewController {
         let nib3 = UINib(nibName: "FifthCellXIB_s", bundle: nil)
         detailsTBView.register(nib3, forHeaderFooterViewReuseIdentifier: "FifthCellXIB_s")
         
+        
+        
+        let url = URL (string: "https://www.dharmani.com/single-page/Aspose-mobile-app/")
+        let request = URLRequest(url: url!)
+        showData.load(request)
+        self.showData.navigationDelegate = self
+//        IJProgressView.shared.showProgressView()
+        
+        detailsTBView.isHidden = true
         detailsTBView.reloadData()
         
     }
+    
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        alert(Constant.shared.appTitle, message: error.localizedDescription, view: self)
+        IJProgressView.shared.hideProgressView()
+    }
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error){
+        alert(Constant.shared.appTitle, message: error.localizedDescription, view: self)
+//        IJProgressView.shared.hideProgressView()
+    }
+    
     @IBAction func backButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
